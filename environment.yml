@@ -1,0 +1,7 @@
+name: footsteps-to-dawn
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - nodejs=24
+  - python=3.12

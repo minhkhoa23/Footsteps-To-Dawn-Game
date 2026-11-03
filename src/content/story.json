@@ -1,0 +1,4058 @@
+{
+  "version": 1,
+  "campaigns": [
+    {
+      "id": "I",
+      "name": "Người lên đường",
+      "description": "Tìm hiểu, lao động, học hỏi và xác định một hướng đi có cơ sở.",
+      "objective": "Tìm hiểu, lao động, học hỏi và xác định một hướng đi có cơ sở.",
+      "opening": "Sài Gòn, năm 1911. Chiếc túi đã sẵn sàng, nhưng An vẫn mang theo một câu hỏi: phải hiểu những gì để giúp quê hương?",
+      "sceneIds": [
+        "I-01",
+        "I-02",
+        "I-03",
+        "I-04",
+        "I-05",
+        "I-06",
+        "I-07",
+        "I-08",
+        "I-09",
+        "I-10",
+        "I-11",
+        "I-12"
+      ],
+      "unlockAfter": null
+    },
+    {
+      "id": "II",
+      "name": "Người ghi chép",
+      "description": "Xây dựng cuốn nhật ký có nguồn, phân biệt lời kể và dữ kiện đã kiểm chứng.",
+      "objective": "Xây dựng cuốn nhật ký có nguồn, phân biệt lời kể và dữ kiện đã kiểm chứng.",
+      "opening": "Sài Gòn, năm 1911. An bắt đầu một nhiệm vụ mới: xây dựng cuốn nhật ký có nguồn, phân biệt lời kể và dữ kiện đã kiểm chứng.",
+      "sceneIds": [
+        "II-01",
+        "II-02",
+        "II-03",
+        "II-04",
+        "II-05",
+        "II-06",
+        "II-07",
+        "II-08",
+        "II-09",
+        "II-10",
+        "II-11",
+        "II-12"
+      ],
+      "unlockAfter": "I"
+    },
+    {
+      "id": "III",
+      "name": "Người kết nối",
+      "description": "Duy trì nhóm học tập bằng lắng nghe, phân công và giải quyết bất đồng.",
+      "objective": "Duy trì nhóm học tập bằng lắng nghe, phân công và giải quyết bất đồng.",
+      "opening": "Sài Gòn, năm 1911. An bắt đầu một nhiệm vụ mới: duy trì nhóm học tập bằng lắng nghe, phân công và giải quyết bất đồng.",
+      "sceneIds": [
+        "III-01",
+        "III-02",
+        "III-03",
+        "III-04",
+        "III-05",
+        "III-06",
+        "III-07",
+        "III-08",
+        "III-09",
+        "III-10",
+        "III-11",
+        "III-12"
+      ],
+      "unlockAfter": "II"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "I-01",
+      "campaignId": "I",
+      "order": 1,
+      "type": "TH",
+      "title": "Câu hỏi ở bến sông",
+      "time": "Trước tháng 6 · 1911",
+      "place": "Bến sông Sài Gòn",
+      "background": "riverside",
+      "characters": [
+        "An",
+        "Bác Tư"
+      ],
+      "context": "Sài Gòn trước ngày khởi hành năm 1911. Phía xa là cầu tàu và kho hàng; phía trước là một quán nước, đôi quang gánh, chiếc túi vải của An. Người lao động đi qua sau một ngày làm việc.",
+      "lead": "An đã nghe nhiều lời giải thích về nỗi khổ của quê hương. Nhưng trước khi lựa chọn một hướng đi, anh muốn biết điều gì đang thực sự xảy ra quanh mình.",
+      "dialogue": {
+        "speaker": "Bác Tư",
+        "text": "Cháu muốn đi xa. Vậy cháu mang theo câu hỏi gì?"
+      },
+      "question": "An nên bắt đầu việc tìm hiểu từ đâu?",
+      "choices": [
+        {
+          "id": "I-01:hoi-chuyen-nhieu-nguoi-lao-dong-va-ghi-lai-nhung-van-de-ho-gap",
+          "originalLabel": "A",
+          "text": "Hỏi chuyện nhiều người lao động và ghi lại những vấn đề họ gặp.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An có trang nhật ký đầu tiên với nhiều góc nhìn.",
+          "itemChange": {
+            "id": "I-01",
+            "title": "Trang nhật ký đầu tiên",
+            "state": "Đã hoàn thành",
+            "description": "An có trang nhật ký đầu tiên với nhiều góc nhìn."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-01:ghi-lai-hoan-canh-cua-rieng-gia-dinh-minh",
+          "originalLabel": "B",
+          "text": "Ghi lại hoàn cảnh của riêng gia đình mình.",
+          "points": 1,
+          "correct": null,
+          "feedback": "An có động lực cụ thể nhưng tư liệu còn hẹp.",
+          "itemChange": {
+            "id": "I-01",
+            "title": "Trang nhật ký đầu tiên",
+            "state": "Cần bổ sung",
+            "description": "An có động lực cụ thể nhưng tư liệu còn hẹp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-01:cho-mot-nguoi-khac-dua-ra-loi-giai-thich-tron-ven",
+          "originalLabel": "C",
+          "text": "Chờ một người khác đưa ra lời giải thích trọn vẹn.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Trang nhật ký vẫn trắng.",
+          "itemChange": {
+            "id": "I-01",
+            "title": "Trang nhật ký đầu tiên",
+            "state": "Đang bỏ ngỏ",
+            "description": "Trang nhật ký vẫn trắng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-01:viet-ngay-mot-ket-luan-roi-bo-qua-nhung-loi-ke-trai-y",
+          "originalLabel": "D",
+          "text": "Viết ngay một kết luận rồi bỏ qua những lời kể trái ý.",
+          "points": -1,
+          "correct": null,
+          "feedback": "An hình thành ghi chép thiên lệch.",
+          "itemChange": {
+            "id": "I-01",
+            "title": "Trang nhật ký đầu tiên",
+            "state": "Cần xem lại",
+            "description": "An hình thành ghi chép thiên lệch."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-02",
+      "historyId": "history-1",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "quan-nuoc",
+          "name": "Quán nước",
+          "text": "Quán nước là một chi tiết trong cảnh hư cấu tại Bến sông Sài Gòn. Bác Tư lắng nghe những người lao động ở đây trước khi An bắt đầu trang nhật ký.",
+          "isHistorical": false
+        },
+        {
+          "id": "chiec-tui-vai",
+          "name": "Chiếc túi vải",
+          "text": "Chiếc túi vải là một chi tiết trong cảnh hư cấu tại Bến sông Sài Gòn. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-02",
+      "campaignId": "I",
+      "order": 2,
+      "type": "TH",
+      "title": "Chuyến tàu và chiếc túi nhỏ",
+      "time": "Tháng 6 · 1911",
+      "place": "Bến cảng Sài Gòn",
+      "background": "departure",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "Bến cảng với cầu lên tàu, dây neo, thùng gỗ và làn khói. Thẻ lịch sử giới thiệu mốc 5/6/1911; chuyến đi cụ thể của An là tình tiết hư cấu.",
+      "lead": "Tiếng còi vang lên. Đi xa cần một cách mưu sinh, một cơ hội học hỏi và một mục đích để không đánh mất mình.",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Cậu định sống thế nào khi chưa biết tiếng và chưa quen ai?"
+      },
+      "question": "An chuẩn bị hành trình ra sao?",
+      "choices": [
+        {
+          "id": "I-02:dung-toan-bo-tien-danh-dum-cho-hanh-ly-dep-de-de-duoc-chu-y",
+          "originalLabel": "A",
+          "text": "Dùng toàn bộ tiền dành dụm cho hành lý đẹp để dễ được chú ý.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Túi nặng hơn, kế hoạch mưu sinh vẫn thiếu.",
+          "itemChange": {
+            "id": "I-02",
+            "title": "Kế hoạch lên đường",
+            "state": "Đang bỏ ngỏ",
+            "description": "Túi nặng hơn, kế hoạch mưu sinh vẫn thiếu."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-02:tim-cong-viec-phu-hop-chuan-bi-hoc-tieng-va-giu-cuon-so-ben-minh",
+          "originalLabel": "B",
+          "text": "Tìm công việc phù hợp, chuẩn bị học tiếng và giữ cuốn sổ bên mình.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An có kế hoạch vừa lao động vừa học.",
+          "itemChange": {
+            "id": "I-02",
+            "title": "Kế hoạch lên đường",
+            "state": "Đã hoàn thành",
+            "description": "An có kế hoạch vừa lao động vừa học."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-02:chi-chuan-bi-cach-kiem-song-truoc-mat",
+          "originalLabel": "C",
+          "text": "Chỉ chuẩn bị cách kiếm sống trước mắt.",
+          "points": 1,
+          "correct": null,
+          "feedback": "An có thể lên đường nhưng việc học dễ bị gác lại.",
+          "itemChange": {
+            "id": "I-02",
+            "title": "Kế hoạch lên đường",
+            "state": "Cần bổ sung",
+            "description": "An có thể lên đường nhưng việc học dễ bị gác lại."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-02:giao-het-tien-cho-nguoi-hua-bao-dam-thanh-cong-ma-khong-hoi-dieu-kien",
+          "originalLabel": "D",
+          "text": "Giao hết tiền cho người hứa bảo đảm thành công mà không hỏi điều kiện.",
+          "points": -1,
+          "correct": null,
+          "feedback": "An mất một phần nguồn lực và buộc phải làm lại kế hoạch.",
+          "itemChange": {
+            "id": "I-02",
+            "title": "Kế hoạch lên đường",
+            "state": "Cần xem lại",
+            "description": "An mất một phần nguồn lực và buộc phải làm lại kế hoạch."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-03",
+      "historyId": "history-2",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "con-tau",
+          "name": "Con tàu",
+          "text": "Ngày 5/6/1911, Nguyễn Tất Thành rời bến cảng Sài Gòn trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.",
+          "isHistorical": true
+        },
+        {
+          "id": "cuon-so-boc-vai",
+          "name": "Cuốn sổ bọc vải",
+          "text": "Cuốn sổ bọc vải là một chi tiết trong cảnh hư cấu tại Bến cảng Sài Gòn. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-03",
+      "campaignId": "I",
+      "order": 3,
+      "type": "TH",
+      "title": "Những gương mặt bên kia biển",
+      "time": "1912–1917",
+      "place": "Khu lao động bên kia biển",
+      "background": "workers",
+      "characters": [
+        "An",
+        "Người bạn lao động"
+      ],
+      "context": "Phân cảnh tổng hợp một khu lao động gần cảng trong những năm 1912–1917. Thùng hàng, bảng ca làm việc và bàn ăn tập thể là các điểm có thể bấm xem. Không gắn phân cảnh hư cấu với một cảng có thật cụ thể.",
+      "lead": "Ở nơi xa lạ, An gặp những người khác màu da và tiếng nói. Anh nhận ra đời sống của họ có những khó khăn vừa quen thuộc vừa khác với quê nhà.",
+      "dialogue": {
+        "speaker": "Người bạn lao động",
+        "text": "Cậu định viết gì về chúng tôi?"
+      },
+      "question": "An lựa chọn cách quan sát nào?",
+      "choices": [
+        {
+          "id": "I-03:chi-nhin-pho-xa-giau-co-roi-ket-luan-moi-nguoi-deu-sung-tuc",
+          "originalLabel": "A",
+          "text": "Chỉ nhìn phố xá giàu có rồi kết luận mọi người đều sung túc.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Nhật ký bỏ sót đời sống phía sau khu cảng.",
+          "itemChange": {
+            "id": "I-03",
+            "title": "Ghi chép đối chiếu",
+            "state": "Đang bỏ ngỏ",
+            "description": "Nhật ký bỏ sót đời sống phía sau khu cảng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-03:chi-tro-chuyen-voi-nguoi-cung-que",
+          "originalLabel": "B",
+          "text": "Chỉ trò chuyện với người cùng quê.",
+          "points": 1,
+          "correct": null,
+          "feedback": "An thu được lời kể hữu ích nhưng chưa hiểu nhiều nhóm khác.",
+          "itemChange": {
+            "id": "I-03",
+            "title": "Ghi chép đối chiếu",
+            "state": "Cần bổ sung",
+            "description": "An thu được lời kể hữu ích nhưng chưa hiểu nhiều nhóm khác."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-03:ket-luan-tinh-cach-moi-nguoi-tu-quoc-tich-cua-ho",
+          "originalLabel": "C",
+          "text": "Kết luận tính cách mọi người từ quốc tịch của họ.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một người bạn phản đối; cuộc trò chuyện dừng lại.",
+          "itemChange": {
+            "id": "I-03",
+            "title": "Ghi chép đối chiếu",
+            "state": "Cần xem lại",
+            "description": "Một người bạn phản đối; cuộc trò chuyện dừng lại."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-03:hoi-ve-cong-viec-thu-nhap-va-doi-song-cua-nhieu-nguoi-roi-so-sanh",
+          "originalLabel": "D",
+          "text": "Hỏi về công việc, thu nhập và đời sống của nhiều người, rồi so sánh.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An có trang ghi chép đối chiếu đầu tiên.",
+          "itemChange": {
+            "id": "I-03",
+            "title": "Ghi chép đối chiếu",
+            "state": "Đã hoàn thành",
+            "description": "An có trang ghi chép đối chiếu đầu tiên."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-04",
+      "historyId": "history-3",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "bang-ca-lam",
+          "name": "Bảng ca làm",
+          "text": "Bảng ca làm là một chi tiết trong cảnh hư cấu tại Khu lao động bên kia biển. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "ban-an-tap-the",
+          "name": "Bàn ăn tập thể",
+          "text": "Bàn ăn tập thể là một chi tiết trong cảnh hư cấu tại Khu lao động bên kia biển. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-04",
+      "campaignId": "I",
+      "order": 4,
+      "type": "TH",
+      "title": "Căn phòng có ngọn đèn",
+      "time": "Trước tháng 6 · 1919",
+      "place": "Căn phòng ở Pháp",
+      "background": "attic",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Pháp, trước tháng 6/1919. Một căn phòng trọ nhỏ có bàn gỗ, sách học tiếng, thư nhà và tờ báo. Mai đang sắp xếp chỗ cho buổi đọc chung.",
+      "lead": "Công việc chiếm phần lớn thời gian. Những trang chữ khó đọc buộc An lựa chọn cách sử dụng buổi tối của mình.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Cậu muốn hiểu tờ báo, hay chỉ muốn biết người khác nói nó viết gì?"
+      },
+      "question": "An sẽ học như thế nào?",
+      "choices": [
+        {
+          "id": "I-04:hoc-tieng-deu-dan-doc-bao-va-thao-luan-nhung-dieu-chua-ro",
+          "originalLabel": "A",
+          "text": "Học tiếng đều đặn, đọc báo và thảo luận những điều chưa rõ.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An dần có thể đối chiếu thông tin trực tiếp.",
+          "itemChange": {
+            "id": "I-04",
+            "title": "Chú giải từ khó",
+            "state": "Đã hoàn thành",
+            "description": "An dần có thể đối chiếu thông tin trực tiếp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-04:bo-viec-doc-vi-thay-kho-chi-cho-nguoi-khac-ke-lai",
+          "originalLabel": "B",
+          "text": "Bỏ việc đọc vì thấy khó, chỉ chờ người khác kể lại.",
+          "points": 0,
+          "correct": null,
+          "feedback": "An tiếp tục phụ thuộc vào lời truyền miệng.",
+          "itemChange": {
+            "id": "I-04",
+            "title": "Chú giải từ khó",
+            "state": "Đang bỏ ngỏ",
+            "description": "An tiếp tục phụ thuộc vào lời truyền miệng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-04:hoc-mot-so-tu-can-cho-cong-viec-roi-tam-gac-phan-con-lai",
+          "originalLabel": "C",
+          "text": "Học một số từ cần cho công việc rồi tạm gác phần còn lại.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Việc mưu sinh thuận lợi hơn, khả năng đọc tư liệu còn hạn chế.",
+          "itemChange": {
+            "id": "I-04",
+            "title": "Chú giải từ khó",
+            "state": "Cần bổ sung",
+            "description": "Việc mưu sinh thuận lợi hơn, khả năng đọc tư liệu còn hạn chế."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-04:gia-vo-da-hieu-de-nhan-giai-thich-thay-cho-moi-nguoi",
+          "originalLabel": "D",
+          "text": "Giả vờ đã hiểu để nhận giải thích thay cho mọi người.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một bản tóm tắt sai khiến nhóm phải làm lại.",
+          "itemChange": {
+            "id": "I-04",
+            "title": "Chú giải từ khó",
+            "state": "Cần xem lại",
+            "description": "Một bản tóm tắt sai khiến nhóm phải làm lại."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-05",
+      "historyId": "history-4",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "ngon-den",
+          "name": "Ngọn đèn",
+          "text": "Ngọn đèn là một chi tiết trong cảnh hư cấu tại Căn phòng ở Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "sach-hoc-tieng",
+          "name": "Sách học tiếng",
+          "text": "Sách học tiếng là một chi tiết trong cảnh hư cấu tại Căn phòng ở Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "I-03",
+          "choiceId": "I-03:hoi-ve-cong-viec-thu-nhap-va-doi-song-cua-nhieu-nguoi-roi-so-sanh",
+          "matched": "Mai đặt trang ghi chép đối chiếu của An cạnh sách học tiếng: “Ta thử đọc từ chính những điều cậu đã quan sát.”",
+          "otherwise": "Mai đưa bản chú giải và nhắc An lắng nghe nhiều góc nhìn trước khi kết luận."
+        }
+      ]
+    },
+    {
+      "id": "I-05",
+      "campaignId": "I",
+      "order": 5,
+      "type": "KT",
+      "title": "Tờ giấy mang tám yêu cầu",
+      "time": "Tháng 6 · 1919",
+      "place": "Bàn đọc tại Pháp",
+      "background": "petition",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Pháp, tháng 6/1919. Trên bàn có bản giới thiệu Yêu sách của nhân dân An Nam, phong bì và bản đồ Versailles. An đọc tin về hoạt động của Nguyễn Ái Quốc, không được dựng là tác giả bản Yêu sách.",
+      "lead": "Một văn bản ngắn đưa những yêu cầu về quyền của người dân thuộc địa đến diễn đàn quốc tế.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Đọc kỹ nội dung trước khi viết điều cậu mong nó có."
+      },
+      "question": "Nội dung nào phản ánh đúng bản Yêu sách năm 1919?",
+      "choices": [
+        {
+          "id": "I-05:tuyen-bo-viet-nam-da-tro-thanh-mot-nuoc-doc-lap",
+          "originalLabel": "A",
+          "text": "Tuyên bố Việt Nam đã trở thành một nước độc lập.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; An đã nhầm yêu cầu với một kết quả chưa xảy ra.",
+          "itemChange": {
+            "id": "I-05",
+            "title": "Thẻ Yêu sách 1919",
+            "state": "Cần ôn lại",
+            "description": "Sai; An đã nhầm yêu cầu với một kết quả chưa xảy ra."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-05:quyet-dinh-thanh-lap-dang-cong-san-viet-nam",
+          "originalLabel": "B",
+          "text": "Quyết định thành lập Đảng Cộng sản Việt Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; đây là sự kiện của giai đoạn sau.",
+          "itemChange": {
+            "id": "I-05",
+            "title": "Thẻ Yêu sách 1919",
+            "state": "Cần ôn lại",
+            "description": "Sai; đây là sự kiện của giai đoạn sau."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-05:neu-nhung-yeu-cau-ve-quyen-tu-do-dan-chu-va-binh-dang-cho-nhan-dan-an-nam",
+          "originalLabel": "C",
+          "text": "Nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng cho nhân dân An Nam.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Đúng; An hoàn thành thẻ kiến thức.",
+          "itemChange": {
+            "id": "I-05",
+            "title": "Thẻ Yêu sách 1919",
+            "state": "Đã xác nhận",
+            "description": "Đúng; An hoàn thành thẻ kiến thức."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-05:ban-hanh-mot-hiep-uoc-quan-su-giua-viet-nam-va-phap",
+          "originalLabel": "D",
+          "text": "Ban hành một hiệp ước quân sự giữa Việt Nam và Pháp.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; bản Yêu sách không phải hiệp ước quân sự.",
+          "itemChange": {
+            "id": "I-05",
+            "title": "Thẻ Yêu sách 1919",
+            "state": "Cần ôn lại",
+            "description": "Sai; bản Yêu sách không phải hiệp ước quân sự."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-06",
+      "historyId": "history-5",
+      "explanation": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+      "hotspots": [
+        {
+          "id": "ban-yeu-sach",
+          "name": "Bản Yêu sách",
+          "text": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+          "isHistorical": true
+        },
+        {
+          "id": "ban-do-versailles",
+          "name": "Bản đồ Versailles",
+          "text": "Bản đồ Versailles là một chi tiết trong cảnh hư cấu tại Bàn đọc tại Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-06",
+      "campaignId": "I",
+      "order": 6,
+      "type": "KT",
+      "title": "Trang báo tháng Bảy",
+      "time": "Tháng 7 · 1920",
+      "place": "Phòng đọc tại Pháp",
+      "background": "july",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Pháp, tháng 7/1920. Đêm muộn, ánh đèn chiếu lên một trang báo và các mẩu ghi chú. Chỉ dùng trích đoạn có nguồn khi đưa văn bản lịch sử thật vào hình.",
+      "lead": "An đọc phần giới thiệu một văn bản bàn trực tiếp về vấn đề dân tộc và thuộc địa. Những quan sát rời rạc bắt đầu có thêm khung lý giải.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Văn bản nào gắn với bước chuyển nhận thức của Nguyễn Ái Quốc vào thời điểm này?"
+      },
+      "question": "Văn bản nào gắn với bước chuyển nhận thức của Nguyễn Ái Quốc vào tháng 7/1920?",
+      "choices": [
+        {
+          "id": "I-06:duong-kach-menh",
+          "originalLabel": "A",
+          "text": "Đường Kách mệnh.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai mốc; tác phẩm được xuất bản năm 1927.",
+          "itemChange": {
+            "id": "I-06",
+            "title": "Sơ đồ tháng Bảy",
+            "state": "Cần ôn lại",
+            "description": "Sai mốc; tác phẩm được xuất bản năm 1927."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "I-06:so-thao-lan-thu-nhat-nhung-luan-cuong-ve-van-de-dan-toc-va-van-de-thuoc-dia-cua-lenin",
+          "originalLabel": "B",
+          "text": "Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin.",
+          "itemChange": {
+            "id": "I-06",
+            "title": "Sơ đồ tháng Bảy",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "I-06:tuyen-ngon-doc-lap-cua-viet-nam-nam-1945",
+          "originalLabel": "C",
+          "text": "Tuyên ngôn Độc lập của Việt Nam năm 1945.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai mốc; sự kiện này còn ở tương lai so với phân cảnh.",
+          "itemChange": {
+            "id": "I-06",
+            "title": "Sơ đồ tháng Bảy",
+            "state": "Cần ôn lại",
+            "description": "Sai mốc; sự kiện này còn ở tương lai so với phân cảnh."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "I-06:luan-cuong-chinh-tri-thang-10-1930",
+          "originalLabel": "D",
+          "text": "Luận cương chính trị tháng 10/1930.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai mốc và nhầm văn kiện.",
+          "itemChange": {
+            "id": "I-06",
+            "title": "Sơ đồ tháng Bảy",
+            "state": "Cần ôn lại",
+            "description": "Sai mốc và nhầm văn kiện."
+          },
+          "milestone": "K6"
+        }
+      ],
+      "nextSceneId": "I-07",
+      "historyId": "history-6",
+      "explanation": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+      "hotspots": [
+        {
+          "id": "trang-bao",
+          "name": "Trang báo",
+          "text": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+          "isHistorical": true
+        },
+        {
+          "id": "cac-mau-ghi-chu",
+          "name": "Các mẩu ghi chú",
+          "text": "Các mẩu ghi chú là một chi tiết trong cảnh hư cấu tại Phòng đọc tại Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-07",
+      "campaignId": "I",
+      "order": 7,
+      "type": "KT",
+      "title": "Tin từ Tours",
+      "time": "Tháng 12 · 1920",
+      "place": "Tin từ Tours · Pháp",
+      "background": "tours",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Tháng 12/1920. Nhóm của An đọc tin và xem hình minh họa về Đại hội Tours. Không đặt An vào ghế đại biểu hoặc để anh bỏ phiếu thay nhân vật lịch sử.",
+      "lead": "Một quyết định tổ chức đánh dấu bước chuyển từ tìm hiểu sang lựa chọn con đường hoạt động.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Điều gì đã diễn ra tại Đại hội Tours liên quan đến Nguyễn Ái Quốc?"
+      },
+      "question": "Điều gì diễn ra tại Đại hội Tours liên quan đến Nguyễn Ái Quốc?",
+      "choices": [
+        {
+          "id": "I-07:thanh-lap-hoi-viet-nam-cach-mang-thanh-nien",
+          "originalLabel": "A",
+          "text": "Thành lập Hội Việt Nam Cách mạng Thanh niên.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm với năm 1925.",
+          "itemChange": {
+            "id": "I-07",
+            "title": "Dòng thời gian Tours",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm với năm 1925."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-07:thanh-lap-dang-cong-san-viet-nam",
+          "originalLabel": "B",
+          "text": "Thành lập Đảng Cộng sản Việt Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm với năm 1930.",
+          "itemChange": {
+            "id": "I-07",
+            "title": "Dòng thời gian Tours",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm với năm 1930."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-07:quyet-dinh-roi-ben-cang-sai-gon",
+          "originalLabel": "C",
+          "text": "Quyết định rời bến cảng Sài Gòn.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm với mốc năm 1911.",
+          "itemChange": {
+            "id": "I-07",
+            "title": "Dòng thời gian Tours",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm với mốc năm 1911."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-07:tan-thanh-gia-nhap-quoc-te-iii-va-tham-gia-sang-lap-dang-cong-san-phap",
+          "originalLabel": "D",
+          "text": "Tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "itemChange": {
+            "id": "I-07",
+            "title": "Dòng thời gian Tours",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-08",
+      "historyId": "history-7",
+      "explanation": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+      "hotspots": [
+        {
+          "id": "ban-do-tours",
+          "name": "Bản đồ Tours",
+          "text": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "isHistorical": true
+        },
+        {
+          "id": "bang-doi-chieu-nien-dai",
+          "name": "Bảng đối chiếu niên đại",
+          "text": "Bảng đối chiếu niên đại là một chi tiết trong cảnh hư cấu tại Tin từ Tours · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "I-06",
+          "choiceId": "I-06:so-thao-lan-thu-nhat-nhung-luan-cuong-ve-van-de-dan-toc-va-van-de-thuoc-dia-cua-lenin",
+          "matched": "Sơ đồ ghi chú đúng từ tháng Bảy đã nằm trên bàn, sẵn sàng nối với mốc Tours.",
+          "otherwise": "Bình mang bảng đối chiếu niên đại để cùng sửa nhầm lẫn ở trang báo tháng Bảy."
+        }
+      ]
+    },
+    {
+      "id": "I-08",
+      "campaignId": "I",
+      "order": 8,
+      "type": "TH",
+      "title": "Một bài viết, nhiều tiếng nói",
+      "time": "Năm 1922",
+      "place": "Bàn biên soạn · Pháp",
+      "background": "press",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Pháp, năm 1922. Một bàn đọc báo có Le Paria, các bản nháp hư cấu của nhóm An và lọ mực. Nhiệm vụ không khẳng định bài viết của An đã xuất hiện trên tờ báo có thật.",
+      "lead": "An muốn viết về đời sống người lao động. Nhưng một bài viết có sức thuyết phục cần nhiều hơn sự giận dữ.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Người đọc sẽ dựa vào đâu để tin điều cậu kể?"
+      },
+      "question": "Nhóm chỉ còn một buổi để hoàn thành bài đọc nội bộ.",
+      "choices": [
+        {
+          "id": "I-08:them-nhung-chi-tiet-chua-xay-ra-de-cau-chuyen-gay-chu-y-hon",
+          "originalLabel": "A",
+          "text": "Thêm những chi tiết chưa xảy ra để câu chuyện gây chú ý hơn.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Người được phỏng vấn phát hiện sai lệch và rút lời đồng ý cho dùng lời kể.",
+          "itemChange": {
+            "id": "I-08",
+            "title": "Bản nháp bài đọc",
+            "state": "Cần xem lại",
+            "description": "Người được phỏng vấn phát hiện sai lệch và rút lời đồng ý cho dùng lời kể."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-08:dung-mot-loi-ke-co-that-nhung-chua-doi-chieu-them",
+          "originalLabel": "B",
+          "text": "Dùng một lời kể có thật nhưng chưa đối chiếu thêm.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Bài có giá trị bước đầu, phạm vi chứng minh còn hẹp.",
+          "itemChange": {
+            "id": "I-08",
+            "title": "Bản nháp bài đọc",
+            "state": "Cần bổ sung",
+            "description": "Bài có giá trị bước đầu, phạm vi chứng minh còn hẹp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-08:doi-chieu-cac-ghi-chep-neu-ro-nguon-va-phan-biet-su-kien-voi-nhan-xet",
+          "originalLabel": "C",
+          "text": "Đối chiếu các ghi chép, nêu rõ nguồn và phân biệt sự kiện với nhận xét.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Nhóm có bài đọc đáng tin cậy.",
+          "itemChange": {
+            "id": "I-08",
+            "title": "Bản nháp bài đọc",
+            "state": "Đã hoàn thành",
+            "description": "Nhóm có bài đọc đáng tin cậy."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-08:chi-viet-mot-khau-hieu-chung-khong-dua-thong-tin-cu-the",
+          "originalLabel": "D",
+          "text": "Chỉ viết một khẩu hiệu chung, không đưa thông tin cụ thể.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Bài hoàn thành nhưng không giúp người đọc hiểu tình huống.",
+          "itemChange": {
+            "id": "I-08",
+            "title": "Bản nháp bài đọc",
+            "state": "Đang bỏ ngỏ",
+            "description": "Bài hoàn thành nhưng không giúp người đọc hiểu tình huống."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-09",
+      "historyId": "history-8",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "ban-nhap-noi-bo",
+          "name": "Bản nháp nội bộ",
+          "text": "Bản nháp nội bộ là một chi tiết trong cảnh hư cấu tại Bàn biên soạn · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "lo-muc",
+          "name": "Lọ mực",
+          "text": "Lọ mực là một chi tiết trong cảnh hư cấu tại Bàn biên soạn · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "I-03",
+          "choiceId": "I-03:hoi-ve-cong-viec-thu-nhap-va-doi-song-cua-nhieu-nguoi-roi-so-sanh",
+          "matched": "Hai trang sổ cũ từ khu cảng trở thành tài liệu đối chiếu cho bản nháp hôm nay.",
+          "otherwise": "Mai đưa tư liệu tham khảo thay cho bản quan sát còn thiếu. Ghi chép cũ vẫn ở nguyên trong nhật ký."
+        }
+      ]
+    },
+    {
+      "id": "I-09",
+      "campaignId": "I",
+      "order": 9,
+      "type": "TH",
+      "title": "Học để trở về với thực tiễn",
+      "time": "1923–1924",
+      "place": "Không gian học tập · Nga Xô viết",
+      "background": "study",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Không gian học tập được hư cấu trong bối cảnh nước Nga Xô viết, giai đoạn 1923–1924. Bàn có sơ đồ xã hội, sách và những ghi chú về quê hương. Không xác nhận An học cùng lớp hoặc dự cùng hội nghị với Nguyễn Ái Quốc.",
+      "lead": "Một mô hình có thể đem lại kinh nghiệm quý. Nhưng quê hương An có hoàn cảnh riêng cần được hiểu.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Học được điều hay rồi, chúng ta có thể làm hệt mọi chi tiết ở bất cứ đâu không?"
+      },
+      "question": "An chuẩn bị bản ghi chú áp dụng điều đã học.",
+      "choices": [
+        {
+          "id": "I-09:tom-tat-dung-noi-dung-nhung-chua-lien-he-voi-dieu-kien-o-viet-nam",
+          "originalLabel": "A",
+          "text": "Tóm tắt đúng nội dung nhưng chưa liên hệ với điều kiện ở Việt Nam.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Bản ghi chú có kiến thức, còn thiếu phần vận dụng.",
+          "itemChange": {
+            "id": "I-09",
+            "title": "Bản liên hệ thực tiễn",
+            "state": "Cần bổ sung",
+            "description": "Bản ghi chú có kiến thức, còn thiếu phần vận dụng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-09:so-sanh-dieu-da-hoc-voi-hoan-canh-que-huong-ghi-ro-diem-can-khao-sat-them",
+          "originalLabel": "B",
+          "text": "So sánh điều đã học với hoàn cảnh quê hương, ghi rõ điểm cần khảo sát thêm.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An có bản liên hệ giữa lý luận và thực tiễn.",
+          "itemChange": {
+            "id": "I-09",
+            "title": "Bản liên hệ thực tiễn",
+            "state": "Đã hoàn thành",
+            "description": "An có bản liên hệ giữa lý luận và thực tiễn."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-09:cho-mot-cong-thuc-san-co-giai-quyet-toan-bo-van-de",
+          "originalLabel": "C",
+          "text": "Chờ một công thức sẵn có giải quyết toàn bộ vấn đề.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Bản kế hoạch chưa được bắt đầu.",
+          "itemChange": {
+            "id": "I-09",
+            "title": "Bản liên hệ thực tiễn",
+            "state": "Đang bỏ ngỏ",
+            "description": "Bản kế hoạch chưa được bắt đầu."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-09:sao-chep-moi-bien-phap-va-bo-di-cac-thong-tin-khong-phu-hop",
+          "originalLabel": "D",
+          "text": "Sao chép mọi biện pháp và bỏ đi các thông tin không phù hợp.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Đề xuất của An không trả lời được những câu hỏi của nhóm.",
+          "itemChange": {
+            "id": "I-09",
+            "title": "Bản liên hệ thực tiễn",
+            "state": "Cần xem lại",
+            "description": "Đề xuất của An không trả lời được những câu hỏi của nhóm."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-10",
+      "historyId": "history-9",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "bang-so-sanh",
+          "name": "Bảng so sánh",
+          "text": "Bảng so sánh là một chi tiết trong cảnh hư cấu tại Không gian học tập · Nga Xô viết. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "ghi-chu-que-huong",
+          "name": "Ghi chú quê hương",
+          "text": "Ghi chú quê hương là một chi tiết trong cảnh hư cấu tại Không gian học tập · Nga Xô viết. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-10",
+      "campaignId": "I",
+      "order": 10,
+      "type": "KT",
+      "title": "Tờ báo trên bàn học",
+      "time": "Năm 1925",
+      "place": "Nhóm học tập · Quảng Châu",
+      "background": "classroom",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Quảng Châu, năm 1925. Căn phòng của nhóm học tập có bảng viết, sách, bản đồ và hình giới thiệu số đầu báo Thanh niên.",
+      "lead": "Kiến thức bắt đầu được truyền đạt có tổ chức. An gặp những thanh niên cũng đang chuẩn bị hành trang để hoạt động.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Báo Thanh niên ra số đầu ngày 21/6/1925 gắn với tổ chức nào?"
+      },
+      "question": "Nhận định nào phù hợp với dữ kiện lịch sử?",
+      "choices": [
+        {
+          "id": "I-10:hoi-viet-nam-cach-mang-thanh-nien",
+          "originalLabel": "A",
+          "text": "Hội Việt Nam Cách mạng Thanh niên.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Hội Việt Nam Cách mạng Thanh niên.",
+          "itemChange": {
+            "id": "I-10",
+            "title": "Thẻ báo Thanh niên",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Hội Việt Nam Cách mạng Thanh niên."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-10:dang-cong-san-viet-nam-da-thanh-lap-tu-nam-1911",
+          "originalLabel": "B",
+          "text": "Đảng Cộng sản Việt Nam đã thành lập từ năm 1911.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai cả tổ chức gắn với mốc và niên đại.",
+          "itemChange": {
+            "id": "I-10",
+            "title": "Thẻ báo Thanh niên",
+            "state": "Cần ôn lại",
+            "description": "Sai cả tổ chức gắn với mốc và niên đại."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-10:hoi-nghi-versailles",
+          "originalLabel": "C",
+          "text": "Hội nghị Versailles.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; đây không phải tổ chức xuất bản tờ báo.",
+          "itemChange": {
+            "id": "I-10",
+            "title": "Thẻ báo Thanh niên",
+            "state": "Cần ôn lại",
+            "description": "Sai; đây không phải tổ chức xuất bản tờ báo."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-10:dai-hoi-tours-nam-1920",
+          "originalLabel": "D",
+          "text": "Đại hội Tours năm 1920.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm sự kiện, địa điểm và thời điểm.",
+          "itemChange": {
+            "id": "I-10",
+            "title": "Thẻ báo Thanh niên",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm sự kiện, địa điểm và thời điểm."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-11",
+      "historyId": "history-10",
+      "explanation": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+      "hotspots": [
+        {
+          "id": "bao-thanh-nien",
+          "name": "Báo Thanh niên",
+          "text": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+          "isHistorical": true
+        },
+        {
+          "id": "bang-hoc-tap",
+          "name": "Bảng học tập",
+          "text": "Bảng học tập là một chi tiết trong cảnh hư cấu tại Nhóm học tập · Quảng Châu. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "I-11",
+      "campaignId": "I",
+      "order": 11,
+      "type": "TH",
+      "title": "Điều đã học có đến được với người nghe?",
+      "time": "Năm 1927",
+      "place": "Bàn đọc · Quảng Châu",
+      "background": "book",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "Quảng Châu, năm 1927. Bàn có phần giới thiệu Đường Kách mệnh, vở bài học của An và chiếc bảng nhỏ. Nhóm An chuẩn bị một buổi đọc; không dựng đây là một lớp có thật do Nguyễn Ái Quốc trực tiếp giảng nếu không dùng tư liệu.",
+      "lead": "An đã đi xa và đọc nhiều. Giờ đây, một người bạn chỉ hỏi một câu giản dị: điều ấy liên quan gì đến cuộc sống của chúng tôi?",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Cậu giải thích bằng điều chúng ta từng thấy được không?"
+      },
+      "question": "An chọn cách trình bày thế nào?",
+      "choices": [
+        {
+          "id": "I-11:che-nguoi-nghe-khong-du-hieu-biet-va-tu-choi-cau-hoi",
+          "originalLabel": "A",
+          "text": "Chê người nghe không đủ hiểu biết và từ chối câu hỏi.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một thành viên rời buổi đọc; nhóm mất sự tin cậy.",
+          "itemChange": {
+            "id": "I-11",
+            "title": "Bài trình bày",
+            "state": "Cần xem lại",
+            "description": "Một thành viên rời buổi đọc; nhóm mất sự tin cậy."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-11:doc-dung-phan-tom-tat-nhung-chua-co-vi-du",
+          "originalLabel": "B",
+          "text": "Đọc đúng phần tóm tắt nhưng chưa có ví dụ.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Người nghe nhớ được vài ý, chưa rõ cách liên hệ.",
+          "itemChange": {
+            "id": "I-11",
+            "title": "Bài trình bày",
+            "state": "Cần bổ sung",
+            "description": "Người nghe nhớ được vài ý, chưa rõ cách liên hệ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-11:hua-moi-kho-khan-se-tu-bien-mat-ngay-sau-mot-buoi-hoc",
+          "originalLabel": "C",
+          "text": "Hứa mọi khó khăn sẽ tự biến mất ngay sau một buổi học.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Buổi nói chuyện kết thúc với những kỳ vọng thiếu cơ sở.",
+          "itemChange": {
+            "id": "I-11",
+            "title": "Bài trình bày",
+            "state": "Đang bỏ ngỏ",
+            "description": "Buổi nói chuyện kết thúc với những kỳ vọng thiếu cơ sở."
+          },
+          "milestone": null
+        },
+        {
+          "id": "I-11:giai-thich-bang-vi-du-co-that-trong-ghi-chep-va-de-moi-nguoi-hoi-lai",
+          "originalLabel": "D",
+          "text": "Giải thích bằng ví dụ có thật trong ghi chép và để mọi người hỏi lại.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Nhóm hiểu rõ hơn, cùng sửa điểm còn thiếu.",
+          "itemChange": {
+            "id": "I-11",
+            "title": "Bài trình bày",
+            "state": "Đã hoàn thành",
+            "description": "Nhóm hiểu rõ hơn, cùng sửa điểm còn thiếu."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "I-12",
+      "historyId": "history-11",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "duong-kach-menh",
+          "name": "Đường Kách mệnh",
+          "text": "Đường Kách mệnh xuất bản năm 1927, tập hợp các bài giảng của Nguyễn Ái Quốc trong công tác huấn luyện cán bộ tại Quảng Châu.",
+          "isHistorical": true
+        },
+        {
+          "id": "vo-bai-hoc",
+          "name": "Vở bài học",
+          "text": "Vở bài học là một chi tiết trong cảnh hư cấu tại Bàn đọc · Quảng Châu. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "I-08",
+          "choiceId": "I-08:doi-chieu-cac-ghi-chep-neu-ro-nguon-va-phan-biet-su-kien-voi-nhan-xet",
+          "matched": "Mai mang bài đọc có nguồn vào buổi học để An dùng làm ví dụ.",
+          "otherwise": "Mai nhắc kiểm tra từng ví dụ với nguồn, đặc biệt những chi tiết chưa xảy ra trong bản nháp cũ."
+        }
+      ]
+    },
+    {
+      "id": "I-12",
+      "campaignId": "I",
+      "order": 12,
+      "type": "KT",
+      "title": "Một con đường được xác định",
+      "time": "Đầu năm · 1930",
+      "place": "Phòng đọc tin · Hồng Kông trên bản đồ",
+      "background": "reunion",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Đầu năm 1930. Một phòng đọc tin của nhóm An, cạnh cửa sổ nhìn ra phố. Bản đồ đánh dấu Hồng Kông; giữa bàn là dòng thời gian của cả hành trình. An không được dựng là người chủ trì hoặc quyết định kết quả hội nghị.",
+      "lead": "Những câu hỏi từ bến sông đã đi qua nhiều năm lao động, học tập và lựa chọn. Giờ An cần hiểu ý nghĩa của mốc lịch sử vừa được ghi thêm.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Đặt sự kiện này vào cả hành trình, cậu thấy điều gì?"
+      },
+      "question": "Nhận định nào phù hợp với sự ra đời của Đảng Cộng sản Việt Nam đầu năm 1930?",
+      "choices": [
+        {
+          "id": "I-12:viet-nam-ngay-lap-tuc-gianh-duoc-doc-lap-va-khong-con-nhiem-vu-nao-phia-truoc",
+          "originalLabel": "A",
+          "text": "Việt Nam ngay lập tức giành được độc lập và không còn nhiệm vụ nào phía trước.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm mốc thành lập Đảng với thắng lợi giành độc lập sau này.",
+          "itemChange": {
+            "id": "I-12",
+            "title": "Dòng thời gian 1930",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm mốc thành lập Đảng với thắng lợi giành độc lập sau này."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "I-12:su-kien-dien-ra-hoan-toan-rieng-le-khong-co-qua-trinh-chuan-bi",
+          "originalLabel": "B",
+          "text": "Sự kiện diễn ra hoàn toàn riêng lẻ, không có quá trình chuẩn bị.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; bỏ qua quá trình chuẩn bị về tư tưởng, chính trị và tổ chức.",
+          "itemChange": {
+            "id": "I-12",
+            "title": "Dòng thời gian 1930",
+            "state": "Cần ôn lại",
+            "description": "Sai; bỏ qua quá trình chuẩn bị về tư tưởng, chính trị và tổ chức."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "I-12:su-kien-danh-dau-viec-thong-nhat-to-chuc-lanh-dao-va-xac-lap-duong-loi-qua-cuong-linh-dau-tien-gan-voi-qua-trinh-chuan-bi-truoc-do",
+          "originalLabel": "C",
+          "text": "Sự kiện đánh dấu việc thống nhất tổ chức lãnh đạo và xác lập đường lối qua Cương lĩnh đầu tiên, gắn với quá trình chuẩn bị trước đó.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Sự kiện đánh dấu việc thống nhất tổ chức lãnh đạo và xác lập đường lối qua Cương lĩnh đầu tiên, gắn với quá trình chuẩn bị trước đó.",
+          "itemChange": {
+            "id": "I-12",
+            "title": "Dòng thời gian 1930",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Sự kiện đánh dấu việc thống nhất tổ chức lãnh đạo và xác lập đường lối qua Cương lĩnh đầu tiên, gắn với quá trình chuẩn bị trước đó."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "I-12:moc-nay-chi-la-viec-doi-ten-cua-mot-to-bao",
+          "originalLabel": "D",
+          "text": "Mốc này chỉ là việc đổi tên của một tờ báo.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; không phản ánh sự thành lập một chính đảng.",
+          "itemChange": {
+            "id": "I-12",
+            "title": "Dòng thời gian 1930",
+            "state": "Cần ôn lại",
+            "description": "Sai; không phản ánh sự thành lập một chính đảng."
+          },
+          "milestone": "K12"
+        }
+      ],
+      "nextSceneId": null,
+      "historyId": "history-12",
+      "explanation": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+      "hotspots": [
+        {
+          "id": "dong-thoi-gian",
+          "name": "Dòng thời gian",
+          "text": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+          "isHistorical": true
+        },
+        {
+          "id": "ban-do-hong-kong",
+          "name": "Bản đồ Hồng Kông",
+          "text": "Bản đồ Hồng Kông là một chi tiết trong cảnh hư cấu tại Phòng đọc tin · Hồng Kông trên bản đồ. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-01",
+      "campaignId": "II",
+      "order": 1,
+      "type": "TH",
+      "title": "Ai đang kể câu chuyện?",
+      "time": "Trước tháng 6 · 1911",
+      "place": "Bến sông Sài Gòn",
+      "background": "riverside",
+      "characters": [
+        "An",
+        "Bác Tư"
+      ],
+      "context": "Quán nước đầu hành trình. Bác Tư đặt ba mẩu lời kể xuống bàn: một chuyện tận mắt thấy, một chuyện được nghe lại, một lời đồn.",
+      "lead": "Quán nước đầu hành trình. Bác Tư đặt ba mẩu lời kể xuống bàn: một chuyện tận mắt thấy, một chuyện được nghe lại, một lời đồn.",
+      "dialogue": {
+        "speaker": "Bác Tư",
+        "text": "Cháu chép chúng giống nhau, người đọc biết tin vào đâu?"
+      },
+      "question": "An nên ghi ba loại lời kể vào nhật ký thế nào?",
+      "choices": [
+        {
+          "id": "II-01:chi-ghi-lai-loi-minh-tan-mat-nghe-chua-phan-loai-phan-con-lai",
+          "originalLabel": "A",
+          "text": "Chỉ ghi lại lời mình tận mắt nghe, chưa phân loại phần còn lại.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Có một ghi chép dùng được, vẫn thiếu hệ thống.",
+          "itemChange": {
+            "id": "II-01",
+            "title": "Quy ước ghi nguồn",
+            "state": "Cần bổ sung",
+            "description": "Có một ghi chép dùng được, vẫn thiếu hệ thống."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-01:chep-ca-ba-nhu-su-that-da-xac-nhan",
+          "originalLabel": "B",
+          "text": "Chép cả ba như sự thật đã xác nhận.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Nhật ký không chỉ rõ mức độ tin cậy.",
+          "itemChange": {
+            "id": "II-01",
+            "title": "Quy ước ghi nguồn",
+            "state": "Đang bỏ ngỏ",
+            "description": "Nhật ký không chỉ rõ mức độ tin cậy."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-01:ghi-nguoi-ke-thoi-diem-va-phan-biet-tan-mat-thay-voi-nghe-lai",
+          "originalLabel": "C",
+          "text": "Ghi người kể, thời điểm và phân biệt tận mắt thấy với nghe lại.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An tạo trang quy ước cho cả cuốn sổ.",
+          "itemChange": {
+            "id": "II-01",
+            "title": "Quy ước ghi nguồn",
+            "state": "Đã hoàn thành",
+            "description": "An tạo trang quy ước cho cả cuốn sổ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-01:viet-ten-mot-nhan-chung-noi-tieng-khong-he-co-mat-de-loi-ke-dang-tin-hon",
+          "originalLabel": "D",
+          "text": "Viết tên một nhân chứng nổi tiếng không hề có mặt để lời kể đáng tin hơn.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Nhật ký có một nguồn bị ngụy tạo.",
+          "itemChange": {
+            "id": "II-01",
+            "title": "Quy ước ghi nguồn",
+            "state": "Cần xem lại",
+            "description": "Nhật ký có một nguồn bị ngụy tạo."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-02",
+      "historyId": "history-1",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "quan-nuoc",
+          "name": "Quán nước",
+          "text": "Quán nước là một chi tiết trong cảnh hư cấu tại Bến sông Sài Gòn. Bác Tư lắng nghe những người lao động ở đây trước khi An bắt đầu trang nhật ký.",
+          "isHistorical": false
+        },
+        {
+          "id": "chiec-tui-vai",
+          "name": "Chiếc túi vải",
+          "text": "Chiếc túi vải là một chi tiết trong cảnh hư cấu tại Bến sông Sài Gòn. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-02",
+      "campaignId": "II",
+      "order": 2,
+      "type": "TH",
+      "title": "Một sự kiện, hai lớp thông tin",
+      "time": "Tháng 6 · 1911",
+      "place": "Bến cảng Sài Gòn",
+      "background": "departure",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "Cầu tàu. An có thẻ tư liệu về chuyến ra đi lịch sử và trang kể về chuyến đi hư cấu của chính mình.",
+      "lead": "Cầu tàu. An có thẻ tư liệu về chuyến ra đi lịch sử và trang kể về chuyến đi hư cấu của chính mình.",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Cậu sẽ viết hai chuyện ấy chung một dòng sao?"
+      },
+      "question": "Dữ kiện lịch sử và chuyến đi hư cấu của An nên được trình bày ra sao?",
+      "choices": [
+        {
+          "id": "II-02:dat-hai-khung-rieng-du-kien-co-nguon-va-trai-nghiem-hu-cau-cua-an",
+          "originalLabel": "A",
+          "text": "Đặt hai khung riêng: dữ kiện có nguồn và trải nghiệm hư cấu của An.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Người đọc phân biệt được lịch sử với câu chuyện.",
+          "itemChange": {
+            "id": "II-02",
+            "title": "Trang phân lớp thông tin",
+            "state": "Đã hoàn thành",
+            "description": "Người đọc phân biệt được lịch sử với câu chuyện."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-02:bo-toan-bo-thoi-gian-dia-diem-cho-do-phai-doi-chieu",
+          "originalLabel": "B",
+          "text": "Bỏ toàn bộ thời gian, địa điểm cho đỡ phải đối chiếu.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Trang sổ khó dùng để học lịch sử.",
+          "itemChange": {
+            "id": "II-02",
+            "title": "Trang phân lớp thông tin",
+            "state": "Đang bỏ ngỏ",
+            "description": "Trang sổ khó dùng để học lịch sử."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-02:viet-rang-an-chinh-la-nguoi-thuc-hien-moi-su-kien-lich-su",
+          "originalLabel": "C",
+          "text": "Viết rằng An chính là người thực hiện mọi sự kiện lịch sử.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Nhật ký đánh tráo vai trò nhân vật.",
+          "itemChange": {
+            "id": "II-02",
+            "title": "Trang phân lớp thông tin",
+            "state": "Cần xem lại",
+            "description": "Nhật ký đánh tráo vai trò nhân vật."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-02:ghi-dung-moc-lich-su-nhung-chua-dan-nguon",
+          "originalLabel": "D",
+          "text": "Ghi đúng mốc lịch sử nhưng chưa dẫn nguồn.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Dữ kiện dùng được, phần kiểm chứng còn thiếu.",
+          "itemChange": {
+            "id": "II-02",
+            "title": "Trang phân lớp thông tin",
+            "state": "Cần bổ sung",
+            "description": "Dữ kiện dùng được, phần kiểm chứng còn thiếu."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-03",
+      "historyId": "history-2",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "con-tau",
+          "name": "Con tàu",
+          "text": "Ngày 5/6/1911, Nguyễn Tất Thành rời bến cảng Sài Gòn trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.",
+          "isHistorical": true
+        },
+        {
+          "id": "cuon-so-boc-vai",
+          "name": "Cuốn sổ bọc vải",
+          "text": "Cuốn sổ bọc vải là một chi tiết trong cảnh hư cấu tại Bến cảng Sài Gòn. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-03",
+      "campaignId": "II",
+      "order": 3,
+      "type": "TH",
+      "title": "Ba lời kể ở khu cảng",
+      "time": "1912–1917",
+      "place": "Khu lao động bên kia biển",
+      "background": "workers",
+      "characters": [
+        "An",
+        "Người bạn lao động"
+      ],
+      "context": "Bàn ăn người lao động. Ba người kể những trải nghiệm khác nhau về giờ làm và tiền công.",
+      "lead": "Bàn ăn người lao động. Ba người kể những trải nghiệm khác nhau về giờ làm và tiền công.",
+      "dialogue": {
+        "speaker": "Người bạn lao động",
+        "text": "Chuyện của tôi không hoàn toàn giống chuyện của anh ấy."
+      },
+      "question": "An sẽ ghi lại ba lời kể khác nhau ở khu cảng như thế nào?",
+      "choices": [
+        {
+          "id": "II-03:sua-loi-ke-de-ca-ba-giong-het-mot-ket-luan-da-viet-san",
+          "originalLabel": "A",
+          "text": "Sửa lời kể để cả ba giống hệt một kết luận đã viết sẵn.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Hai nhân chứng không đồng ý với bản ghi.",
+          "itemChange": {
+            "id": "II-03",
+            "title": "Ba hồ sơ lời kể",
+            "state": "Cần xem lại",
+            "description": "Hai nhân chứng không đồng ý với bản ghi."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-03:giu-khac-biet-hoi-hoan-canh-tung-nguoi-va-ghi-gioi-han-cua-viec-so-sanh",
+          "originalLabel": "B",
+          "text": "Giữ khác biệt, hỏi hoàn cảnh từng người và ghi giới hạn của việc so sánh.",
+          "points": 2,
+          "correct": null,
+          "feedback": "An có ba hồ sơ có thể đối chiếu.",
+          "itemChange": {
+            "id": "II-03",
+            "title": "Ba hồ sơ lời kể",
+            "state": "Đã hoàn thành",
+            "description": "An có ba hồ sơ có thể đối chiếu."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-03:ghi-nguyen-mot-loi-ke-co-su-dong-y-cua-nguoi-noi",
+          "originalLabel": "C",
+          "text": "Ghi nguyên một lời kể có sự đồng ý của người nói.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Có tư liệu tốt nhưng phạm vi hẹp.",
+          "itemChange": {
+            "id": "II-03",
+            "title": "Ba hồ sơ lời kể",
+            "state": "Cần bổ sung",
+            "description": "Có tư liệu tốt nhưng phạm vi hẹp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-03:chon-cau-chuyen-kich-tinh-nhat-va-coi-la-dai-dien-moi-noi",
+          "originalLabel": "D",
+          "text": "Chọn câu chuyện kịch tính nhất và coi là đại diện mọi nơi.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Nhật ký vượt quá điều tư liệu cho phép kết luận.",
+          "itemChange": {
+            "id": "II-03",
+            "title": "Ba hồ sơ lời kể",
+            "state": "Đang bỏ ngỏ",
+            "description": "Nhật ký vượt quá điều tư liệu cho phép kết luận."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-04",
+      "historyId": "history-3",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "bang-ca-lam",
+          "name": "Bảng ca làm",
+          "text": "Bảng ca làm là một chi tiết trong cảnh hư cấu tại Khu lao động bên kia biển. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "ban-an-tap-the",
+          "name": "Bàn ăn tập thể",
+          "text": "Bàn ăn tập thể là một chi tiết trong cảnh hư cấu tại Khu lao động bên kia biển. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "II-01",
+          "choiceId": "II-01:ghi-nguoi-ke-thoi-diem-va-phan-biet-tan-mat-thay-voi-nghe-lai",
+          "matched": "Biểu tượng nguồn từ trang đầu được dùng lại: người kể, thời điểm, điều tận mắt thấy.",
+          "otherwise": "Trang đầu còn thiếu quy ước nguồn; Mai đưa mẫu tham khảo để An dùng khi đối chiếu ba lời kể."
+        }
+      ]
+    },
+    {
+      "id": "II-04",
+      "campaignId": "II",
+      "order": 4,
+      "type": "TH",
+      "title": "Một dòng dịch chưa chắc đúng",
+      "time": "Trước tháng 6 · 1919",
+      "place": "Căn phòng ở Pháp",
+      "background": "attic",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Pháp, trước tháng 6/1919. An đang dịch một mẩu tin để nhóm đọc chung; có một từ anh chưa hiểu.",
+      "lead": "Pháp, trước tháng 6/1919. An đang dịch một mẩu tin để nhóm đọc chung; có một từ anh chưa hiểu.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Chỗ nào chưa chắc, cứ để chúng ta cùng xem."
+      },
+      "question": "An sẽ làm gì với từ chưa hiểu trong bản dịch?",
+      "choices": [
+        {
+          "id": "II-04:bo-qua-ca-bai-vi-co-mot-tu-kho",
+          "originalLabel": "A",
+          "text": "Bỏ qua cả bài vì có một từ khó.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Nhóm chưa có bản đọc.",
+          "itemChange": {
+            "id": "II-04",
+            "title": "Thẻ từ vựng",
+            "state": "Đang bỏ ngỏ",
+            "description": "Nhóm chưa có bản đọc."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-04:dich-phan-hieu-duoc-danh-dau-phan-con-cho-kiem-tra",
+          "originalLabel": "B",
+          "text": "Dịch phần hiểu được, đánh dấu phần còn chờ kiểm tra.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Có bản nháp trung thực nhưng chưa đầy đủ.",
+          "itemChange": {
+            "id": "II-04",
+            "title": "Thẻ từ vựng",
+            "state": "Cần bổ sung",
+            "description": "Có bản nháp trung thực nhưng chưa đầy đủ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-04:doan-nghia-roi-noi-minh-da-kiem-tra",
+          "originalLabel": "C",
+          "text": "Đoán nghĩa rồi nói mình đã kiểm tra.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một nhận định sai lan vào ghi chép chung.",
+          "itemChange": {
+            "id": "II-04",
+            "title": "Thẻ từ vựng",
+            "state": "Cần xem lại",
+            "description": "Một nhận định sai lan vào ghi chép chung."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-04:tra-cuu-hoi-nguoi-doc-duoc-van-ban-va-giu-chu-giai-tu-kho",
+          "originalLabel": "D",
+          "text": "Tra cứu, hỏi người đọc được văn bản và giữ chú giải từ khó.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Nhóm có bản đọc được kiểm tra.",
+          "itemChange": {
+            "id": "II-04",
+            "title": "Thẻ từ vựng",
+            "state": "Đã hoàn thành",
+            "description": "Nhóm có bản đọc được kiểm tra."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-05",
+      "historyId": "history-4",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "ngon-den",
+          "name": "Ngọn đèn",
+          "text": "Ngọn đèn là một chi tiết trong cảnh hư cấu tại Căn phòng ở Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "sach-hoc-tieng",
+          "name": "Sách học tiếng",
+          "text": "Sách học tiếng là một chi tiết trong cảnh hư cấu tại Căn phòng ở Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-05",
+      "campaignId": "II",
+      "order": 5,
+      "type": "KT",
+      "title": "Tiêu đề nào không làm sai tư liệu?",
+      "time": "Tháng 6 · 1919",
+      "place": "Bàn đọc tại Pháp",
+      "background": "petition",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Bàn biên soạn mục năm 1919. An phải đặt một tiêu đề mô tả bản Yêu sách.",
+      "lead": "Bàn biên soạn mục năm 1919. An phải đặt một tiêu đề mô tả bản Yêu sách.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Tiêu đề ngắn, nhưng không được viết một kết quả chưa xảy ra."
+      },
+      "question": "Tiêu đề nào mô tả đúng bản Yêu sách năm 1919?",
+      "choices": [
+        {
+          "id": "II-05:viet-nam-gianh-doc-lap-ngay-tai-versailles",
+          "originalLabel": "A",
+          "text": "Việt Nam giành độc lập ngay tại Versailles.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm kết quả.",
+          "itemChange": {
+            "id": "II-05",
+            "title": "Tiêu đề mục 1919",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm kết quả."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-05:nhung-yeu-cau-ve-quyen-tu-do-dan-chu-va-binh-dang-cua-nhan-dan-an-nam",
+          "originalLabel": "B",
+          "text": "Những yêu cầu về quyền tự do, dân chủ và bình đẳng của nhân dân An Nam.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Những yêu cầu về quyền tự do, dân chủ và bình đẳng của nhân dân An Nam.",
+          "itemChange": {
+            "id": "II-05",
+            "title": "Tiêu đề mục 1919",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Những yêu cầu về quyền tự do, dân chủ và bình đẳng của nhân dân An Nam."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-05:dai-hoi-thanh-lap-dang-cong-san-phap-nam-1919",
+          "originalLabel": "C",
+          "text": "Đại hội thành lập Đảng Cộng sản Pháp năm 1919.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm sự kiện và mốc thời gian.",
+          "itemChange": {
+            "id": "II-05",
+            "title": "Tiêu đề mục 1919",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm sự kiện và mốc thời gian."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-05:ban-dieu-le-cua-hoi-viet-nam-cach-mang-thanh-nien",
+          "originalLabel": "D",
+          "text": "Bản điều lệ của Hội Việt Nam Cách mạng Thanh niên.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm loại văn bản và giai đoạn.",
+          "itemChange": {
+            "id": "II-05",
+            "title": "Tiêu đề mục 1919",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm loại văn bản và giai đoạn."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-06",
+      "historyId": "history-5",
+      "explanation": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+      "hotspots": [
+        {
+          "id": "ban-yeu-sach",
+          "name": "Bản Yêu sách",
+          "text": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+          "isHistorical": true
+        },
+        {
+          "id": "ban-do-versailles",
+          "name": "Bản đồ Versailles",
+          "text": "Bản đồ Versailles là một chi tiết trong cảnh hư cấu tại Bàn đọc tại Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-06",
+      "campaignId": "II",
+      "order": 6,
+      "type": "KT",
+      "title": "Tấm thẻ bị xếp sai",
+      "time": "Tháng 7 · 1920",
+      "place": "Phòng đọc tại Pháp",
+      "background": "july",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Trang sổ về Luận cương của Lênin đang nằm giữa bốn ngăn thời gian.",
+      "lead": "Trang sổ về Luận cương của Lênin đang nằm giữa bốn ngăn thời gian.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Muốn hiểu hành trình, trước tiên phải đặt đúng thời điểm."
+      },
+      "question": "Mốc nào gắn với việc Nguyễn Ái Quốc đọc bản Luận cương về vấn đề dân tộc và thuộc địa?",
+      "choices": [
+        {
+          "id": "II-06:ngay-ra-di-nam-1911",
+          "originalLabel": "A",
+          "text": "Ngày ra đi năm 1911.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Phương án “Ngày ra đi năm 1911.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích.",
+          "itemChange": {
+            "id": "II-06",
+            "title": "Thẻ thời gian 1920",
+            "state": "Cần ôn lại",
+            "description": "Phương án “Ngày ra đi năm 1911.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "II-06:hoi-nghi-versailles-nam-1919",
+          "originalLabel": "B",
+          "text": "Hội nghị Versailles năm 1919.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Phương án “Hội nghị Versailles năm 1919.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích.",
+          "itemChange": {
+            "id": "II-06",
+            "title": "Thẻ thời gian 1920",
+            "state": "Cần ôn lại",
+            "description": "Phương án “Hội nghị Versailles năm 1919.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "II-06:ngay-ra-so-dau-bao-thanh-nien-nam-1925",
+          "originalLabel": "C",
+          "text": "Ngày ra số đầu báo Thanh niên năm 1925.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Phương án “Ngày ra số đầu báo Thanh niên năm 1925.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích.",
+          "itemChange": {
+            "id": "II-06",
+            "title": "Thẻ thời gian 1920",
+            "state": "Cần ôn lại",
+            "description": "Phương án “Ngày ra số đầu báo Thanh niên năm 1925.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "II-06:thang-7-1920",
+          "originalLabel": "D",
+          "text": "Tháng 7/1920.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Tháng 7/1920.",
+          "itemChange": {
+            "id": "II-06",
+            "title": "Thẻ thời gian 1920",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Tháng 7/1920."
+          },
+          "milestone": "K6"
+        }
+      ],
+      "nextSceneId": "II-07",
+      "historyId": "history-6",
+      "explanation": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+      "hotspots": [
+        {
+          "id": "trang-bao",
+          "name": "Trang báo",
+          "text": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+          "isHistorical": true
+        },
+        {
+          "id": "cac-mau-ghi-chu",
+          "name": "Các mẩu ghi chú",
+          "text": "Các mẩu ghi chú là một chi tiết trong cảnh hư cấu tại Phòng đọc tại Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-07",
+      "campaignId": "II",
+      "order": 7,
+      "type": "KT",
+      "title": "Hai Đảng, hai mốc",
+      "time": "Tháng 12 · 1920",
+      "place": "Tin từ Tours · Pháp",
+      "background": "tours",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Bàn sắp dòng thời gian tại mục Tours. An thấy hai thẻ: Đảng Cộng sản Pháp và Đảng Cộng sản Việt Nam.",
+      "lead": "Bàn sắp dòng thời gian tại mục Tours. An thấy hai thẻ: Đảng Cộng sản Pháp và Đảng Cộng sản Việt Nam.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Giống nhau một phần tên gọi không có nghĩa là cùng một sự kiện."
+      },
+      "question": "Thẻ nào thuộc sự kiện Tours tháng 12/1920?",
+      "choices": [
+        {
+          "id": "II-07:nguyen-ai-quoc-tham-gia-sang-lap-dang-cong-san-phap",
+          "originalLabel": "A",
+          "text": "Nguyễn Ái Quốc tham gia sáng lập Đảng Cộng sản Pháp.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Nguyễn Ái Quốc tham gia sáng lập Đảng Cộng sản Pháp.",
+          "itemChange": {
+            "id": "II-07",
+            "title": "Hai mốc thành lập Đảng",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Nguyễn Ái Quốc tham gia sáng lập Đảng Cộng sản Pháp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-07:nguyen-ai-quoc-chu-tri-hoi-nghi-thanh-lap-dang-cong-san-viet-nam",
+          "originalLabel": "B",
+          "text": "Nguyễn Ái Quốc chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai mốc.",
+          "itemChange": {
+            "id": "II-07",
+            "title": "Hai mốc thành lập Đảng",
+            "state": "Cần ôn lại",
+            "description": "Sai mốc."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-07:bao-thanh-nien-ra-so-dau-tai-quang-chau",
+          "originalLabel": "C",
+          "text": "Báo Thanh niên ra số đầu tại Quảng Châu.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai sự kiện.",
+          "itemChange": {
+            "id": "II-07",
+            "title": "Hai mốc thành lập Đảng",
+            "state": "Cần ôn lại",
+            "description": "Sai sự kiện."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-07:duong-kach-menh-duoc-xuat-ban",
+          "originalLabel": "D",
+          "text": "Đường Kách mệnh được xuất bản.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai sự kiện.",
+          "itemChange": {
+            "id": "II-07",
+            "title": "Hai mốc thành lập Đảng",
+            "state": "Cần ôn lại",
+            "description": "Sai sự kiện."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-08",
+      "historyId": "history-7",
+      "explanation": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+      "hotspots": [
+        {
+          "id": "ban-do-tours",
+          "name": "Bản đồ Tours",
+          "text": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "isHistorical": true
+        },
+        {
+          "id": "bang-doi-chieu-nien-dai",
+          "name": "Bảng đối chiếu niên đại",
+          "text": "Bảng đối chiếu niên đại là một chi tiết trong cảnh hư cấu tại Tin từ Tours · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-08",
+      "campaignId": "II",
+      "order": 8,
+      "type": "TH",
+      "title": "Lời trích và lời của mình",
+      "time": "Năm 1922",
+      "place": "Bàn biên soạn · Pháp",
+      "background": "press",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "An đang làm một bản đọc nội bộ sau khi tìm hiểu báo Người cùng khổ. Bản nháp có lời của một người bạn và nhận xét riêng của An.",
+      "lead": "An đang làm một bản đọc nội bộ sau khi tìm hiểu báo Người cùng khổ. Bản nháp có lời của một người bạn và nhận xét riêng của An.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Đoạn nào người ấy nói, đoạn nào cậu rút ra?"
+      },
+      "question": "An nên phân biệt lời trích và nhận xét của mình thế nào?",
+      "choices": [
+        {
+          "id": "II-08:giu-nguyen-loi-ke-nhung-chua-giai-thich-boi-canh",
+          "originalLabel": "A",
+          "text": "Giữ nguyên lời kể, nhưng chưa giải thích bối cảnh.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Bản đọc trung thực, thông tin chưa đủ.",
+          "itemChange": {
+            "id": "II-08",
+            "title": "Bản chú giải lời trích",
+            "state": "Cần bổ sung",
+            "description": "Bản đọc trung thực, thông tin chưa đủ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-08:danh-dau-loi-trich-ghi-nguoi-noi-va-tach-nhan-xet-cua-minh",
+          "originalLabel": "B",
+          "text": "Đánh dấu lời trích, ghi người nói và tách nhận xét của mình.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Người đọc có thể kiểm tra cách diễn giải.",
+          "itemChange": {
+            "id": "II-08",
+            "title": "Bản chú giải lời trích",
+            "state": "Đã hoàn thành",
+            "description": "Người đọc có thể kiểm tra cách diễn giải."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-08:bo-moi-dau-phan-biet-de-van-ban-troi-chay-hon",
+          "originalLabel": "C",
+          "text": "Bỏ mọi dấu phân biệt để văn bản trôi chảy hơn.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Ranh giới nguồn và nhận xét bị mờ.",
+          "itemChange": {
+            "id": "II-08",
+            "title": "Bản chú giải lời trích",
+            "state": "Đang bỏ ngỏ",
+            "description": "Ranh giới nguồn và nhận xét bị mờ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-08:bien-nhan-xet-rieng-thanh-mot-cau-noi-cua-nhan-vat-lich-su",
+          "originalLabel": "D",
+          "text": "Biến nhận xét riêng thành một câu nói của nhân vật lịch sử.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một lời nói hư cấu bị gán sai tác giả.",
+          "itemChange": {
+            "id": "II-08",
+            "title": "Bản chú giải lời trích",
+            "state": "Cần xem lại",
+            "description": "Một lời nói hư cấu bị gán sai tác giả."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-09",
+      "historyId": "history-8",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "ban-nhap-noi-bo",
+          "name": "Bản nháp nội bộ",
+          "text": "Bản nháp nội bộ là một chi tiết trong cảnh hư cấu tại Bàn biên soạn · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "lo-muc",
+          "name": "Lọ mực",
+          "text": "Lọ mực là một chi tiết trong cảnh hư cấu tại Bàn biên soạn · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "II-04",
+          "choiceId": "II-04:doan-nghia-roi-noi-minh-da-kiem-tra",
+          "matched": "Mai chỉ vào từ từng dịch bằng phỏng đoán: “Ta cần kiểm lại bản dịch cũ trước khi trích.”",
+          "otherwise": "An mở lại thẻ từ khó; phần dịch đã kiểm tra và phần chờ đối chiếu được ghi riêng."
+        }
+      ]
+    },
+    {
+      "id": "II-09",
+      "campaignId": "II",
+      "order": 9,
+      "type": "TH",
+      "title": "Bảng so sánh còn một cột trống",
+      "time": "1923–1924",
+      "place": "Không gian học tập · Nga Xô viết",
+      "background": "study",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Không gian nghiên cứu giai đoạn 1923–1924. An có bảng “kinh nghiệm đã đọc – điều kiện quê hương – điều cần khảo sát”.",
+      "lead": "Không gian nghiên cứu giai đoạn 1923–1924. An có bảng “kinh nghiệm đã đọc – điều kiện quê hương – điều cần khảo sát”.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Cột cuối trống vì chúng ta đã biết hết, hay vì chưa hỏi đủ?"
+      },
+      "question": "An sẽ xử lý cột “điều cần khảo sát” còn trống ra sao?",
+      "choices": [
+        {
+          "id": "II-09:xoa-cot-cuoi-de-bang-trong-hoan-chinh",
+          "originalLabel": "A",
+          "text": "Xóa cột cuối để bảng trông hoàn chỉnh.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Các câu hỏi thực tế bị bỏ sót.",
+          "itemChange": {
+            "id": "II-09",
+            "title": "Bảng so sánh",
+            "state": "Đang bỏ ngỏ",
+            "description": "Các câu hỏi thực tế bị bỏ sót."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-09:dien-nhung-con-so-tu-nghi-ra-cho-du-trang",
+          "originalLabel": "B",
+          "text": "Điền những con số tự nghĩ ra cho đủ trang.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Bảng có dữ liệu không có căn cứ.",
+          "itemChange": {
+            "id": "II-09",
+            "title": "Bảng so sánh",
+            "state": "Cần xem lại",
+            "description": "Bảng có dữ liệu không có căn cứ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-09:doi-chieu-nguon-va-giu-ro-nhung-diem-chua-the-ket-luan",
+          "originalLabel": "C",
+          "text": "Đối chiếu nguồn và giữ rõ những điểm chưa thể kết luận.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Bảng giúp nhóm biết cần tìm hiểu gì tiếp.",
+          "itemChange": {
+            "id": "II-09",
+            "title": "Bảng so sánh",
+            "state": "Đã hoàn thành",
+            "description": "Bảng giúp nhóm biết cần tìm hiểu gì tiếp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-09:hoan-thanh-phan-tom-tat-ly-luan-de-phan-lien-he-o-trang-thai-nhap",
+          "originalLabel": "D",
+          "text": "Hoàn thành phần tóm tắt lý luận, để phần liên hệ ở trạng thái nháp.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Có nền tảng nhưng nhiệm vụ chưa trọn vẹn.",
+          "itemChange": {
+            "id": "II-09",
+            "title": "Bảng so sánh",
+            "state": "Cần bổ sung",
+            "description": "Có nền tảng nhưng nhiệm vụ chưa trọn vẹn."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-10",
+      "historyId": "history-9",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "bang-so-sanh",
+          "name": "Bảng so sánh",
+          "text": "Bảng so sánh là một chi tiết trong cảnh hư cấu tại Không gian học tập · Nga Xô viết. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "ghi-chu-que-huong",
+          "name": "Ghi chú quê hương",
+          "text": "Ghi chú quê hương là một chi tiết trong cảnh hư cấu tại Không gian học tập · Nga Xô viết. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-10",
+      "campaignId": "II",
+      "order": 10,
+      "type": "KT",
+      "title": "Dòng ngày tháng dưới tờ báo",
+      "time": "Năm 1925",
+      "place": "Nhóm học tập · Quảng Châu",
+      "background": "classroom",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Quảng Châu. An hoàn thành trang giới thiệu báo Thanh niên.",
+      "lead": "Quảng Châu. An hoàn thành trang giới thiệu báo Thanh niên.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Hãy chọn mốc ra số đầu trước khi khóa trang này."
+      },
+      "question": "Báo Thanh niên ra số đầu vào ngày nào?",
+      "choices": [
+        {
+          "id": "II-10:5-6-1911",
+          "originalLabel": "A",
+          "text": "5/6/1911.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm với mốc ra đi.",
+          "itemChange": {
+            "id": "II-10",
+            "title": "Trang báo 1925",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm với mốc ra đi."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-10:18-6-1919",
+          "originalLabel": "B",
+          "text": "18/6/1919.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm với bản Yêu sách.",
+          "itemChange": {
+            "id": "II-10",
+            "title": "Trang báo 1925",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm với bản Yêu sách."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-10:3-2-1930",
+          "originalLabel": "C",
+          "text": "3/2/1930.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm với ngày kỷ niệm thành lập Đảng.",
+          "itemChange": {
+            "id": "II-10",
+            "title": "Trang báo 1925",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm với ngày kỷ niệm thành lập Đảng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-10:21-6-1925",
+          "originalLabel": "D",
+          "text": "21/6/1925.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: 21/6/1925.",
+          "itemChange": {
+            "id": "II-10",
+            "title": "Trang báo 1925",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: 21/6/1925."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-11",
+      "historyId": "history-10",
+      "explanation": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+      "hotspots": [
+        {
+          "id": "bao-thanh-nien",
+          "name": "Báo Thanh niên",
+          "text": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+          "isHistorical": true
+        },
+        {
+          "id": "bang-hoc-tap",
+          "name": "Bảng học tập",
+          "text": "Bảng học tập là một chi tiết trong cảnh hư cấu tại Nhóm học tập · Quảng Châu. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "II-11",
+      "campaignId": "II",
+      "order": 11,
+      "type": "TH",
+      "title": "Giới thiệu một cuốn sách",
+      "time": "Năm 1927",
+      "place": "Bàn đọc · Quảng Châu",
+      "background": "book",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "An viết lời giới thiệu cho phần tìm hiểu Đường Kách mệnh của nhóm.",
+      "lead": "An viết lời giới thiệu cho phần tìm hiểu Đường Kách mệnh của nhóm.",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Người chưa đọc cuốn sách cần biết điều gì đầu tiên?"
+      },
+      "question": "An sẽ giới thiệu Đường Kách mệnh với người chưa đọc như thế nào?",
+      "choices": [
+        {
+          "id": "II-11:neu-dung-tac-gia-thoi-diem-nguon-goc-bai-giang-va-vai-tro-cua-tac-pham-ghi-nguon",
+          "originalLabel": "A",
+          "text": "Nêu đúng tác giả, thời điểm, nguồn gốc bài giảng và vai trò của tác phẩm; ghi nguồn.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Trang giới thiệu đầy đủ, có thể kiểm chứng.",
+          "itemChange": {
+            "id": "II-11",
+            "title": "Trang giới thiệu sách",
+            "state": "Đã hoàn thành",
+            "description": "Trang giới thiệu đầy đủ, có thể kiểm chứng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-11:ghi-dung-ten-sach-tac-gia-va-nam-xuat-ban",
+          "originalLabel": "B",
+          "text": "Ghi đúng tên sách, tác giả và năm xuất bản.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Trang đúng thông tin cơ bản nhưng chưa giải thích ý nghĩa.",
+          "itemChange": {
+            "id": "II-11",
+            "title": "Trang giới thiệu sách",
+            "state": "Cần bổ sung",
+            "description": "Trang đúng thông tin cơ bản nhưng chưa giải thích ý nghĩa."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-11:gan-cuon-sach-cho-an-de-cuon-nhat-ky-hap-dan-hon",
+          "originalLabel": "C",
+          "text": "Gán cuốn sách cho An để cuốn nhật ký hấp dẫn hơn.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Trang giới thiệu sai tác giả.",
+          "itemChange": {
+            "id": "II-11",
+            "title": "Trang giới thiệu sách",
+            "state": "Cần xem lại",
+            "description": "Trang giới thiệu sai tác giả."
+          },
+          "milestone": null
+        },
+        {
+          "id": "II-11:chi-mo-ta-bia-va-mau-giay",
+          "originalLabel": "D",
+          "text": "Chỉ mô tả bìa và màu giấy.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Người đọc chưa hiểu nội dung học tập.",
+          "itemChange": {
+            "id": "II-11",
+            "title": "Trang giới thiệu sách",
+            "state": "Đang bỏ ngỏ",
+            "description": "Người đọc chưa hiểu nội dung học tập."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "II-12",
+      "historyId": "history-11",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "duong-kach-menh",
+          "name": "Đường Kách mệnh",
+          "text": "Đường Kách mệnh xuất bản năm 1927, tập hợp các bài giảng của Nguyễn Ái Quốc trong công tác huấn luyện cán bộ tại Quảng Châu.",
+          "isHistorical": true
+        },
+        {
+          "id": "vo-bai-hoc",
+          "name": "Vở bài học",
+          "text": "Vở bài học là một chi tiết trong cảnh hư cấu tại Bàn đọc · Quảng Châu. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "II-08",
+          "choiceId": "II-08:bien-nhan-xet-rieng-thanh-mot-cau-noi-cua-nhan-vat-lich-su",
+          "matched": "Mai nhắc An sửa lời đã gán sai tác giả trong bản đọc trước rồi mới hoàn thiện trang giới thiệu.",
+          "otherwise": "Cách tách lời trích và nhận xét được dùng lại khi ghi đúng tác giả của cuốn sách."
+        }
+      ]
+    },
+    {
+      "id": "II-12",
+      "campaignId": "II",
+      "order": 12,
+      "type": "KT",
+      "title": "Dòng kết của cuốn nhật ký",
+      "time": "Đầu năm · 1930",
+      "place": "Phòng đọc tin · Hồng Kông trên bản đồ",
+      "background": "reunion",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Đầu năm 1930. An viết đoạn tổng kết giai đoạn đã theo dõi.",
+      "lead": "Đầu năm 1930. An viết đoạn tổng kết giai đoạn đã theo dõi.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Đừng để trang cuối phủ nhận cả quá trình trong những trang trước."
+      },
+      "question": "Nhận định nào đúng về quá trình dẫn tới sự ra đời của Đảng Cộng sản Việt Nam?",
+      "choices": [
+        {
+          "id": "II-12:chi-can-xuat-ban-mot-to-bao-la-tu-dong-co-mot-chinh-dang",
+          "originalLabel": "A",
+          "text": "Chỉ cần xuất bản một tờ báo là tự động có một chính đảng.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; giản lược quá trình chuẩn bị.",
+          "itemChange": {
+            "id": "II-12",
+            "title": "Trang tổng kết",
+            "state": "Cần ôn lại",
+            "description": "Sai; giản lược quá trình chuẩn bị."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "II-12:co-qua-trinh-chuan-bi-ve-tu-tuong-chinh-tri-va-to-chuc-gan-voi-hoat-dong-cua-nguyen-ai-quoc-va-su-phat-trien-cua-cac-phong-trao",
+          "originalLabel": "B",
+          "text": "Có quá trình chuẩn bị về tư tưởng, chính trị và tổ chức, gắn với hoạt động của Nguyễn Ái Quốc và sự phát triển của các phong trào.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Có quá trình chuẩn bị về tư tưởng, chính trị và tổ chức, gắn với hoạt động của Nguyễn Ái Quốc và sự phát triển của các phong trào.",
+          "itemChange": {
+            "id": "II-12",
+            "title": "Trang tổng kết",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Có quá trình chuẩn bị về tư tưởng, chính trị và tổ chức, gắn với hoạt động của Nguyễn Ái Quốc và sự phát triển của các phong trào."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "II-12:hoi-nghi-versailles-nam-1919-da-truc-tiep-thanh-lap-dang-cong-san-viet-nam",
+          "originalLabel": "C",
+          "text": "Hội nghị Versailles năm 1919 đã trực tiếp thành lập Đảng Cộng sản Việt Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai mốc và sự kiện.",
+          "itemChange": {
+            "id": "II-12",
+            "title": "Trang tổng kết",
+            "state": "Cần ôn lại",
+            "description": "Sai mốc và sự kiện."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "II-12:moc-1930-co-nghia-moi-muc-tieu-giai-phong-dan-toc-da-hoan-thanh-ngay",
+          "originalLabel": "D",
+          "text": "Mốc 1930 có nghĩa mọi mục tiêu giải phóng dân tộc đã hoàn thành ngay.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm bước ngoặt với kết quả cuối cùng.",
+          "itemChange": {
+            "id": "II-12",
+            "title": "Trang tổng kết",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm bước ngoặt với kết quả cuối cùng."
+          },
+          "milestone": "K12"
+        }
+      ],
+      "nextSceneId": null,
+      "historyId": "history-12",
+      "explanation": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+      "hotspots": [
+        {
+          "id": "dong-thoi-gian",
+          "name": "Dòng thời gian",
+          "text": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+          "isHistorical": true
+        },
+        {
+          "id": "ban-do-hong-kong",
+          "name": "Bản đồ Hồng Kông",
+          "text": "Bản đồ Hồng Kông là một chi tiết trong cảnh hư cấu tại Phòng đọc tin · Hồng Kông trên bản đồ. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-01",
+      "campaignId": "III",
+      "order": 1,
+      "type": "TH",
+      "title": "Hai lý do để lên đường",
+      "time": "Trước tháng 6 · 1911",
+      "place": "Bến sông Sài Gòn",
+      "background": "riverside",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "Quán nước đầu hành trình. An muốn tìm hiểu xã hội; Lâm lo tiền gửi về gia đình.",
+      "lead": "Quán nước đầu hành trình. An muốn tìm hiểu xã hội; Lâm lo tiền gửi về gia đình.",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Nếu chỉ nói đến một việc lớn, ai sẽ lo bữa ăn trước mắt?"
+      },
+      "question": "An sẽ trao đổi với Lâm về mưu sinh và việc học ra sao?",
+      "choices": [
+        {
+          "id": "III-01:giup-lam-sap-xep-cong-viec-truoc-mat-chua-trao-doi-muc-dich-lau-dai",
+          "originalLabel": "A",
+          "text": "Giúp Lâm sắp xếp công việc trước mắt, chưa trao đổi mục đích lâu dài.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Có sự hỗ trợ nhưng chưa hình thành việc chung.",
+          "itemChange": {
+            "id": "III-01",
+            "title": "Thỏa thuận với Lâm",
+            "state": "Cần bổ sung",
+            "description": "Có sự hỗ trợ nhưng chưa hình thành việc chung."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-01:lang-nghe-hoan-canh-cua-lam-va-cung-tim-cach-vua-muu-sinh-vua-giu-viec-hoc",
+          "originalLabel": "B",
+          "text": "Lắng nghe hoàn cảnh của Lâm và cùng tìm cách vừa mưu sinh vừa giữ việc học.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Hai người có một thỏa thuận có thể thực hiện.",
+          "itemChange": {
+            "id": "III-01",
+            "title": "Thỏa thuận với Lâm",
+            "state": "Đã hoàn thành",
+            "description": "Hai người có một thỏa thuận có thể thực hiện."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-01:tranh-noi-chuyen-vi-muc-dich-hai-nguoi-khac-nhau",
+          "originalLabel": "C",
+          "text": "Tránh nói chuyện vì mục đích hai người khác nhau.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Không có kế hoạch phối hợp.",
+          "itemChange": {
+            "id": "III-01",
+            "title": "Thỏa thuận với Lâm",
+            "state": "Đang bỏ ngỏ",
+            "description": "Không có kế hoạch phối hợp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-01:che-trach-lam-truoc-moi-nguoi-vi-lo-cho-gia-dinh",
+          "originalLabel": "D",
+          "text": "Chê trách Lâm trước mọi người vì lo cho gia đình.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Lâm mất tin cậy, ngừng chia sẻ.",
+          "itemChange": {
+            "id": "III-01",
+            "title": "Thỏa thuận với Lâm",
+            "state": "Cần xem lại",
+            "description": "Lâm mất tin cậy, ngừng chia sẻ."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-02",
+      "historyId": "history-1",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "quan-nuoc",
+          "name": "Quán nước",
+          "text": "Quán nước là một chi tiết trong cảnh hư cấu tại Bến sông Sài Gòn. Bác Tư lắng nghe những người lao động ở đây trước khi An bắt đầu trang nhật ký.",
+          "isHistorical": false
+        },
+        {
+          "id": "chiec-tui-vai",
+          "name": "Chiếc túi vải",
+          "text": "Chiếc túi vải là một chi tiết trong cảnh hư cấu tại Bến sông Sài Gòn. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-02",
+      "campaignId": "III",
+      "order": 2,
+      "type": "TH",
+      "title": "Ai giữ lời hẹn?",
+      "time": "Tháng 6 · 1911",
+      "place": "Bến cảng Sài Gòn",
+      "background": "departure",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "Bến cảng. An và Lâm cần chia thời gian lao động, học tiếng và ghi chép trong chuyến đi.",
+      "lead": "Bến cảng. An và Lâm cần chia thời gian lao động, học tiếng và ghi chép trong chuyến đi.",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Nếu một người mệt hoặc bận ca, việc học sẽ ra sao?"
+      },
+      "question": "An và Lâm nên chia việc và giữ lời hẹn thế nào?",
+      "choices": [
+        {
+          "id": "III-02:khong-ban-truoc-doi-co-chuyen-roi-xu-ly",
+          "originalLabel": "A",
+          "text": "Không bàn trước, đợi có chuyện rồi xử lý.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Kế hoạch dễ bị bỏ quên.",
+          "itemChange": {
+            "id": "III-02",
+            "title": "Lịch học và lao động",
+            "state": "Đang bỏ ngỏ",
+            "description": "Kế hoạch dễ bị bỏ quên."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-02:hua-minh-se-lam-het-de-nguoi-khac-khong-can-tham-gia",
+          "originalLabel": "B",
+          "text": "Hứa mình sẽ làm hết để người khác không cần tham gia.",
+          "points": -1,
+          "correct": null,
+          "feedback": "An sớm quá tải, lời hẹn bị bỏ dở.",
+          "itemChange": {
+            "id": "III-02",
+            "title": "Lịch học và lao động",
+            "state": "Cần xem lại",
+            "description": "An sớm quá tải, lời hẹn bị bỏ dở."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-02:chia-viec-ro-nhung-chua-co-cach-thay-nhau-khi-ban",
+          "originalLabel": "C",
+          "text": "Chia việc rõ nhưng chưa có cách thay nhau khi bận.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Công việc tiến triển, dễ ngắt quãng.",
+          "itemChange": {
+            "id": "III-02",
+            "title": "Lịch học và lao động",
+            "state": "Cần bổ sung",
+            "description": "Công việc tiến triển, dễ ngắt quãng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-02:chia-viec-vua-suc-va-thong-nhat-cach-bao-lai-thay-nhau-khi-can",
+          "originalLabel": "D",
+          "text": "Chia việc vừa sức và thống nhất cách báo lại, thay nhau khi cần.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Hai người có lịch sinh hoạt bền vững hơn.",
+          "itemChange": {
+            "id": "III-02",
+            "title": "Lịch học và lao động",
+            "state": "Đã hoàn thành",
+            "description": "Hai người có lịch sinh hoạt bền vững hơn."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-03",
+      "historyId": "history-2",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "con-tau",
+          "name": "Con tàu",
+          "text": "Ngày 5/6/1911, Nguyễn Tất Thành rời bến cảng Sài Gòn trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.",
+          "isHistorical": true
+        },
+        {
+          "id": "cuon-so-boc-vai",
+          "name": "Cuốn sổ bọc vải",
+          "text": "Cuốn sổ bọc vải là một chi tiết trong cảnh hư cấu tại Bến cảng Sài Gòn. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "III-01",
+          "choiceId": "III-01:che-trach-lam-truoc-moi-nguoi-vi-lo-cho-gia-dinh",
+          "matched": "Lâm chỉ nhận một việc nhỏ để thử lại sự tin cậy sau cuộc trò chuyện ở quán nước.",
+          "otherwise": "Lâm sẵn sàng trao đổi công việc; tờ hẹn ở quán nước nằm cạnh lịch sinh hoạt mới."
+        }
+      ]
+    },
+    {
+      "id": "III-03",
+      "campaignId": "III",
+      "order": 3,
+      "type": "TH",
+      "title": "Người bạn nói một tiếng khác",
+      "time": "1912–1917",
+      "place": "Khu lao động bên kia biển",
+      "background": "workers",
+      "characters": [
+        "An",
+        "Người bạn"
+      ],
+      "context": "Khu lao động bên cảng. Một người bạn mới muốn tham gia bàn đọc nhưng chưa hiểu tiếng của nhóm.",
+      "lead": "Khu lao động bên cảng. Một người bạn mới muốn tham gia bàn đọc nhưng chưa hiểu tiếng của nhóm.",
+      "dialogue": {
+        "speaker": "Người bạn",
+        "text": "Tôi không hiểu hết, nhưng tôi có một chuyện muốn kể."
+      },
+      "question": "An sẽ giúp người bạn mới tham gia bàn đọc bằng cách nào?",
+      "choices": [
+        {
+          "id": "III-03:dung-cau-ngan-hinh-ve-va-nguoi-ho-tro-ngon-ngu-de-cung-trao-doi",
+          "originalLabel": "A",
+          "text": "Dùng câu ngắn, hình vẽ và người hỗ trợ ngôn ngữ để cùng trao đổi.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Người bạn tham gia được và bổ sung một góc nhìn mới.",
+          "itemChange": {
+            "id": "III-03",
+            "title": "Ghế tại bàn đọc",
+            "state": "Đã hoàn thành",
+            "description": "Người bạn tham gia được và bổ sung một góc nhìn mới."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-03:tiep-tuc-noi-that-nhanh-nhu-cu",
+          "originalLabel": "B",
+          "text": "Tiếp tục nói thật nhanh như cũ.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Người bạn không theo kịp buổi đọc.",
+          "itemChange": {
+            "id": "III-03",
+            "title": "Ghế tại bàn đọc",
+            "state": "Đang bỏ ngỏ",
+            "description": "Người bạn không theo kịp buổi đọc."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-03:dua-mot-ban-tom-tat-don-gian-hen-nghe-chuyen-vao-dip-sau",
+          "originalLabel": "C",
+          "text": "Đưa một bản tóm tắt đơn giản, hẹn nghe chuyện vào dịp sau.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Có hỗ trợ bước đầu, phần trao đổi còn thiếu.",
+          "itemChange": {
+            "id": "III-03",
+            "title": "Ghế tại bàn đọc",
+            "state": "Cần bổ sung",
+            "description": "Có hỗ trợ bước đầu, phần trao đổi còn thiếu."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-03:quy-ket-rang-nguoi-ay-khong-hieu-vi-khong-dang-duoc-tham-gia",
+          "originalLabel": "D",
+          "text": "Quy kết rằng người ấy không hiểu vì không đáng được tham gia.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một thành viên khác phản đối và rời nhóm.",
+          "itemChange": {
+            "id": "III-03",
+            "title": "Ghế tại bàn đọc",
+            "state": "Cần xem lại",
+            "description": "Một thành viên khác phản đối và rời nhóm."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-04",
+      "historyId": "history-3",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "bang-ca-lam",
+          "name": "Bảng ca làm",
+          "text": "Bảng ca làm là một chi tiết trong cảnh hư cấu tại Khu lao động bên kia biển. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "ban-an-tap-the",
+          "name": "Bàn ăn tập thể",
+          "text": "Bàn ăn tập thể là một chi tiết trong cảnh hư cấu tại Khu lao động bên kia biển. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-04",
+      "campaignId": "III",
+      "order": 4,
+      "type": "TH",
+      "title": "Buổi đọc đầu tiên",
+      "time": "Trước tháng 6 · 1919",
+      "place": "Căn phòng ở Pháp",
+      "background": "attic",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Căn phòng của Mai, trước tháng 6/1919. Người đọc tốt muốn đi nhanh; người mới học cần thời gian.",
+      "lead": "Căn phòng của Mai, trước tháng 6/1919. Người đọc tốt muốn đi nhanh; người mới học cần thời gian.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Chúng ta muốn đọc hết một tờ báo, hay muốn mọi người cùng hiểu được điều đang đọc?"
+      },
+      "question": "Làm thế nào để buổi đọc có sự tham gia của cả nhóm?",
+      "choices": [
+        {
+          "id": "III-04:de-nguoi-doc-nhanh-che-gieu-nguoi-moi-hoc",
+          "originalLabel": "A",
+          "text": "Để người đọc nhanh chế giễu người mới học.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Hai người ngại quay lại buổi sau.",
+          "itemChange": {
+            "id": "III-04",
+            "title": "Bảng câu hỏi chung",
+            "state": "Cần xem lại",
+            "description": "Hai người ngại quay lại buổi sau."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-04:chia-nhom-theo-kha-nang-nhung-chua-co-phan-trao-doi-chung",
+          "originalLabel": "B",
+          "text": "Chia nhóm theo khả năng nhưng chưa có phần trao đổi chung.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Mỗi nhóm tiến bộ riêng, liên hệ còn yếu.",
+          "itemChange": {
+            "id": "III-04",
+            "title": "Bảng câu hỏi chung",
+            "state": "Cần bổ sung",
+            "description": "Mỗi nhóm tiến bộ riêng, liên hệ còn yếu."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-04:chon-doan-vua-suc-giai-thich-tu-kho-va-danh-luot-hoi-cho-tung-nguoi",
+          "originalLabel": "C",
+          "text": "Chọn đoạn vừa sức, giải thích từ khó và dành lượt hỏi cho từng người.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Buổi đọc có sự tham gia của cả nhóm.",
+          "itemChange": {
+            "id": "III-04",
+            "title": "Bảng câu hỏi chung",
+            "state": "Đã hoàn thành",
+            "description": "Buổi đọc có sự tham gia của cả nhóm."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-04:hoan-vo-thoi-han-cho-toi-khi-moi-nguoi-co-trinh-do-nhu-nhau",
+          "originalLabel": "D",
+          "text": "Hoãn vô thời hạn cho tới khi mọi người có trình độ như nhau.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Buổi học chưa diễn ra.",
+          "itemChange": {
+            "id": "III-04",
+            "title": "Bảng câu hỏi chung",
+            "state": "Đang bỏ ngỏ",
+            "description": "Buổi học chưa diễn ra."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-05",
+      "historyId": "history-4",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "ngon-den",
+          "name": "Ngọn đèn",
+          "text": "Ngọn đèn là một chi tiết trong cảnh hư cấu tại Căn phòng ở Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "sach-hoc-tieng",
+          "name": "Sách học tiếng",
+          "text": "Sách học tiếng là một chi tiết trong cảnh hư cấu tại Căn phòng ở Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-05",
+      "campaignId": "III",
+      "order": 5,
+      "type": "KT",
+      "title": "Trả lời một lời đồn",
+      "time": "Tháng 6 · 1919",
+      "place": "Bàn đọc tại Pháp",
+      "background": "petition",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Nhóm đọc tin về bản Yêu sách năm 1919. Một người hỏi có phải việc gửi văn bản đã lập tức đem lại độc lập hay không.",
+      "lead": "Nhóm đọc tin về bản Yêu sách năm 1919. Một người hỏi có phải việc gửi văn bản đã lập tức đem lại độc lập hay không.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Cùng đọc kỹ dữ kiện, rồi chọn cách giải quyết nhiệm vụ này nhé."
+      },
+      "question": "An nên trả lời bằng nhận định nào đúng với dữ kiện?",
+      "choices": [
+        {
+          "id": "III-05:dung-chi-can-gui-van-ban-la-viet-nam-da-doc-lap",
+          "originalLabel": "A",
+          "text": "Đúng, chỉ cần gửi văn bản là Việt Nam đã độc lập.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm yêu cầu với kết quả.",
+          "itemChange": {
+            "id": "III-05",
+            "title": "Thẻ trả lời lời đồn",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm yêu cầu với kết quả."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-05:ban-yeu-sach-la-quyet-dinh-thanh-lap-dang-cong-san-viet-nam",
+          "originalLabel": "B",
+          "text": "Bản Yêu sách là quyết định thành lập Đảng Cộng sản Việt Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm sự kiện.",
+          "itemChange": {
+            "id": "III-05",
+            "title": "Thẻ trả lời lời đồn",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm sự kiện."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-05:van-ban-khong-lien-quan-den-quyen-cua-nguoi-dan-an-nam",
+          "originalLabel": "C",
+          "text": "Văn bản không liên quan đến quyền của người dân An Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai về nội dung.",
+          "itemChange": {
+            "id": "III-05",
+            "title": "Thẻ trả lời lời đồn",
+            "state": "Cần ôn lại",
+            "description": "Sai về nội dung."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-05:ban-yeu-sach-neu-cac-yeu-cau-ve-quyen-viec-gui-van-ban-khong-dong-nghia-muc-tieu-giai-phong-dan-toc-da-dat-duoc",
+          "originalLabel": "D",
+          "text": "Bản Yêu sách nêu các yêu cầu về quyền; việc gửi văn bản không đồng nghĩa mục tiêu giải phóng dân tộc đã đạt được.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Bản Yêu sách nêu các yêu cầu về quyền; việc gửi văn bản không đồng nghĩa mục tiêu giải phóng dân tộc đã đạt được.",
+          "itemChange": {
+            "id": "III-05",
+            "title": "Thẻ trả lời lời đồn",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Bản Yêu sách nêu các yêu cầu về quyền; việc gửi văn bản không đồng nghĩa mục tiêu giải phóng dân tộc đã đạt được."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-06",
+      "historyId": "history-5",
+      "explanation": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+      "hotspots": [
+        {
+          "id": "ban-yeu-sach",
+          "name": "Bản Yêu sách",
+          "text": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+          "isHistorical": true
+        },
+        {
+          "id": "ban-do-versailles",
+          "name": "Bản đồ Versailles",
+          "text": "Bản đồ Versailles là một chi tiết trong cảnh hư cấu tại Bàn đọc tại Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-06",
+      "campaignId": "III",
+      "order": 6,
+      "type": "KT",
+      "title": "Một câu hỏi tại bàn đọc",
+      "time": "Tháng 7 · 1920",
+      "place": "Phòng đọc tại Pháp",
+      "background": "july",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Tháng 7/1920. Nhóm tìm hiểu vì sao Luận cương của Lênin có vị trí quan trọng trong hành trình nhận thức của Nguyễn Ái Quốc.",
+      "lead": "Tháng 7/1920. Nhóm tìm hiểu vì sao Luận cương của Lênin có vị trí quan trọng trong hành trình nhận thức của Nguyễn Ái Quốc.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Nội dung nào trực tiếp gắn với câu hỏi mà Người đang theo đuổi?"
+      },
+      "question": "Nội dung nào của Luận cương gắn với câu hỏi Nguyễn Ái Quốc đang theo đuổi?",
+      "choices": [
+        {
+          "id": "III-06:van-de-dan-toc-va-thuoc-dia-gan-voi-viec-tim-con-duong-giai-phong-dan-toc",
+          "originalLabel": "A",
+          "text": "Vấn đề dân tộc và thuộc địa, gắn với việc tìm con đường giải phóng dân tộc.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Vấn đề dân tộc và thuộc địa, gắn với việc tìm con đường giải phóng dân tộc.",
+          "itemChange": {
+            "id": "III-06",
+            "title": "Sơ đồ vấn đề thuộc địa",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Vấn đề dân tộc và thuộc địa, gắn với việc tìm con đường giải phóng dân tộc."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "III-06:lich-tau-cho-hang-tu-chau-au-ve-sai-gon",
+          "originalLabel": "B",
+          "text": "Lịch tàu chở hàng từ châu Âu về Sài Gòn.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; nhầm loại nội dung.",
+          "itemChange": {
+            "id": "III-06",
+            "title": "Sơ đồ vấn đề thuộc địa",
+            "state": "Cần ôn lại",
+            "description": "Sai; nhầm loại nội dung."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "III-06:mot-ban-tuyen-bo-viet-nam-da-doc-lap-tu-nam-1920",
+          "originalLabel": "C",
+          "text": "Một bản tuyên bố Việt Nam đã độc lập từ năm 1920.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai dữ kiện.",
+          "itemChange": {
+            "id": "III-06",
+            "title": "Sơ đồ vấn đề thuộc địa",
+            "state": "Cần ôn lại",
+            "description": "Sai dữ kiện."
+          },
+          "milestone": "K6"
+        },
+        {
+          "id": "III-06:dieu-le-cua-dang-cong-san-viet-nam-da-ra-doi-tu-nam-1911",
+          "originalLabel": "D",
+          "text": "Điều lệ của Đảng Cộng sản Việt Nam đã ra đời từ năm 1911.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai sự kiện và thời điểm.",
+          "itemChange": {
+            "id": "III-06",
+            "title": "Sơ đồ vấn đề thuộc địa",
+            "state": "Cần ôn lại",
+            "description": "Sai sự kiện và thời điểm."
+          },
+          "milestone": "K6"
+        }
+      ],
+      "nextSceneId": "III-07",
+      "historyId": "history-6",
+      "explanation": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+      "hotspots": [
+        {
+          "id": "trang-bao",
+          "name": "Trang báo",
+          "text": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+          "isHistorical": true
+        },
+        {
+          "id": "cac-mau-ghi-chu",
+          "name": "Các mẩu ghi chú",
+          "text": "Các mẩu ghi chú là một chi tiết trong cảnh hư cấu tại Phòng đọc tại Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "III-04",
+          "choiceId": "III-04:chon-doan-vua-suc-giai-thich-tu-kho-va-danh-luot-hoi-cho-tung-nguoi",
+          "matched": "Bình nối vấn đề thuộc địa với câu hỏi cũ mà cả nhóm từng viết lên bảng.",
+          "otherwise": "Mai tóm tắt lại câu hỏi về dân tộc và thuộc địa để mọi người cùng theo dõi."
+        }
+      ]
+    },
+    {
+      "id": "III-07",
+      "campaignId": "III",
+      "order": 7,
+      "type": "KT",
+      "title": "Nhầm tên trên bản đồ",
+      "time": "Tháng 12 · 1920",
+      "place": "Tin từ Tours · Pháp",
+      "background": "tours",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Cuối năm 1920. An phải đặt biểu tượng sự kiện Tours lên bản đồ để giải thích cho nhóm.",
+      "lead": "Cuối năm 1920. An phải đặt biểu tượng sự kiện Tours lên bản đồ để giải thích cho nhóm.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Cùng đọc kỹ dữ kiện, rồi chọn cách giải quyết nhiệm vụ này nhé."
+      },
+      "question": "Nội dung nào nên nằm cạnh biểu tượng Tours?",
+      "choices": [
+        {
+          "id": "III-07:hoi-viet-nam-cach-mang-thanh-nien-ra-doi-o-quang-chau",
+          "originalLabel": "A",
+          "text": "Hội Việt Nam Cách mạng Thanh niên ra đời ở Quảng Châu.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai địa điểm và mốc.",
+          "itemChange": {
+            "id": "III-07",
+            "title": "Biểu tượng Tours",
+            "state": "Cần ôn lại",
+            "description": "Sai địa điểm và mốc."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-07:hoi-nghi-hop-nhat-thanh-lap-dang-cong-san-viet-nam",
+          "originalLabel": "B",
+          "text": "Hội nghị hợp nhất thành lập Đảng Cộng sản Việt Nam.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai sự kiện.",
+          "itemChange": {
+            "id": "III-07",
+            "title": "Biểu tượng Tours",
+            "state": "Cần ôn lại",
+            "description": "Sai sự kiện."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-07:nguyen-ai-quoc-tan-thanh-quoc-te-iii-va-tham-gia-sang-lap-dang-cong-san-phap",
+          "originalLabel": "C",
+          "text": "Nguyễn Ái Quốc tán thành Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Nguyễn Ái Quốc tán thành Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "itemChange": {
+            "id": "III-07",
+            "title": "Biểu tượng Tours",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Nguyễn Ái Quốc tán thành Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-07:so-dau-bao-thanh-nien-duoc-xuat-ban",
+          "originalLabel": "D",
+          "text": "Số đầu báo Thanh niên được xuất bản.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai sự kiện.",
+          "itemChange": {
+            "id": "III-07",
+            "title": "Biểu tượng Tours",
+            "state": "Cần ôn lại",
+            "description": "Sai sự kiện."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-08",
+      "historyId": "history-7",
+      "explanation": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+      "hotspots": [
+        {
+          "id": "ban-do-tours",
+          "name": "Bản đồ Tours",
+          "text": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+          "isHistorical": true
+        },
+        {
+          "id": "bang-doi-chieu-nien-dai",
+          "name": "Bảng đối chiếu niên đại",
+          "text": "Bảng đối chiếu niên đại là một chi tiết trong cảnh hư cấu tại Tin từ Tours · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-08",
+      "campaignId": "III",
+      "order": 8,
+      "type": "TH",
+      "title": "Tờ đọc không tìm được người đọc",
+      "time": "Năm 1922",
+      "place": "Bàn biên soạn · Pháp",
+      "background": "press",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Sau khi tìm hiểu báo Người cùng khổ, nhóm làm một bản thông tin nội bộ. Người viết dùng nhiều từ khó; người đọc nói mình không hiểu.",
+      "lead": "Sau khi tìm hiểu báo Người cùng khổ, nhóm làm một bản thông tin nội bộ. Người viết dùng nhiều từ khó; người đọc nói mình không hiểu.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Chúng ta cần giữ nội dung chính xác và giúp người đọc tiếp cận được nó."
+      },
+      "question": "An nên làm gì khi người đọc chưa hiểu bản thông tin nội bộ?",
+      "choices": [
+        {
+          "id": "III-08:giu-nguyen-roi-trach-nguoi-doc-khong-co-gang",
+          "originalLabel": "A",
+          "text": "Giữ nguyên rồi trách người đọc không cố gắng.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Bản đọc không được sử dụng.",
+          "itemChange": {
+            "id": "III-08",
+            "title": "Bản tin đọc thử",
+            "state": "Đang bỏ ngỏ",
+            "description": "Bản đọc không được sử dụng."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-08:them-mot-bang-giai-nghia-ngan-nhung-chua-thu-voi-nguoi-doc",
+          "originalLabel": "B",
+          "text": "Thêm một bảng giải nghĩa ngắn nhưng chưa thử với người đọc.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Bản tin dễ tiếp cận hơn một phần.",
+          "itemChange": {
+            "id": "III-08",
+            "title": "Bản tin đọc thử",
+            "state": "Cần bổ sung",
+            "description": "Bản tin dễ tiếp cận hơn một phần."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-08:bo-nhung-du-kien-khong-vua-khau-hieu-du-lam-thay-doi-nghia",
+          "originalLabel": "C",
+          "text": "Bỏ những dữ kiện không vừa khẩu hiệu, dù làm thay đổi nghĩa.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Nội dung bị sai lệch.",
+          "itemChange": {
+            "id": "III-08",
+            "title": "Bản tin đọc thử",
+            "state": "Cần xem lại",
+            "description": "Nội dung bị sai lệch."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-08:viet-lai-bang-cau-ro-giu-nguon-va-nho-nguoi-doc-thu-de-kiem-tra-cach-hieu",
+          "originalLabel": "D",
+          "text": "Viết lại bằng câu rõ, giữ nguồn và nhờ người đọc thử để kiểm tra cách hiểu.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Nhóm có bản tin vừa đúng vừa dễ đọc.",
+          "itemChange": {
+            "id": "III-08",
+            "title": "Bản tin đọc thử",
+            "state": "Đã hoàn thành",
+            "description": "Nhóm có bản tin vừa đúng vừa dễ đọc."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-09",
+      "historyId": "history-8",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "ban-nhap-noi-bo",
+          "name": "Bản nháp nội bộ",
+          "text": "Bản nháp nội bộ là một chi tiết trong cảnh hư cấu tại Bàn biên soạn · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "lo-muc",
+          "name": "Lọ mực",
+          "text": "Lọ mực là một chi tiết trong cảnh hư cấu tại Bàn biên soạn · Pháp. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "III-03",
+          "choiceId": "III-03:dung-cau-ngan-hinh-ve-va-nguoi-ho-tro-ngon-ngu-de-cung-trao-doi",
+          "matched": "Người bạn từng được hỗ trợ ngôn ngữ nhận lời đọc thử bản tin và góp một góc nhìn mới.",
+          "otherwise": "Mai làm người đọc thử; chiếc ghế của người bạn ở khu cảng vẫn nhắc nhóm về điều chưa kết nối được."
+        }
+      ]
+    },
+    {
+      "id": "III-09",
+      "campaignId": "III",
+      "order": 9,
+      "type": "TH",
+      "title": "Những việc không thể giao hết cho một người",
+      "time": "1923–1924",
+      "place": "Không gian học tập · Nga Xô viết",
+      "background": "study",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Giai đoạn nghiên cứu 1923–1924. Nhóm cần đọc, đối chiếu, viết tóm tắt và trình bày liên hệ thực tế.",
+      "lead": "Giai đoạn nghiên cứu 1923–1924. Nhóm cần đọc, đối chiếu, viết tóm tắt và trình bày liên hệ thực tế.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Nếu An vắng mặt một buổi, chúng ta có tiếp tục được không?"
+      },
+      "question": "Nhóm sẽ phân công thế nào để vẫn làm việc khi An vắng mặt?",
+      "choices": [
+        {
+          "id": "III-09:chia-viec-theo-kha-nang-cung-kiem-tra-va-luan-phien-trinh-bay",
+          "originalLabel": "A",
+          "text": "Chia việc theo khả năng, cùng kiểm tra và luân phiên trình bày.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Nhóm có thể tiếp tục khi một người bận.",
+          "itemChange": {
+            "id": "III-09",
+            "title": "Bảng phân công",
+            "state": "Đã hoàn thành",
+            "description": "Nhóm có thể tiếp tục khi một người bận."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-09:chia-viec-ro-nhung-moi-kiem-tra-van-phu-thuoc-rieng-an",
+          "originalLabel": "B",
+          "text": "Chia việc rõ nhưng mọi kiểm tra vẫn phụ thuộc riêng An.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Nhiệm vụ tiến triển, còn một điểm dễ gián đoạn.",
+          "itemChange": {
+            "id": "III-09",
+            "title": "Bảng phân công",
+            "state": "Cần bổ sung",
+            "description": "Nhiệm vụ tiến triển, còn một điểm dễ gián đoạn."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-09:khong-chia-viec-de-tranh-phai-ban-bac",
+          "originalLabel": "C",
+          "text": "Không chia việc để tránh phải bàn bạc.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Nhiều phần chưa ai làm.",
+          "itemChange": {
+            "id": "III-09",
+            "title": "Bảng phân công",
+            "state": "Đang bỏ ngỏ",
+            "description": "Nhiều phần chưa ai làm."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-09:nhan-moi-cong-viec-roi-ghi-ten-minh-len-phan-do-nguoi-khac-hoan-thanh",
+          "originalLabel": "D",
+          "text": "Nhận mọi công việc rồi ghi tên mình lên phần do người khác hoàn thành.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Nhóm mất tin cậy và phải phân công lại.",
+          "itemChange": {
+            "id": "III-09",
+            "title": "Bảng phân công",
+            "state": "Cần xem lại",
+            "description": "Nhóm mất tin cậy và phải phân công lại."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-10",
+      "historyId": "history-9",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "bang-so-sanh",
+          "name": "Bảng so sánh",
+          "text": "Bảng so sánh là một chi tiết trong cảnh hư cấu tại Không gian học tập · Nga Xô viết. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        },
+        {
+          "id": "ghi-chu-que-huong",
+          "name": "Ghi chú quê hương",
+          "text": "Ghi chú quê hương là một chi tiết trong cảnh hư cấu tại Không gian học tập · Nga Xô viết. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-10",
+      "campaignId": "III",
+      "order": 10,
+      "type": "KT",
+      "title": "Học để chuẩn bị điều gì?",
+      "time": "Năm 1925",
+      "place": "Nhóm học tập · Quảng Châu",
+      "background": "classroom",
+      "characters": [
+        "An",
+        "Bình"
+      ],
+      "context": "Nhóm An tìm hiểu vai trò công tác đào tạo của Hội Việt Nam Cách mạng Thanh niên.",
+      "lead": "Nhóm An tìm hiểu vai trò công tác đào tạo của Hội Việt Nam Cách mạng Thanh niên.",
+      "dialogue": {
+        "speaker": "Bình",
+        "text": "Các lớp huấn luyện và việc truyền bá kiến thức có ý nghĩa gì trong giai đoạn chuẩn bị?"
+      },
+      "question": "Công tác huấn luyện, truyền bá kiến thức của Hội có ý nghĩa gì?",
+      "choices": [
+        {
+          "id": "III-10:chi-phuc-vu-mot-hoat-dong-giai-tri-khong-lien-quan-den-to-chuc",
+          "originalLabel": "A",
+          "text": "Chỉ phục vụ một hoạt động giải trí, không liên quan đến tổ chức.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Phương án “Chỉ phục vụ một hoạt động giải trí, không liên quan đến tổ chức.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích.",
+          "itemChange": {
+            "id": "III-10",
+            "title": "Thẻ công tác đào tạo",
+            "state": "Cần ôn lại",
+            "description": "Phương án “Chỉ phục vụ một hoạt động giải trí, không liên quan đến tổ chức.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-10:gop-phan-dao-tao-can-bo-truyen-ba-ly-luan-va-chuan-bi-dieu-kien-ve-tu-tuong-to-chuc-cho-phong-trao",
+          "originalLabel": "B",
+          "text": "Góp phần đào tạo cán bộ, truyền bá lý luận và chuẩn bị điều kiện về tư tưởng, tổ chức cho phong trào.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Góp phần đào tạo cán bộ, truyền bá lý luận và chuẩn bị điều kiện về tư tưởng, tổ chức cho phong trào.",
+          "itemChange": {
+            "id": "III-10",
+            "title": "Thẻ công tác đào tạo",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Góp phần đào tạo cán bộ, truyền bá lý luận và chuẩn bị điều kiện về tư tưởng, tổ chức cho phong trào."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-10:co-nghia-dang-cong-san-viet-nam-da-ra-doi-tu-nam-1925",
+          "originalLabel": "C",
+          "text": "Có nghĩa Đảng Cộng sản Việt Nam đã ra đời từ năm 1925.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai mốc.",
+          "itemChange": {
+            "id": "III-10",
+            "title": "Thẻ công tác đào tạo",
+            "state": "Cần ôn lại",
+            "description": "Sai mốc."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-10:co-the-thay-the-toan-bo-hoat-dong-thuc-tien-bang-viec-hoc-thuoc-ten-sach",
+          "originalLabel": "D",
+          "text": "Có thể thay thế toàn bộ hoạt động thực tiễn bằng việc học thuộc tên sách.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai về ý nghĩa và phương pháp.",
+          "itemChange": {
+            "id": "III-10",
+            "title": "Thẻ công tác đào tạo",
+            "state": "Cần ôn lại",
+            "description": "Sai về ý nghĩa và phương pháp."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-11",
+      "historyId": "history-10",
+      "explanation": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+      "hotspots": [
+        {
+          "id": "bao-thanh-nien",
+          "name": "Báo Thanh niên",
+          "text": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+          "isHistorical": true
+        },
+        {
+          "id": "bang-hoc-tap",
+          "name": "Bảng học tập",
+          "text": "Bảng học tập là một chi tiết trong cảnh hư cấu tại Nhóm học tập · Quảng Châu. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    },
+    {
+      "id": "III-11",
+      "campaignId": "III",
+      "order": 11,
+      "type": "TH",
+      "title": "Mâu thuẫn trước buổi học",
+      "time": "Năm 1927",
+      "place": "Bàn đọc · Quảng Châu",
+      "background": "book",
+      "characters": [
+        "An",
+        "Lâm"
+      ],
+      "context": "Buổi tìm hiểu Đường Kách mệnh. Hai thành viên hiểu khác nhau một ý trong bản tóm tắt do An viết.",
+      "lead": "Buổi tìm hiểu Đường Kách mệnh. Hai thành viên hiểu khác nhau một ý trong bản tóm tắt do An viết.",
+      "dialogue": {
+        "speaker": "Lâm",
+        "text": "Nếu hai người hiểu khác nhau, chúng ta chọn ai đúng bằng cách nào?"
+      },
+      "question": "Nhóm nên giải quyết hai cách hiểu khác nhau bằng cách nào?",
+      "choices": [
+        {
+          "id": "III-11:bo-qua-vi-tranh-luan-luon-la-viec-vo-ich",
+          "originalLabel": "A",
+          "text": "Bỏ qua vì tranh luận luôn là việc vô ích.",
+          "points": 0,
+          "correct": null,
+          "feedback": "Điểm hiểu khác vẫn tồn tại.",
+          "itemChange": {
+            "id": "III-11",
+            "title": "Bản tóm tắt đã trao đổi",
+            "state": "Đang bỏ ngỏ",
+            "description": "Điểm hiểu khác vẫn tồn tại."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-11:chon-nguoi-than-voi-an-hon-va-yeu-cau-nguoi-kia-im-lang",
+          "originalLabel": "B",
+          "text": "Chọn người thân với An hơn và yêu cầu người kia im lặng.",
+          "points": -1,
+          "correct": null,
+          "feedback": "Một thành viên rời nhóm, bản tóm tắt không được kiểm tra.",
+          "itemChange": {
+            "id": "III-11",
+            "title": "Bản tóm tắt đã trao đổi",
+            "state": "Cần xem lại",
+            "description": "Một thành viên rời nhóm, bản tóm tắt không được kiểm tra."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-11:cung-tro-ve-van-ban-va-nguon-de-tung-nguoi-giai-thich-roi-sua-ban-tom-tat",
+          "originalLabel": "C",
+          "text": "Cùng trở về văn bản và nguồn, để từng người giải thích rồi sửa bản tóm tắt.",
+          "points": 2,
+          "correct": null,
+          "feedback": "Nhóm giải quyết bất đồng bằng căn cứ.",
+          "itemChange": {
+            "id": "III-11",
+            "title": "Bản tóm tắt đã trao đổi",
+            "state": "Đã hoàn thành",
+            "description": "Nhóm giải quyết bất đồng bằng căn cứ."
+          },
+          "milestone": null
+        },
+        {
+          "id": "III-11:tam-dung-diem-tranh-luan-ghi-lai-de-nho-nguoi-am-hieu-ho-tro",
+          "originalLabel": "D",
+          "text": "Tạm dừng điểm tranh luận, ghi lại để nhờ người am hiểu hỗ trợ.",
+          "points": 1,
+          "correct": null,
+          "feedback": "Giữ được buổi học nhưng vấn đề chưa giải quyết.",
+          "itemChange": {
+            "id": "III-11",
+            "title": "Bản tóm tắt đã trao đổi",
+            "state": "Cần bổ sung",
+            "description": "Giữ được buổi học nhưng vấn đề chưa giải quyết."
+          },
+          "milestone": null
+        }
+      ],
+      "nextSceneId": "III-12",
+      "historyId": "history-11",
+      "explanation": "Đây là hệ quả đối với nhiệm vụ hư cấu của An. Bạn có thể tiếp tục học hỏi ở những chặng tiếp theo.",
+      "hotspots": [
+        {
+          "id": "duong-kach-menh",
+          "name": "Đường Kách mệnh",
+          "text": "Đường Kách mệnh xuất bản năm 1927, tập hợp các bài giảng của Nguyễn Ái Quốc trong công tác huấn luyện cán bộ tại Quảng Châu.",
+          "isHistorical": true
+        },
+        {
+          "id": "vo-bai-hoc",
+          "name": "Vở bài học",
+          "text": "Vở bài học là một chi tiết trong cảnh hư cấu tại Bàn đọc · Quảng Châu. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": [
+        {
+          "sceneId": "III-09",
+          "choiceId": "III-09:chia-viec-theo-kha-nang-cung-kiem-tra-va-luan-phien-trinh-bay",
+          "matched": "Một thành viên khác chủ trì phần kiểm tra theo lịch luân phiên. An cùng lắng nghe.",
+          "otherwise": "Bình đề nghị phân công lại để việc đối chiếu không còn phụ thuộc một mình An."
+        }
+      ]
+    },
+    {
+      "id": "III-12",
+      "campaignId": "III",
+      "order": 12,
+      "type": "KT",
+      "title": "Hiểu đúng ý nghĩa của sự thống nhất",
+      "time": "Đầu năm · 1930",
+      "place": "Phòng đọc tin · Hồng Kông trên bản đồ",
+      "background": "reunion",
+      "characters": [
+        "An",
+        "Mai"
+      ],
+      "context": "Nhóm An nhận tin về sự thành lập Đảng. Mỗi người cầm một phần dòng thời gian, ghép thành bức tranh chung.",
+      "lead": "Nhóm An nhận tin về sự thành lập Đảng. Mỗi người cầm một phần dòng thời gian, ghép thành bức tranh chung.",
+      "dialogue": {
+        "speaker": "Mai",
+        "text": "Từ quá trình trước đó, ý nghĩa nào cần được ghi vào trang tổng kết?"
+      },
+      "question": "Ý nghĩa nào của sự thành lập Đảng cần được ghi vào tổng kết?",
+      "choices": [
+        {
+          "id": "III-12:viec-thong-nhat-to-chuc-co-nghia-moi-khac-biet-thuc-te-tu-bien-mat-ngay",
+          "originalLabel": "A",
+          "text": "Việc thống nhất tổ chức có nghĩa mọi khác biệt thực tế tự biến mất ngay.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; kết luận vượt quá dữ kiện.",
+          "itemChange": {
+            "id": "III-12",
+            "title": "Dòng thời gian chung",
+            "state": "Cần ôn lại",
+            "description": "Sai; kết luận vượt quá dữ kiện."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "III-12:chi-can-doi-ten-khong-can-duong-loi-hay-qua-trinh-chuan-bi",
+          "originalLabel": "B",
+          "text": "Chỉ cần đổi tên, không cần đường lối hay quá trình chuẩn bị.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Phương án “Chỉ cần đổi tên, không cần đường lối hay quá trình chuẩn bị.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích.",
+          "itemChange": {
+            "id": "III-12",
+            "title": "Dòng thời gian chung",
+            "state": "Cần ôn lại",
+            "description": "Phương án “Chỉ cần đổi tên, không cần đường lối hay quá trình chuẩn bị.” chưa phù hợp với mốc này. Hãy đối chiếu thời gian và sự kiện trong phần giải thích."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "III-12:su-kien-khong-lien-quan-den-phong-trao-cong-nhan-va-phong-trao-yeu-nuoc",
+          "originalLabel": "C",
+          "text": "Sự kiện không liên quan đến phong trào công nhân và phong trào yêu nước.",
+          "points": 0,
+          "correct": false,
+          "feedback": "Sai; tách sự kiện khỏi điều kiện lịch sử.",
+          "itemChange": {
+            "id": "III-12",
+            "title": "Dòng thời gian chung",
+            "state": "Cần ôn lại",
+            "description": "Sai; tách sự kiện khỏi điều kiện lịch sử."
+          },
+          "milestone": "K12"
+        },
+        {
+          "id": "III-12:su-ra-doi-cua-mot-chinh-dang-thong-nhat-cung-cuong-linh-dau-tien-tao-buoc-ngoat-ve-to-chuc-lanh-dao-va-duong-loi-cho-cach-mang-viet-nam",
+          "originalLabel": "D",
+          "text": "Sự ra đời của một chính đảng thống nhất cùng Cương lĩnh đầu tiên tạo bước ngoặt về tổ chức lãnh đạo và đường lối cho cách mạng Việt Nam.",
+          "points": 2,
+          "correct": true,
+          "feedback": "Thẻ được đặt đúng: Sự ra đời của một chính đảng thống nhất cùng Cương lĩnh đầu tiên tạo bước ngoặt về tổ chức lãnh đạo và đường lối cho cách mạng Việt Nam.",
+          "itemChange": {
+            "id": "III-12",
+            "title": "Dòng thời gian chung",
+            "state": "Đã xác nhận",
+            "description": "Thẻ được đặt đúng: Sự ra đời của một chính đảng thống nhất cùng Cương lĩnh đầu tiên tạo bước ngoặt về tổ chức lãnh đạo và đường lối cho cách mạng Việt Nam."
+          },
+          "milestone": "K12"
+        }
+      ],
+      "nextSceneId": null,
+      "historyId": "history-12",
+      "explanation": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+      "hotspots": [
+        {
+          "id": "dong-thoi-gian",
+          "name": "Dòng thời gian",
+          "text": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+          "isHistorical": true
+        },
+        {
+          "id": "ban-do-hong-kong",
+          "name": "Bản đồ Hồng Kông",
+          "text": "Bản đồ Hồng Kông là một chi tiết trong cảnh hư cấu tại Phòng đọc tin · Hồng Kông trên bản đồ. Hãy quan sát, đọc hội thoại và mở nhật ký để xem dấu vết nhiệm vụ của An. Chi tiết này không tự cộng điểm.",
+          "isHistorical": false
+        }
+      ],
+      "conditions": []
+    }
+  ],
+  "historyCards": [
+    {
+      "id": "history-1",
+      "order": 1,
+      "time": "Trước tháng 6 · 1911",
+      "fact": "Bối cảnh thuộc địa và khát vọng tìm một con đường giải phóng dân tộc đầu thế kỷ XX.",
+      "sources": [
+        {
+          "title": "Tư liệu về lựa chọn lên đường",
+          "url": "https://tphcm.chinhphu.vn/hieu-them-ve-lua-chon-lich-su-cua-lanh-tu-nguyen-ai-quoc-ho-chi-minh-10121374.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-2",
+      "order": 2,
+      "time": "Tháng 6 · 1911",
+      "fact": "Ngày 5/6/1911, Nguyễn Tất Thành rời bến cảng Sài Gòn trên tàu Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.",
+      "sources": [
+        {
+          "title": "Tư liệu về ngày ra đi",
+          "url": "https://tphcm.chinhphu.vn/hieu-them-ve-lua-chon-lich-su-cua-lanh-tu-nguyen-ai-quoc-ho-chi-minh-10121374.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-3",
+      "order": 3,
+      "time": "1912–1917",
+      "fact": "Những năm bôn ba, Người lao động, quan sát đời sống ở nhiều nơi và tích lũy nhận thức thực tiễn. Không dựng một hành trình chi tiết tới từng cảng khi chưa có tư liệu.",
+      "sources": [
+        {
+          "title": "Khái quát hành trình",
+          "url": "https://baochinhphu.vn/nhung-dau-moc-quan-trong-tren-hanh-trinh-tim-duong-cuu-nuoc-cua-bac-ho-10281133.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-4",
+      "order": 4,
+      "time": "Trước tháng 6 · 1919",
+      "fact": "Bối cảnh cộng đồng người Việt và phong trào công nhân tại Pháp; phân cảnh của An được đặt trước sự kiện tháng 6/1919.",
+      "sources": [
+        {
+          "title": "Tư liệu về thời kỳ hoạt động ở Pháp",
+          "url": "https://baochinhphu.vn/ky-niem-121-nam-ngay-sinh-chu-tich-ho-chi-minh-va-100-nam-bac-ho-ra-di-tim-duong-cuu-nuoc-nguoi-viet-nam-yeu-nuoc-dau-tien-tim-thay-chu-nghia-mac-lenin-va-buoc-ngoat-cua-cach-mang-viet-nam-10278338.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-5",
+      "order": 5,
+      "time": "Tháng 6 · 1919",
+      "fact": "Ngày 18/6/1919, thay mặt những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Versailles, nêu những yêu cầu về quyền tự do, dân chủ và bình đẳng.",
+      "sources": [
+        {
+          "title": "Tư liệu về bản Yêu sách",
+          "url": "https://baochinhphu.vn/ky-niem-121-nam-ngay-sinh-chu-tich-ho-chi-minh-va-100-nam-bac-ho-ra-di-tim-duong-cuu-nuoc-nguoi-viet-nam-yeu-nuoc-dau-tien-tim-thay-chu-nghia-mac-lenin-va-buoc-ngoat-cua-cach-mang-viet-nam-10278338.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-6",
+      "order": 6,
+      "time": "Tháng 7 · 1920",
+      "fact": "Tháng 7/1920, Nguyễn Ái Quốc đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin trên báo L’Humanité.",
+      "sources": [
+        {
+          "title": "Biên niên các sự kiện tháng Bảy",
+          "url": "https://btllang.mod.gov.vn/tin-tuc/tin-tong-hop/5210-chu-tich-ho-chi-minh-voi-nhung-su-kien-trong-thang-bay-qua-cac-nam-1890-1969-phan-1.html?showall=1",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-7",
+      "order": 7,
+      "time": "Tháng 12 · 1920",
+      "fact": "Tháng 12/1920, tại Đại hội Tours, Nguyễn Ái Quốc tán thành gia nhập Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+      "sources": [
+        {
+          "title": "Tư liệu về bước ngoặt năm 1920",
+          "url": "https://www.mpi.gov.vn/portal/pages/print.aspx?p=151192",
+          "status": "unavailable"
+        },
+        {
+          "title": "Biên niên chính thức: Nguyễn Ái Quốc tại Đại hội Tours tháng 12/1920",
+          "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/lich-su-dang/lich-su-bien-nien-dang-cong-san-viet-nam-tap-1-18",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-8",
+      "order": 8,
+      "time": "Năm 1922",
+      "fact": "Báo Le Paria – Người cùng khổ ra số đầu ngày 1/4/1922; Nguyễn Ái Quốc có vai trò quan trọng trong việc tổ chức và hoạt động của tờ báo.",
+      "sources": [
+        {
+          "title": "Lịch sử biên niên Đảng, tập I",
+          "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/lich-su-dang/lich-su-bien-nien-dang-cong-san-viet-nam-tap-1-18",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-9",
+      "order": 9,
+      "time": "1923–1924",
+      "fact": "Nguyễn Ái Quốc đến nước Nga Xô viết lần đầu ngày 30/6/1923; giai đoạn tiếp theo gắn với học tập và hoạt động trong phong trào cộng sản quốc tế.",
+      "sources": [
+        {
+          "title": "Tư liệu và hiện vật về chuyến đến năm 1923",
+          "url": "https://baochinhphu.vn/hien-vat-quy-ve-bac-ho-sau-100-nam-nguoi-dat-chan-toi-lien-xo-102230630142401052.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-10",
+      "order": 10,
+      "time": "Năm 1925",
+      "fact": "Hội Việt Nam Cách mạng Thanh niên được thành lập năm 1925 ở Quảng Châu. Báo Thanh niên ra số đầu ngày 21/6/1925.",
+      "sources": [
+        {
+          "title": "Tư liệu về Hội và công tác đào tạo",
+          "url": "https://baotanglichsu.vn/vi/Articles/1001/19692/cuon-djuong-kach-menh-cua-nguyen-ai-quoc-su-xuat-hien-va-hanh-trinh.html",
+          "status": "verified-2026-11-04"
+        },
+        {
+          "title": "Biên niên báo Thanh niên",
+          "url": "https://baotanghochiminh.vn/tuan-bao-thanh-nien-co-quan-trung-uong-cua-tong-bo-hoi-viet-nam-cach-mang-thanh-nien-do-nguyen-ai-quoc-sang-lap-ra-so-dau-tien.htm",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-11",
+      "order": 11,
+      "time": "Năm 1927",
+      "fact": "Đường Kách mệnh xuất bản năm 1927, tập hợp các bài giảng của Nguyễn Ái Quốc trong công tác huấn luyện cán bộ tại Quảng Châu.",
+      "sources": [
+        {
+          "title": "Bảo tàng Lịch sử quốc gia: Đường Kách mệnh",
+          "url": "https://baotanglichsuquocgia.vn/vi/Articles/1001/28315/sach-djuong-kach-menh.html",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    },
+    {
+      "id": "history-12",
+      "order": 12,
+      "time": "Đầu năm · 1930",
+      "fact": "Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất, thành lập Đảng Cộng sản Việt Nam và thông qua các văn kiện của Cương lĩnh đầu tiên. Ngày 3/2 là ngày kỷ niệm thành lập Đảng.",
+      "sources": [
+        {
+          "title": "Tư liệu về sự thành lập Đảng",
+          "url": "https://tulieuvankien.dangcongsan.vn/ho-so-su-kien-nhan-chung/phong-trao-cong-san-cong-nhan-quoc-te/cac-dang-cong-san-cong-nhan/dang-cong-san-viet-nam-97",
+          "status": "verified-2026-11-04"
+        }
+      ],
+      "distinction": "Dữ kiện lịch sử có thật. Cảnh, nhân vật An, hội thoại và nhiệm vụ xung quanh dữ kiện là sáng tác."
+    }
+  ],
+  "endings": [
+    {
+      "id": "I-good",
+      "campaignId": "I",
+      "type": "good",
+      "title": "Ánh sáng trên con đường",
+      "text": "An chưa thể biết hết những thử thách phía trước. Nhưng mong muốn giúp quê hương đã có thêm hiểu biết, phương hướng và những người cùng bước. Câu hỏi ở bến sông vẫn còn đó, giờ đã trở thành một việc cần làm mỗi ngày.",
+      "illustration": "Cuốn sổ được mở, những trang ghi chép nối thành một bản đồ. An ngồi cùng nhóm bạn, bắt đầu một kế hoạch học tập và hoạt động tiếp theo. Trên lớp thông tin lịch sử, các mốc có thật hiện đúng thứ tự.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": "II"
+    },
+    {
+      "id": "I-neutral",
+      "campaignId": "I",
+      "type": "neutral",
+      "title": "Ngọn đèn còn sáng",
+      "text": "Chuyến đi đã thay đổi An, nhưng chưa phải câu hỏi nào anh cũng hiểu đến nơi. Anh chưa sẵn sàng nhận nhiệm vụ lớn hơn. Buổi học ngày mai vẫn còn một chỗ dành cho anh.",
+      "illustration": "An ở lại bàn đọc sau khi bạn bè ra về. Cuốn sổ có nhiều trang hoàn chỉnh, vài phần còn dấu hỏi. Một lá thư mời tiếp tục học nằm cạnh đèn.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": "II"
+    },
+    {
+      "id": "I-bad",
+      "campaignId": "I",
+      "type": "bad",
+      "title": "Cuốn sổ khép lại",
+      "text": "An đã đi qua nhiều nơi, nhưng các câu hỏi chưa được theo đuổi đến cùng. Những quyết định vội và lời hứa bỏ dở khiến hành trình riêng của anh dừng lại ở ngưỡng cửa. Ngoài kia, dòng lịch sử vẫn tiếp tục.",
+      "illustration": "Những ghi chép thiếu căn cứ chồng lên nhau; chiếc ghế bên cạnh An trống. Anh cất cuốn sổ và trở lại công việc mưu sinh, chưa thực hiện được mục tiêu ban đầu.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": "II"
+    },
+    {
+      "id": "II-good",
+      "campaignId": "II",
+      "type": "good",
+      "title": "Cuốn sổ có người đọc",
+      "text": "An không viết để mình trở thành nhân vật lớn nhất trong câu chuyện. Anh viết để người đến sau hiểu được điều đã xảy ra, nhận ra điều chưa chắc và tiếp tục đặt câu hỏi. Cuốn sổ rời khỏi tay anh, bắt đầu một hành trình khác.",
+      "illustration": "Nhóm bạn dùng cuốn nhật ký như một bản hướng dẫn đọc; các trang có nguồn, mốc và chú giải. Dòng thời gian lịch sử giữ nguyên.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": "III"
+    },
+    {
+      "id": "II-neutral",
+      "campaignId": "II",
+      "type": "neutral",
+      "title": "Bản thảo bên cửa sổ",
+      "text": "Cuốn sổ đã có nhiều trang hữu ích. Vài mốc còn nhầm, vài nhận xét còn cần chứng minh. An giữ lại bản thảo để sửa, chấp nhận rằng một câu chuyện đáng tin cần thêm công sức.",
+      "illustration": "Mai đặt các dấu trang vào những mục còn thiếu. An mở lại bản nháp thay vì gửi nó như bản hoàn chỉnh.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": "III"
+    },
+    {
+      "id": "II-bad",
+      "campaignId": "II",
+      "type": "bad",
+      "title": "Những dòng chữ không còn được tin",
+      "text": "Những trang giấy từng đầy chữ, nhưng thiếu điều khiến người đọc có thể tin: sự trung thực với điều đã biết và điều chưa biết. Nhiệm vụ ghi chép dừng lại. Lịch sử không đổi; bản thảo của An cần được bắt đầu lại.",
+      "illustration": "Các lời kể bị sửa và nguồn bị gán sai hiện cạnh bản đối chiếu. Nhóm ngừng dùng cuốn nhật ký của An.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": "III"
+    },
+    {
+      "id": "III-good",
+      "campaignId": "III",
+      "type": "good",
+      "title": "Những ngọn đèn cùng sáng",
+      "text": "Điều An giữ được không chỉ là một câu trả lời. Đó là những người có thể cùng học, cùng kiểm tra và tiếp tục công việc khi anh không có mặt. Hành trình riêng đã trở thành một nỗ lực chung.",
+      "illustration": "Nhiều bàn đọc trong một căn phòng được thắp sáng. Các thành viên tự tổ chức buổi tiếp theo, An trở thành một người tham gia trong số họ. Phía ngoài lớp truyện là dòng thời gian lịch sử đúng mốc.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": null
+    },
+    {
+      "id": "III-neutral",
+      "campaignId": "III",
+      "type": "neutral",
+      "title": "Một bàn đọc còn mở",
+      "text": "Nhóm chưa đủ vững để đi xa như dự định. Nhưng những người ở lại đã thống nhất một việc vừa sức: tiếp tục học và sửa điều chưa hiểu. Chiếc bàn chưa khép lại.",
+      "illustration": "Nhóm nhỏ vẫn gặp nhau; vài ghế còn trống, vài câu hỏi vẫn nằm trên bảng. Kế hoạch lớn hơn chưa được thông qua.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": null
+    },
+    {
+      "id": "III-bad",
+      "campaignId": "III",
+      "type": "bad",
+      "title": "Những lá thư không người nhận",
+      "text": "An đã có lời kêu gọi, nhưng không giữ được việc lắng nghe, sự công bằng và những lời đã hứa. Nhóm của anh tan rã trước khi hoàn thành mục tiêu. Dòng lịch sử vẫn tiếp tục qua công sức của những con người khác.",
+      "illustration": "An đặt các thư mời lên bàn; lịch hẹn đã qua nhưng không còn buổi gặp chung. Những lựa chọn làm mất tin cậy được nhắc lại bằng các khung hình ngắn.",
+      "momentsRule": "Ưu tiên các lựa chọn làm nhiệm vụ thiếu sót, rồi các lựa chọn có hệ quả xuyên màn; chọn ba màn khác nhau, giữ thứ tự thời gian.",
+      "nextCampaignId": null
+    }
+  ]
+}

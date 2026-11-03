@@ -1,0 +1,1463 @@
+import { useEffect, useMemo, useState } from "react"
+
+type IconName = "arrow" | "book" | "check" | "chevron" | "close" | "compass" | "gear" | "headphones" | "info" | "lock" | "map" | "pause" | "play" | "spark" | "volume"
+
+function Icon({ name, size = 20 }: { name: IconName size?: number }) {
+  const paths: Record<IconName, React.ReactNode> = {
+    arrow: (
+      <>
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </>
+    ),
+    book: (
+      <>
+        <path d="M4 5.5A2.5 2.5 0 016.5 3H11v16H6.5A2.5 2.5 0 004 21zM20 5.5A2.5 2.5 0 0017.5 3H13v16h4.5A2.5 2.5 0 0120 21z" />
+      </>
+    ),
+    check: <path d="M5 12.5l4.2 4L19 7" />,
+    chevron: <path d="M9 6l6 6-6 6" />,
+    close: (
+      <>
+        <path d="M6 6l12 12M18 6L6 18" />
+      </>
+    ),
+    compass: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M15.5 8.5l-2 5-5 2 2-5z" />
+      </>
+    ),
+    gear: (
+      <>
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M19 13.5v-3l-2.1-.5a7 7 0 00-.8-1.9l1.1-1.8-2.1-2.1-1.8 1.1a7 7 0 00-1.9-.8L10.5 2h-3L7 4.5a7 7 0 00-1.9.8L3.3 4.2 1.2 6.3l1.1 1.8a7 7 0 00-.8 1.9L0 10.5v3l2.3.5a7 7 0 00.8 1.9L2 17.7l2.1 2.1 1.8-1.1a7 7 0 001.9.8l.5 2.5h3l.5-2.5a7 7 0 001.9-.8l1.8 1.1 2.1-2.1-1.1-1.8a7 7 0 00.8-1.9z"
+          transform="translate(2.5)"
+        />
+      </>
+    ),
+    headphones: (
+      <>
+        <path d="M4 14v-2a8 8 0 0116 0v2" />
+        <path d="M4 14h3v6H5a1 1 0 01-1-1zM20 14h-3v6h2a1 1 0 001-1z" />
+      </>
+    ),
+    info: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 11v6M12 7h.01" />
+      </>
+    ),
+    lock: (
+      <>
+        <rect x="5" y="10" width="14" height="11" rx="2" />
+        <path d="M8 10V7a4 4 0 018 0v3" />
+      </>
+    ),
+    map: (
+      <>
+        <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15" />
+      </>
+    ),
+    pause: (
+      <>
+        <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+      </>
+    ),
+    play: <path d="M8 5l11 7-11 7z" />,
+    spark: (
+      <>
+        <path d="M12 2l1.6 5.4L19 9l-5.4 1.6L12 16l-1.6-5.4L5 9l5.4-1.6z" />
+        <path d="M19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z" />
+      </>
+    ),
+    volume: (
+      <>
+        <path d="M4 10v4h4l5 4V6L8 10z" />
+        <path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11" />
+      </>
+    ),
+  }
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {paths[name]}
+    </svg>
+  )
+}
+
+type Choice = { text: string result: string points: number correct?: boolean }
+type Scene = {
+  code: string
+  title: string
+  year: string
+  place: string
+  speaker: string
+  quote: string
+  lead: string
+  question: string
+  type: "Tình huống" | "Kiến thức"
+  choices: Choice[]
+}
+
+const scenes: Scene[] = [
+  {
+    code: "I-01",
+    title: "Câu hỏi ở bến sông",
+    year: "Sài Gòn · 1911",
+    place: "Bến sông Sài Gòn",
+    speaker: "Bác Tư",
+    quote: "Cháu muốn đi xa. Vậy cháu mang theo câu hỏi gì?",
+    lead: "An đã nghe nhiều lời giải thích về nỗi khổ của quê hương. Nhưng trước khi chọn một hướng đi, anh muốn biết điều gì đang thực sự xảy ra quanh mình.",
+    question: "An nên bắt đầu việc tìm hiểu từ đâu?",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Hỏi chuyện nhiều người lao động và ghi lại những vấn đề họ gặp.",
+        result:
+          "An có trang nhật ký đầu tiên với nhiều góc nhìn. Một câu hỏi đã được đặt ra.",
+        points: 2,
+      },
+      {
+        text: "Ghi lại hoàn cảnh của riêng gia đình mình.",
+        result: "An có động lực cụ thể, nhưng tư liệu ban đầu còn hẹp.",
+        points: 1,
+      },
+      {
+        text: "Chờ một người khác đưa ra lời giải thích trọn vẹn.",
+        result:
+          "Trang nhật ký vẫn trắng. An sẽ phải bắt đầu lại bằng câu hỏi của chính mình.",
+        points: 0,
+      },
+      {
+        text: "Viết ngay một kết luận rồi bỏ qua những lời kể trái ý.",
+        result:
+          "Ghi chép đầu tiên trở nên thiên lệch; Bác Tư nhắc An học cách lắng nghe.",
+        points: -1,
+      },
+    ],
+  },
+  {
+    code: "I-02",
+    title: "Chuyến tàu và chiếc túi nhỏ",
+    year: "Ngày 5 tháng 6 · 1911",
+    place: "Bến cảng Sài Gòn",
+    speaker: "Lâm",
+    quote: "Cậu định sống thế nào khi chưa biết tiếng và chưa quen ai?",
+    lead: "Tiếng còi vang lên. Đi xa cần một cách mưu sinh, một cơ hội học hỏi và một mục đích để không đánh mất mình.",
+    question: "An chuẩn bị hành trình ra sao?",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Dùng toàn bộ tiền dành dụm cho hành lý đẹp.",
+        result: "Túi nặng hơn, nhưng kế hoạch mưu sinh vẫn còn thiếu.",
+        points: 0,
+      },
+      {
+        text: "Tìm công việc phù hợp, chuẩn bị học tiếng và giữ cuốn sổ bên mình.",
+        result: "An có kế hoạch vừa lao động, vừa học hỏi.",
+        points: 2,
+      },
+      {
+        text: "Chỉ chuẩn bị cách kiếm sống trước mắt.",
+        result: "An có thể lên đường, nhưng việc học dễ bị gác lại.",
+        points: 1,
+      },
+      {
+        text: "Giao tiền cho người hứa bảo đảm thành công mà không hỏi điều kiện.",
+        result: "An mất một phần nguồn lực và buộc phải làm lại kế hoạch.",
+        points: -1,
+      },
+    ],
+  },
+  {
+    code: "I-03",
+    title: "Những gương mặt bên kia biển",
+    year: "Những năm 1912–1917",
+    place: "Một khu lao động gần cảng",
+    speaker: "Người bạn lao động",
+    quote: "Cậu định viết gì về chúng tôi?",
+    lead: "Ở nơi xa lạ, An gặp những người khác màu da và tiếng nói. Đời sống của họ có khó khăn vừa quen thuộc, vừa khác quê nhà.",
+    question: "An lựa chọn cách quan sát nào?",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Chỉ nhìn phố xá giàu có rồi kết luận mọi người đều sung túc.",
+        result: "Nhật ký bỏ sót đời sống phía sau khu cảng.",
+        points: 0,
+      },
+      {
+        text: "Chỉ trò chuyện với người cùng quê.",
+        result: "An có lời kể hữu ích nhưng chưa hiểu nhiều nhóm khác.",
+        points: 1,
+      },
+      {
+        text: "Kết luận tính cách mọi người từ quốc tịch của họ.",
+        result: "Một người bạn phản đối; cuộc trò chuyện dừng lại.",
+        points: -1,
+      },
+      {
+        text: "Hỏi về công việc, thu nhập của nhiều người, rồi so sánh.",
+        result: "An có trang ghi chép đối chiếu đầu tiên.",
+        points: 2,
+      },
+    ],
+  },
+  {
+    code: "I-04",
+    title: "Căn phòng có ngọn đèn",
+    year: "Trước tháng 6 · 1919",
+    place: "Pháp",
+    speaker: "Mai",
+    quote: "Cậu muốn hiểu tờ báo, hay chỉ muốn biết người khác nói nó viết gì?",
+    lead: "Công việc chiếm phần lớn thời gian. Những trang chữ khó đọc buộc An lựa chọn cách sử dụng buổi tối của mình.",
+    question: "An sẽ học như thế nào?",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Học tiếng đều đặn, đọc báo và thảo luận điều chưa rõ.",
+        result: "An dần có thể đối chiếu thông tin trực tiếp.",
+        points: 2,
+      },
+      {
+        text: "Bỏ việc đọc vì thấy khó, chỉ chờ người khác kể lại.",
+        result: "An tiếp tục phụ thuộc vào lời truyền miệng.",
+        points: 0,
+      },
+      {
+        text: "Học vài từ cần cho công việc rồi tạm gác phần còn lại.",
+        result:
+          "Việc mưu sinh thuận lợi hơn, khả năng đọc tư liệu còn hạn chế.",
+        points: 1,
+      },
+      {
+        text: "Giả vờ đã hiểu để nhận giải thích thay mọi người.",
+        result: "Một bản tóm tắt sai khiến nhóm phải làm lại.",
+        points: -1,
+      },
+    ],
+  },
+  {
+    code: "I-05",
+    title: "Tờ giấy mang tám yêu cầu",
+    year: "Tháng 6 · 1919",
+    place: "Pháp",
+    speaker: "Mai",
+    quote: "Đọc kỹ nội dung trước khi viết điều cậu mong nó có.",
+    lead: "Một văn bản ngắn đưa những yêu cầu về quyền của người dân thuộc địa đến diễn đàn quốc tế.",
+    question: "Nội dung nào phản ánh đúng bản Yêu sách năm 1919?",
+    type: "Kiến thức",
+    choices: [
+      {
+        text: "Tuyên bố Việt Nam đã trở thành một nước độc lập.",
+        result: "Chưa đúng. Đây là nhầm yêu cầu với một kết quả chưa xảy ra.",
+        points: 0,
+      },
+      {
+        text: "Quyết định thành lập Đảng Cộng sản Việt Nam.",
+        result: "Chưa đúng. Đây là sự kiện của giai đoạn sau.",
+        points: 0,
+      },
+      {
+        text: "Nêu yêu cầu về quyền tự do, dân chủ và bình đẳng cho nhân dân An Nam.",
+        result:
+          "Chính xác. Bản Yêu sách nêu các yêu cầu về quyền, không tuyên bố một kết quả đã đạt.",
+        points: 2,
+        correct: true,
+      },
+      {
+        text: "Ban hành một hiệp ước quân sự giữa Việt Nam và Pháp.",
+        result: "Chưa đúng. Bản Yêu sách không phải hiệp ước quân sự.",
+        points: 0,
+      },
+    ],
+  },
+  {
+    code: "I-06",
+    title: "Trang báo tháng Bảy",
+    year: "Tháng 7 · 1920",
+    place: "Pháp",
+    speaker: "Bình",
+    quote: "Văn bản nào gắn với bước chuyển nhận thức của Nguyễn Ái Quốc?",
+    lead: "An đọc phần giới thiệu một văn bản bàn trực tiếp về vấn đề dân tộc và thuộc địa. Những quan sát rời rạc bắt đầu có thêm khung lý giải.",
+    question: "Văn bản nào gắn với bước chuyển nhận thức vào thời điểm này?",
+    type: "Kiến thức",
+    choices: [
+      {
+        text: "Đường Kách mệnh.",
+        result: "Sai mốc. Tác phẩm được xuất bản năm 1927.",
+        points: 0,
+      },
+      {
+        text: "Sơ thảo luận cương về vấn đề dân tộc và thuộc địa của Lênin.",
+        result:
+          "Chính xác. Đây là mốc nhận thức quan trọng trong hành trình của Nguyễn Ái Quốc.",
+        points: 2,
+        correct: true,
+      },
+      {
+        text: "Tuyên ngôn Độc lập của Việt Nam năm 1945.",
+        result: "Sai mốc. Sự kiện này còn ở tương lai so với phân cảnh.",
+        points: 0,
+      },
+      {
+        text: "Luận cương chính trị tháng 10/1930.",
+        result: "Sai mốc và nhầm văn kiện.",
+        points: 0,
+      },
+    ],
+  },
+  {
+    code: "I-07",
+    title: "Tin từ Tours",
+    year: "Tháng 12 · 1920",
+    place: "Pháp",
+    speaker: "Bình",
+    quote: "Điều gì đã diễn ra tại Đại hội Tours liên quan đến Nguyễn Ái Quốc?",
+    lead: "Một quyết định tổ chức đánh dấu bước chuyển từ tìm hiểu sang lựa chọn con đường hoạt động.",
+    question: "Điều gì đã diễn ra tại Đại hội Tours?",
+    type: "Kiến thức",
+    choices: [
+      {
+        text: "Thành lập Hội Việt Nam Cách mạng Thanh niên.",
+        result: "Sai, sự kiện này diễn ra năm 1925.",
+        points: 0,
+      },
+      {
+        text: "Thành lập Đảng Cộng sản Việt Nam.",
+        result: "Sai, nhầm với mốc đầu năm 1930.",
+        points: 0,
+      },
+      {
+        text: "Quyết định rời bến cảng Sài Gòn.",
+        result: "Sai, nhầm với mốc năm 1911.",
+        points: 0,
+      },
+      {
+        text: "Tán thành Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.",
+        result:
+          "Chính xác. Hai sự kiện 1920 và 1930 cần nằm ở vị trí khác nhau trên dòng thời gian.",
+        points: 2,
+        correct: true,
+      },
+    ],
+  },
+  {
+    code: "I-08",
+    title: "Một bài viết, nhiều tiếng nói",
+    year: "Năm 1922",
+    place: "Pháp",
+    speaker: "Mai",
+    quote: "Người đọc sẽ dựa vào đâu để tin điều cậu kể?",
+    lead: "An muốn viết về đời sống người lao động. Nhưng một bài viết có sức thuyết phục cần nhiều hơn sự giận dữ.",
+    question: "Nhóm chỉ còn một buổi để hoàn thành bài đọc nội bộ.",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Thêm chi tiết chưa xảy ra để câu chuyện gây chú ý.",
+        result: "Người được phỏng vấn phát hiện sai lệch và rút lời đồng ý.",
+        points: -1,
+      },
+      {
+        text: "Dùng một lời kể có thật nhưng chưa đối chiếu thêm.",
+        result: "Bài có giá trị bước đầu, phạm vi chứng minh còn hẹp.",
+        points: 1,
+      },
+      {
+        text: "Đối chiếu ghi chép, nêu rõ nguồn và phân biệt sự kiện với nhận xét.",
+        result: "Nhóm có một bài đọc đáng tin cậy.",
+        points: 2,
+      },
+      {
+        text: "Chỉ viết một khẩu hiệu chung, không đưa thông tin cụ thể.",
+        result: "Bài không giúp người đọc hiểu tình huống.",
+        points: 0,
+      },
+    ],
+  },
+  {
+    code: "I-09",
+    title: "Học để trở về với thực tiễn",
+    year: "Giai đoạn 1923–1924",
+    place: "Nước Nga Xô viết",
+    speaker: "Bình",
+    quote:
+      "Học được điều hay rồi, chúng ta có thể làm hệt mọi chi tiết ở bất cứ đâu không?",
+    lead: "Một mô hình có thể đem lại kinh nghiệm quý. Nhưng quê hương An có hoàn cảnh riêng cần được hiểu.",
+    question: "An chuẩn bị bản ghi chú áp dụng điều đã học.",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Tóm tắt đúng nhưng chưa liên hệ điều kiện Việt Nam.",
+        result: "Bản ghi chú có kiến thức, còn thiếu phần vận dụng.",
+        points: 1,
+      },
+      {
+        text: "So sánh với quê hương, ghi rõ điểm cần khảo sát thêm.",
+        result: "An có bản liên hệ giữa lý luận và thực tiễn.",
+        points: 2,
+      },
+      {
+        text: "Chờ một công thức sẵn có giải quyết toàn bộ vấn đề.",
+        result: "Bản kế hoạch chưa được bắt đầu.",
+        points: 0,
+      },
+      {
+        text: "Sao chép mọi biện pháp, bỏ thông tin không phù hợp.",
+        result: "Đề xuất không trả lời được câu hỏi của nhóm.",
+        points: -1,
+      },
+    ],
+  },
+  {
+    code: "I-10",
+    title: "Tờ báo trên bàn học",
+    year: "Năm 1925",
+    place: "Quảng Châu",
+    speaker: "Bình",
+    quote: "Báo Thanh niên ra số đầu ngày 21/6/1925 gắn với tổ chức nào?",
+    lead: "Kiến thức bắt đầu được truyền đạt có tổ chức. An gặp những thanh niên cũng đang chuẩn bị hành trang hoạt động.",
+    question: "Báo Thanh niên gắn với tổ chức nào?",
+    type: "Kiến thức",
+    choices: [
+      {
+        text: "Hội Việt Nam Cách mạng Thanh niên.",
+        result:
+          "Chính xác. Báo chí và đào tạo thanh niên góp phần chuẩn bị về tư tưởng, tổ chức.",
+        points: 2,
+        correct: true,
+      },
+      {
+        text: "Đảng Cộng sản Việt Nam đã thành lập từ năm 1911.",
+        result: "Sai cả tổ chức và niên đại.",
+        points: 0,
+      },
+      {
+        text: "Hội nghị Versailles.",
+        result: "Đây không phải tổ chức xuất bản tờ báo.",
+        points: 0,
+      },
+      {
+        text: "Đại hội Tours năm 1920.",
+        result: "Nhầm sự kiện, địa điểm và thời điểm.",
+        points: 0,
+      },
+    ],
+  },
+  {
+    code: "I-11",
+    title: "Điều đã học có đến được với người nghe?",
+    year: "Năm 1927",
+    place: "Quảng Châu",
+    speaker: "Lâm",
+    quote: "Cậu giải thích bằng điều chúng ta từng thấy được không?",
+    lead: "An đã đi xa và đọc nhiều. Giờ đây, một người bạn chỉ hỏi: điều ấy liên quan gì đến cuộc sống của chúng tôi?",
+    question: "An chọn cách trình bày thế nào?",
+    type: "Tình huống",
+    choices: [
+      {
+        text: "Chê người nghe không đủ hiểu biết và từ chối câu hỏi.",
+        result: "Một thành viên rời buổi đọc; nhóm mất sự tin cậy.",
+        points: -1,
+      },
+      {
+        text: "Đọc đúng phần tóm tắt nhưng chưa có ví dụ.",
+        result: "Người nghe nhớ vài ý nhưng chưa rõ cách liên hệ.",
+        points: 1,
+      },
+      {
+        text: "Hứa mọi khó khăn sẽ biến mất ngay sau một buổi học.",
+        result: "Buổi nói chuyện kết thúc với kỳ vọng thiếu cơ sở.",
+        points: 0,
+      },
+      {
+        text: "Giải thích bằng ví dụ thật và để mọi người hỏi lại.",
+        result: "Nhóm hiểu rõ hơn, cùng sửa điểm còn thiếu.",
+        points: 2,
+      },
+    ],
+  },
+  {
+    code: "I-12",
+    title: "Một con đường được xác định",
+    year: "Đầu năm · 1930",
+    place: "Phòng đọc tin",
+    speaker: "Mai",
+    quote: "Đặt sự kiện này vào cả hành trình, cậu thấy điều gì?",
+    lead: "Những câu hỏi từ bến sông đã đi qua nhiều năm lao động, học tập và lựa chọn. An cần hiểu ý nghĩa của mốc lịch sử vừa được ghi thêm.",
+    question: "Nhận định nào phù hợp với sự ra đời của Đảng Cộng sản Việt Nam?",
+    type: "Kiến thức",
+    choices: [
+      {
+        text: "Việt Nam ngay lập tức giành độc lập.",
+        result: "Sai. Mốc thành lập Đảng chưa phải thắng lợi giành độc lập.",
+        points: 0,
+      },
+      {
+        text: "Sự kiện diễn ra riêng lẻ, không có quá trình chuẩn bị.",
+        result: "Sai. Nhận định này bỏ qua quá trình chuẩn bị lâu dài.",
+        points: 0,
+      },
+      {
+        text: "Sự kiện thống nhất tổ chức lãnh đạo, xác lập đường lối qua Cương lĩnh đầu tiên.",
+        result:
+          "Chính xác. Đây là bước ngoặt, gắn với quá trình chuẩn bị trước đó.",
+        points: 2,
+        correct: true,
+      },
+      {
+        text: "Mốc này chỉ là việc đổi tên của một tờ báo.",
+        result: "Sai. Nhận định không phản ánh sự thành lập một chính đảng.",
+        points: 0,
+      },
+    ],
+  },
+]
+
+function HarborScene({ night = false }: { night?: boolean }) {
+  return (
+    <svg
+      className="harbor-art"
+      viewBox="0 0 920 660"
+      role="img"
+      aria-label="Minh họa An đứng trước bến cảng Sài Gòn đầu thế kỷ hai mươi"
+    >
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={night ? "#223946" : "#b9d0c5"} />
+          <stop offset="1" stopColor={night ? "#a16f53" : "#ead09d"} />
+        </linearGradient>
+        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+          <stop stopColor="#567c7e" />
+          <stop offset="1" stopColor="#183d47" />
+        </linearGradient>
+        <filter id="rough">
+          <feTurbulence baseFrequency=".8" numOctaves="2" result="noise" />
+          <feBlend in="SourceGraphic" in2="noise" mode="soft-light" />
+        </filter>
+      </defs>
+      <rect width="920" height="660" fill="url(#sky)" />
+      <circle cx="690" cy="115" r="52" fill="#f6d994" opacity=".74" />
+      <path
+        d="M0 260Q130 230 270 252T540 244T920 222V395H0Z"
+        fill="#8ea597"
+        opacity=".46"
+      />
+      <g fill="#364b49" opacity=".9">
+        <path d="M0 302h103v-61h70v61h88v-88h84v88h62v-45h92v45h100v-67h81v67h90v-42h150v145H0z" />
+        <path
+          d="M64 241v-43h10v43m50 0v-62h9v62m158-27v-53h9v53m25 0v-70h8v70m311 21v-76h9v76"
+          stroke="#253936"
+          strokeWidth="7"
+        />
+      </g>
+      <path d="M0 365Q190 342 390 374T920 344V660H0Z" fill="url(#water)" />
+      <g stroke="#a9c0ad" opacity=".42" fill="none">
+        <path d="M12 429q140-22 277 3t264-2 355-6M22 500q128 18 241-2t270 6 374-8M0 576q136-18 265 1t247-2 407 1" />
+      </g>
+      <g className="ship">
+        <path
+          d="M464 316h342l-35 98H500z"
+          fill="#222e2f"
+          stroke="#17272b"
+          strokeWidth="4"
+        />
+        <path
+          d="M534 268h183v50H534z"
+          fill="#e6d6af"
+          stroke="#253536"
+          strokeWidth="4"
+        />
+        <path d="M562 236h120v32H562z" fill="#8c352e" />
+        <path
+          d="M618 235V111M551 268v-80M688 268v-108"
+          stroke="#233539"
+          strokeWidth="5"
+        />
+        <path
+          d="M622 114q100 2 137 48H622z"
+          fill="#ede3c7"
+          stroke="#28393a"
+          strokeWidth="3"
+        />
+        <path
+          d="M554 190l65-62v62z"
+          fill="#afc4b9"
+          stroke="#28393a"
+          strokeWidth="3"
+        />
+        <path
+          d="M736 236h36v-96h-36z"
+          fill="#8b332b"
+          stroke="#303b38"
+          strokeWidth="3"
+        />
+        <path
+          className="smoke s1"
+          d="M753 128c-13-20 13-27 3-49s18-29 8-51"
+          stroke="#596968"
+          strokeWidth="24"
+          opacity=".35"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </g>
+      <path
+        d="M0 552h480l108 108H0z"
+        fill="#9a7651"
+        stroke="#513e32"
+        strokeWidth="5"
+      />
+      <path
+        d="M0 574h505M92 552v108M230 552v108M370 552v108"
+        stroke="#6d5038"
+        strokeWidth="3"
+        opacity=".7"
+      />
+      <g className="an">
+        <ellipse
+          cx="356"
+          cy="620"
+          rx="70"
+          ry="14"
+          fill="#17313a"
+          opacity=".4"
+        />
+        <path
+          d="M330 431q28-24 57 0l-2 99h-63z"
+          fill="#e3d8bb"
+          stroke="#263337"
+          strokeWidth="4"
+        />
+        <path
+          d="M322 466l-35 82M385 466l30 78"
+          stroke="#a77956"
+          strokeWidth="18"
+        />
+        <path
+          d="M332 526l-19 94M377 526l21 94"
+          stroke="#263d44"
+          strokeWidth="22"
+        />
+        <path
+          d="M305 620h35M387 620h36"
+          stroke="#1d292c"
+          strokeWidth="13"
+          strokeLinecap="round"
+        />
+        <ellipse
+          cx="357"
+          cy="397"
+          rx="29"
+          ry="35"
+          fill="#b9825f"
+          stroke="#263337"
+          strokeWidth="4"
+        />
+        <path
+          d="M330 394q2-39 31-37 28 3 27 34-14-6-27-22-10 17-31 25z"
+          fill="#1f2d31"
+        />
+        <path d="M339 430q18 15 36 0l19 52q-38 21-76 0z" fill="#e7dbc0" />
+        <path
+          d="M305 499q-26 25-9 72h49v-68z"
+          fill="#806249"
+          stroke="#3d322c"
+          strokeWidth="4"
+        />
+        <path d="M316 503v67" stroke="#b9966d" strokeWidth="3" />
+        <path d="M384 447q13 6 20 16" stroke="#8d322a" strokeWidth="5" />
+      </g>
+      <g transform="translate(116 476)">
+        <path
+          d="M0 28l86-18 58 34-79 26z"
+          fill="#9f744c"
+          stroke="#49382e"
+          strokeWidth="4"
+        />
+        <path d="M86 10v48M28 23l60 35" stroke="#6c4e37" strokeWidth="3" />
+      </g>
+      <g opacity=".45" filter="url(#rough)">
+        <rect width="920" height="660" fill="#bd9b65" opacity=".09" />
+      </g>
+    </svg>
+  )
+}
+
+type View = "home" | "intro" | "game" | "ending"
+type Modal = null | "journal" | "history" | "settings" | "journeys" | "collection" | "about" | "pause"
+type Saved = {
+  scene: number
+  score: number
+  answers: number[]
+  k6?: boolean
+  k12?: boolean
+}
+
+const emptyProgress: Saved = { scene: 0, score: 0, answers: [] }
+
+export default function App() {
+  const [view, setView] = useState<View>("home")
+  const [modal, setModal] = useState<Modal>(null)
+  const [progress, setProgress] = useState<Saved>(() => {
+    try {
+      return (
+        JSON.parse(localStorage.getItem("hanh-trinh-progress") || "null") ||
+        emptyProgress
+      )
+    } catch {
+      return emptyProgress
+    }
+  })
+  const [selected, setSelected] = useState<number | null>(null)
+  const [sound, setSound] = useState(true)
+  const [largeText, setLargeText] = useState(false)
+
+  useEffect(() => {
+    localStorage.setItem("hanh-trinh-progress", JSON.stringify(progress))
+  }, [progress])
+
+  const scene = scenes[progress.scene]
+  const hasProgress = progress.answers.length > 0
+  const ending = useMemo(() => {
+    if (progress.score >= 18 && progress.k6 && progress.k12) return "good"
+    if (progress.score >= 8) return "neutral"
+    return "bad"
+  }, [progress])
+
+  function start(fresh = false) {
+    if (fresh) setProgress(emptyProgress)
+    setSelected(null)
+    setView("intro")
+    setModal(null)
+  }
+
+  function choose(index: number) {
+    if (selected !== null) return
+    setSelected(index)
+    const choice = scene.choices[index]
+    setProgress((p) => ({
+      ...p,
+      score: p.score + choice.points,
+      answers: [...p.answers.slice(0, p.scene), index],
+      ...(p.scene === 5 ? { k6: !!choice.correct } : {}),
+      ...(p.scene === 11 ? { k12: !!choice.correct } : {}),
+    }))
+  }
+
+  function next() {
+    if (progress.scene === 11) {
+      setView("ending")
+      return
+    }
+    setProgress((p) => ({ ...p, scene: p.scene + 1 }))
+    setSelected(null)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  function resume() {
+    setSelected(progress.answers[progress.scene] ?? null)
+    setView("game")
+  }
+
+  return (
+    <main className={largeText ? "large-text" : ""}>
+      {view === "home" && (
+        <div className="home-page">
+          <header className="site-header">
+            <button
+              className="brand"
+              onClick={() => setView("home")}
+              aria-label="Trang chủ"
+            >
+              <span className="brand-seal">
+                <Icon name="compass" size={24} />
+              </span>
+              <span>
+                <b>HÀNH TRÌNH</b>
+                <small>TÌM ĐƯỜNG CỨU NƯỚC</small>
+              </span>
+            </button>
+            <nav aria-label="Điều hướng chính">
+              <button onClick={() => setModal("about")}>Giới thiệu</button>
+              <button onClick={() => setModal("history")}>Nguồn tư liệu</button>
+              <button
+                className="icon-button"
+                onClick={() => setModal("settings")}
+                aria-label="Cài đặt"
+              >
+                <Icon name="gear" />
+              </button>
+            </nav>
+          </header>
+          <section className="home-hero">
+            <div className="hero-art-wrap">
+              <HarborScene />
+              <div className="art-caption">
+                <span>MINH HỌA</span> Bến cảng Sài Gòn, 1911
+              </div>
+              <button
+                className="hotspot h1"
+                onClick={() => setModal("history")}
+                aria-label="Khám phá con tàu"
+              >
+                <span>+</span>
+              </button>
+              <button
+                className="hotspot h2"
+                onClick={() => setModal("history")}
+                aria-label="Khám phá chiếc túi của An"
+              >
+                <span>+</span>
+              </button>
+            </div>
+            <div className="hero-content">
+              <div className="eyebrow">
+                <i /> TRÒ CHƠI KỂ CHUYỆN LỊCH SỬ <i />
+              </div>
+              <h1>
+                Hành trình
+                <br />
+                <em>tìm đường cứu nước</em>
+              </h1>
+              <p className="hero-lead">
+                Theo bước An — một thanh niên trẻ đi qua những bến cảng, trang
+                sách và câu hỏi lớn của thời đại.
+              </p>
+              <div className="meta-row">
+                <span>
+                  <Icon name="compass" /> 3 hành trình
+                </span>
+                <span>
+                  <Icon name="book" /> 36 màn chơi
+                </span>
+                <span>
+                  <Icon name="pause" /> 20–30 phút / hành trình
+                </span>
+              </div>
+              <div className="hero-actions">
+                <button
+                  className="primary-button"
+                  onClick={() => (hasProgress ? resume() : start(true))}
+                >
+                  <span className="button-icon">
+                    <Icon name={hasProgress ? "arrow" : "play"} />
+                  </span>
+                  {hasProgress
+                    ? `Tiếp tục · Màn ${progress.scene + 1}/12`
+                    : "Bắt đầu hành trình"}
+                  <Icon name="arrow" />
+                </button>
+                <button
+                  className="text-button"
+                  onClick={() => setModal("journeys")}
+                >
+                  <Icon name="map" /> Chọn hành trình{" "}
+                  <Icon name="chevron" size={16} />
+                </button>
+              </div>
+              <blockquote>
+                “Điều An mang theo không chỉ là một chiếc túi nhỏ, mà là một câu
+                hỏi chưa có lời đáp.”
+              </blockquote>
+            </div>
+          </section>
+          <section className="home-footer">
+            <button onClick={() => setModal("journal")}>
+              <Icon name="book" />
+              <span>
+                <b>Nhật ký kiến thức</b>
+                <small>Những điều đã khám phá</small>
+              </span>
+              <Icon name="chevron" />
+            </button>
+            <button onClick={() => setModal("collection")}>
+              <Icon name="spark" />
+              <span>
+                <b>Bộ sưu tập kết thúc</b>
+                <small>
+                  {hasProgress ? "Hành trình đang tiếp diễn" : "Chưa mở khóa"}
+                </small>
+              </span>
+              <Icon name={hasProgress ? "chevron" : "lock"} />
+            </button>
+          </section>
+        </div>
+      )}
+
+      {view === "intro" && (
+        <section className="intro-page">
+          <button className="corner-back" onClick={() => setView("home")}>
+            ← Trở về
+          </button>
+          <div className="intro-card paper-card">
+            <span className="chapter-no">LỜI MỞ ĐẦU</span>
+            <h2>Một câu hỏi ở bến sông</h2>
+            <div className="ornament">◆</div>
+            <p className="dropcap">
+              Sài Gòn, năm 1911. An vừa tròn hai mươi tuổi. Anh đã nghe nhiều
+              lời giải thích về nỗi khổ của quê hương, nhưng vẫn chưa tìm thấy
+              một con đường đủ sáng rõ để bước theo.
+            </p>
+            <p>
+              Hành trình này không kể An như một nhân vật lịch sử. Đây là lớp
+              truyện hư cấu giúp bạn quan sát, đặt câu hỏi và tìm hiểu những mốc
+              có thật trong hành trình tìm đường cứu nước của Nguyễn Ái Quốc.
+            </p>
+            <div className="how-to">
+              <div>
+                <span>01</span>
+                <Icon name="compass" />
+                <b>Quan sát bối cảnh</b>
+                <small>Khám phá cảnh vật và những dấu hiệu quanh bạn.</small>
+              </div>
+              <div>
+                <span>02</span>
+                <Icon name="book" />
+                <b>Đọc và lắng nghe</b>
+                <small>Theo dõi lời dẫn, hội thoại và thẻ lịch sử.</small>
+              </div>
+              <div>
+                <span>03</span>
+                <Icon name="arrow" />
+                <b>Đưa ra lựa chọn</b>
+                <small>Mỗi quyết định để lại dấu vết trong hành trình.</small>
+              </div>
+            </div>
+            <button
+              className="primary-button"
+              onClick={() => {
+                setProgress((p) => ({ ...p, scene: p.scene || 0 }))
+                setView("game")
+              }}
+            >
+              Bước tới bến sông <Icon name="arrow" />
+            </button>
+          </div>
+        </section>
+      )}
+
+      {view === "game" && scene && (
+        <div className="game-page">
+          <header className="game-header">
+            <button className="brand compact" onClick={() => setView("home")}>
+              <span className="brand-seal">
+                <Icon name="compass" size={19} />
+              </span>
+              <span>
+                <b>HÀNH TRÌNH</b>
+                <small>TÌM ĐƯỜNG CỨU NƯỚC</small>
+              </span>
+            </button>
+            <div className="journey-title">
+              <span>HÀNH TRÌNH 1/3</span>
+              <b>NGƯỜI LÊN ĐƯỜNG</b>
+            </div>
+            <div className="game-tools">
+              <span className="save-state">
+                <Icon name="check" size={15} /> Đã lưu
+              </span>
+              <button onClick={() => setModal("journal")} aria-label="Nhật ký">
+                <Icon name="book" />
+              </button>
+              <button onClick={() => setSound(!sound)} aria-label="Âm thanh">
+                <Icon name={sound ? "volume" : "headphones"} />
+              </button>
+              <button onClick={() => setModal("pause")} aria-label="Tạm dừng">
+                <Icon name="pause" />
+              </button>
+            </div>
+          </header>
+          <div className="progress-strip">
+            <div style={{ width: `${((progress.scene + 1) / 12) * 100}%` }} />
+            <span>MÀN {progress.scene + 1} / 12</span>
+          </div>
+          <div className="game-layout">
+            <section className="scene-panel">
+              <div className="scene-image">
+                <HarborScene night={progress.scene >= 3} />
+                <div className="scene-grain" />
+                <span className="scene-label">
+                  <Icon name="map" size={16} /> {scene.year}
+                </span>
+                <button
+                  className="hotspot scene-hotspot"
+                  onClick={() => setModal("history")}
+                >
+                  <span>+</span>
+                  <small>Khám phá</small>
+                </button>
+                <div className="scene-title">
+                  <span>{scene.code}</span>
+                  <div>
+                    <small>{scene.place}</small>
+                    <h2>{scene.title}</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="narration">
+                <span className="decorative-letter">
+                  {scene.lead.charAt(0)}
+                </span>
+                {scene.lead.slice(1)}
+              </div>
+              <div className="dialogue">
+                <div className="portrait">
+                  <span>{scene.speaker.charAt(0)}</span>
+                </div>
+                <div>
+                  <b>{scene.speaker}</b>
+                  <p>“{scene.quote}”</p>
+                </div>
+              </div>
+            </section>
+            <section className="choice-panel">
+              <div className="choice-topline">
+                <span>
+                  {scene.type === "Kiến thức" ? (
+                    <Icon name="book" size={15} />
+                  ) : (
+                    <Icon name="compass" size={15} />
+                  )}
+                  {scene.type}
+                </span>
+                <button onClick={() => setModal("history")}>
+                  <Icon name="info" size={16} /> Xem thẻ lịch sử
+                </button>
+              </div>
+              <h3>{scene.question}</h3>
+              <p className="choice-help">
+                {selected === null
+                  ? "Chọn một phương án. Lựa chọn sẽ được lưu vào nhật ký."
+                  : "Lựa chọn đã được ghi lại. Hãy đọc diễn biến trước khi tiếp tục."}
+              </p>
+              <div className="options">
+                {scene.choices.map((choice, i) => {
+                  const chosen = selected === i
+                  const showCorrect =
+                    selected !== null &&
+                    scene.type === "Kiến thức" &&
+                    choice.correct
+                  return (
+                    <button
+                      key={choice.text}
+                      onClick={() => choose(i)}
+                      disabled={selected !== null}
+                      className={`${chosen ? "selected" : ""} ${
+                        showCorrect ? "correct" : ""
+                      } ${
+                        selected !== null && !chosen && !showCorrect
+                          ? "dimmed"
+                          : ""
+                      }`}
+                    >
+                      <span className="option-letter">
+                        {String.fromCharCode(65 + i)}
+                      </span>
+                      <span>{choice.text}</span>
+                      {chosen && (
+                        <span className="choice-check">
+                          <Icon name="check" size={17} />
+                        </span>
+                      )}
+                    </button>
+                  )
+                })}
+              </div>
+              {selected !== null && (
+                <div
+                  className={`result-box ${
+                    scene.type === "Kiến thức" &&
+                    scene.choices[selected].correct
+                      ? "success"
+                      : ""
+                  }`}
+                >
+                  <div className="result-heading">
+                    <span>
+                      <Icon
+                        name={scene.type === "Kiến thức" ? "book" : "spark"}
+                      />
+                    </span>
+                    <b>
+                      {scene.type === "Kiến thức"
+                        ? "Giải thích kiến thức"
+                        : "Diễn biến"}
+                    </b>
+                  </div>
+                  <p>{scene.choices[selected].result}</p>
+                  <div className="result-footer">
+                    <span>
+                      <Icon name="check" size={15} /> Nhật ký đã cập nhật
+                    </span>
+                    <button className="primary-button" onClick={next}>
+                      {progress.scene === 11 ? "Xem kết quả" : "Tiếp tục"}{" "}
+                      <Icon name="arrow" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </section>
+          </div>
+        </div>
+      )}
+
+      {view === "ending" && (
+        <section className={`ending-page ${ending}`}>
+          <div className="ending-art">
+            <HarborScene night={ending !== "good"} />
+          </div>
+          <div className="ending-content paper-card">
+            <span className="chapter-no">KẾT THÚC HÀNH TRÌNH I</span>
+            <h2>
+              {ending === "good"
+                ? "Ánh sáng trên con đường"
+                : ending === "neutral"
+                  ? "Ngọn đèn còn sáng"
+                  : "Cuốn sổ khép lại"}
+            </h2>
+            <div className="ending-seal">
+              <Icon name={ending === "good" ? "spark" : "book"} size={30} />
+            </div>
+            <p>
+              {ending === "good"
+                ? "An chưa thể biết hết những thử thách phía trước. Nhưng mong muốn giúp quê hương đã có thêm hiểu biết, phương hướng và những người cùng bước."
+                : ending === "neutral"
+                  ? "Chuyến đi đã thay đổi An, nhưng chưa phải câu hỏi nào anh cũng hiểu đến nơi. Buổi học ngày mai vẫn còn một chỗ dành cho anh."
+                  : "An đã đi qua nhiều nơi, nhưng các câu hỏi chưa được theo đuổi đến cùng. Ngoài kia, dòng lịch sử vẫn tiếp tục."}
+            </p>
+            <div className="ending-stats">
+              <span>
+                <b>12</b> màn đã đi qua
+              </span>
+              <span>
+                <b>
+                  {
+                    progress.answers.filter((_, i) =>
+                      [4, 5, 6, 9, 11].includes(i),
+                    ).length
+                  }
+                </b>{" "}
+                thẻ kiến thức
+              </span>
+              <span>
+                <b>{progress.answers.length}</b> lựa chọn đã lưu
+              </span>
+            </div>
+            <button
+              className="primary-button"
+              onClick={() => setModal("journeys")}
+            >
+              Tiếp tục hành trình <Icon name="arrow" />
+            </button>
+            <button className="text-button" onClick={() => setView("home")}>
+              Trở về trang chủ
+            </button>
+          </div>
+        </section>
+      )}
+
+      {modal && (
+        <ModalView
+          modal={modal}
+          close={() => setModal(null)}
+          progress={progress}
+          setView={setView}
+          start={start}
+          sound={sound}
+          setSound={setSound}
+          largeText={largeText}
+          setLargeText={setLargeText}
+        />
+      )}
+    </main>
+  )
+}
+
+function ModalView({
+  modal,
+  close,
+  progress,
+  setView,
+  start,
+  sound,
+  setSound,
+  largeText,
+  setLargeText,
+}: {
+  modal: Exclude<Modal, null>
+  close: () => void
+  progress: Saved
+  setView: (v: View) => void
+  start: (fresh?: boolean) => void
+  sound: boolean
+  setSound: (v: boolean) => void
+  largeText: boolean
+  setLargeText: (v: boolean) => void
+}) {
+  const content = {
+    about: { kicker: "VỀ TRÒ CHƠI", title: "Lịch sử qua một góc nhìn gần gũi" },
+    history: {
+      kicker: "THẺ LỊCH SỬ · MỐC 1911",
+      title: "Ngày bắt đầu một hành trình",
+    },
+    journal: { kicker: "NHẬT KÝ HÀNH TRÌNH", title: "Những dấu vết đã lưu" },
+    journeys: {
+      kicker: "BẢN ĐỒ HÀNH TRÌNH",
+      title: "Ba lượt kể · Ba nhiệm vụ",
+    },
+    collection: {
+      kicker: "BỘ SƯU TẬP",
+      title: "Chín kết thúc có thể khám phá",
+    },
+    settings: { kicker: "TÙY CHỈNH TRẢI NGHIỆM", title: "Cài đặt" },
+    pause: { kicker: "TIẾN TRÌNH ĐÃ ĐƯỢC LƯU", title: "Tạm dừng hành trình" },
+  }[modal]
+  return (
+    <div
+      className="modal-backdrop"
+      role="presentation"
+      onMouseDown={(e) => e.target === e.currentTarget && close()}
+    >
+      <section
+        className={`modal-card ${modal}`}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button className="modal-close" onClick={close} aria-label="Đóng">
+          <Icon name="close" />
+        </button>
+        <span className="modal-kicker">{content.kicker}</span>
+        <h2 id="modal-title">{content.title}</h2>
+        {modal === "about" && (
+          <>
+            <p>
+              “Hành trình tìm đường cứu nước” là trò chơi kể chuyện giáo dục
+              dành cho người học Lịch sử Đảng Cộng sản Việt Nam.
+            </p>
+            <p>
+              An và các nhân vật đồng hành là hư cấu. Các sự kiện lịch sử được
+              trình bày riêng, có mốc thời gian và nguồn kiểm chứng.
+            </p>
+            <div className="notice">
+              <Icon name="info" />
+              <span>
+                <b>Hai lớp nội dung</b>“Trong câu chuyện” giúp bạn nhập vai. “Tư
+                liệu lịch sử” giúp phân biệt dữ kiện đã được kiểm chứng.
+              </span>
+            </div>
+          </>
+        )}
+        {modal === "history" && (
+          <>
+            <div className="history-visual">
+              <HarborScene />
+            </div>
+            <div className="history-meta">
+              <span>5 tháng 6, 1911</span>
+              <span>Bến cảng Sài Gòn</span>
+              <span>TƯ LIỆU LỊCH SỬ</span>
+            </div>
+            <p>
+              Ngày 5/6/1911, Nguyễn Tất Thành rời bến cảng Sài Gòn trên tàu
+              Amiral Latouche-Tréville, bắt đầu hành trình tìm đường cứu nước.
+            </p>
+            <a
+              href="https://tphcm.chinhphu.vn/hieu-them-ve-lua-chon-lich-su-cua-lanh-tu-nguyen-ai-quoc-ho-chi-minh-10121374.htm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Đọc nguồn kiểm chứng <Icon name="arrow" size={16} />
+            </a>
+            <div className="notice">
+              <Icon name="info" />
+              <span>
+                Chuyến đi của An trong trò chơi là tình tiết hư cấu, không thay
+                thế vai trò của nhân vật lịch sử.
+              </span>
+            </div>
+          </>
+        )}
+        {modal === "journal" && (
+          <>
+            <div className="journal-tabs">
+              <button className="active">Lựa chọn</button>
+              <button>Sự kiện</button>
+              <button>Vật phẩm</button>
+            </div>
+            <div className="journal-list">
+              {progress.answers.length ? (
+                progress.answers.map((answer, i) => (
+                  <div key={i}>
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <div>
+                      <b>{scenes[i].title}</b>
+                      <small>
+                        Đã chọn phương án {String.fromCharCode(65 + answer)}
+                      </small>
+                    </div>
+                    <Icon name="check" />
+                  </div>
+                ))
+              ) : (
+                <div className="empty-state">
+                  <Icon name="book" size={34} />
+                  <b>Nhật ký vẫn đang chờ trang đầu tiên</b>
+                  <small>
+                    Những lựa chọn và sự kiện bạn khám phá sẽ xuất hiện tại đây.
+                  </small>
+                </div>
+              )}
+            </div>
+          </>
+        )}
+        {modal === "journeys" && (
+          <div className="journey-list">
+            <button
+              className="journey-card available"
+              onClick={() => {
+                close()
+                progress.answers.length ? setView("game") : start()
+              }}
+            >
+              <span>I</span>
+              <div>
+                <small>ĐANG MỞ</small>
+                <b>Người lên đường</b>
+                <p>Lao động · Quan sát · Học hỏi</p>
+              </div>
+              <Icon name="arrow" />
+            </button>
+            <button className="journey-card locked">
+              <span>II</span>
+              <div>
+                <small>MỘT GÓC NHÌN KHÁC</small>
+                <b>Người ghi chép</b>
+                <p>Kiểm chứng · Ghi nguồn · Biên soạn</p>
+              </div>
+              <Icon name="lock" />
+            </button>
+            <button className="journey-card locked">
+              <span>III</span>
+              <div>
+                <small>MỘT GÓC NHÌN KHÁC</small>
+                <b>Người kết nối</b>
+                <p>Lắng nghe · Phân công · Tin cậy</p>
+              </div>
+              <Icon name="lock" />
+            </button>
+            <p className="unlock-note">
+              <Icon name="info" /> Hoàn thành một hành trình để mở lượt kể tiếp
+              theo. Mọi kết quả đều có thể tiếp tục.
+            </p>
+          </div>
+        )}
+        {modal === "collection" && (
+          <div className="ending-grid">
+            {[
+              "Ánh sáng trên con đường",
+              "Ngọn đèn còn sáng",
+              "Cuốn sổ khép lại",
+              "Cuốn sổ có người đọc",
+              "Bản thảo bên cửa sổ",
+              "Những dòng chữ không còn được tin",
+              "Những ngọn đèn cùng sáng",
+              "Một bàn đọc còn mở",
+              "Những lá thư không người nhận",
+            ].map((title, i) => (
+              <div
+                className={
+                  i === 1 && progress.answers.length === 12 ? "unlocked" : ""
+                }
+                key={title}
+              >
+                <span>
+                  {i === 1 && progress.answers.length === 12 ? (
+                    <Icon name="spark" />
+                  ) : (
+                    <Icon name="lock" />
+                  )}
+                </span>
+                <small>KẾT THÚC {i + 1}</small>
+                <b>
+                  {i === 1 && progress.answers.length === 12
+                    ? title
+                    : "Chưa được khám phá"}
+                </b>
+              </div>
+            ))}
+          </div>
+        )}
+        {modal === "settings" && (
+          <div className="settings-list">
+            <label>
+              <span>
+                <b>Âm thanh</b>
+                <small>Âm thanh nền và hiệu ứng</small>
+              </span>
+              <input
+                type="checkbox"
+                checked={sound}
+                onChange={(e) => setSound(e.target.checked)}
+              />
+              <i />
+            </label>
+            <label>
+              <span>
+                <b>Cỡ chữ lớn</b>
+                <small>Tăng kích thước nội dung để dễ đọc hơn</small>
+              </span>
+              <input
+                type="checkbox"
+                checked={largeText}
+                onChange={(e) => setLargeText(e.target.checked)}
+              />
+              <i />
+            </label>
+            <label>
+              <span>
+                <b>Giảm chuyển động</b>
+                <small>Hạn chế hiệu ứng trong cảnh minh họa</small>
+              </span>
+              <input type="checkbox" />
+              <i />
+            </label>
+          </div>
+        )}
+        {modal === "pause" && (
+          <div className="pause-actions">
+            <div className="pause-mark">
+              <Icon name="pause" size={32} />
+            </div>
+            <p>
+              Bạn đang ở màn {progress.scene + 1}/12. Lựa chọn gần nhất đã được
+              lưu trên thiết bị này.
+            </p>
+            <button className="primary-button" onClick={close}>
+              Tiếp tục chơi <Icon name="play" />
+            </button>
+            <button
+              className="secondary-button"
+              onClick={() => {
+                close()
+                setView("home")
+              }}
+            >
+              Về trang chủ
+            </button>
+          </div>
+        )}
+      </section>
+    </div>
+  )
+}
