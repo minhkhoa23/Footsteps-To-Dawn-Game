@@ -223,6 +223,73 @@ select { width: 100%; min-height: 46px; padding: 10px; color: var(--navy); borde
 .source-links a svg { flex-shrink: 0; margin-left: 8px; }
 .source-links a:hover { background: #eadbc1; }
 .history-fact { font-size: 17px!important; }
+.archive-scene { position: relative; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 30%,#53625b,#213c40 72%); isolation: isolate; }
+.archive-scene::before { content: ''; position: absolute; inset: 0; opacity: .12; background: repeating-linear-gradient(35deg,transparent 0 5px,#e8d8b8 5px 6px); pointer-events: none; }
+.archive-mount { position: absolute; inset: 60px 20px 92px; }
+.archive-mount img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 7px 12px #101b2370); }
+.archive-landscape .archive-mount { inset: 0; }
+.archive-landscape .archive-mount img { object-fit: cover; object-position: center 45%; }
+.archive-landscape::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,#122e3c38,transparent 40%,#122e3cb3); pointer-events: none; }
+.archive-document .archive-mount { inset: 12px 16px 75px; }
+.archive-badge { position: absolute; z-index: 1; top: 20px; right: 18px; padding: 6px 8px; background: #172d38e6; color: #f1e3c9; font-size: 9px; letter-spacing: .09em; }
+.scene-grain { box-shadow: inset 0 -110px 65px #132d3b99; }
+.scene-image-credit { display: flex; gap: 12px; align-items: flex-start; padding: 14px 0 12px; border-bottom: 1px solid #a6967a55; font-size: 11px; line-height: 1.65; color: #555a51; }
+.scene-image-credit > div { flex: 1; min-width: 0; }
+.scene-image-credit b { color: var(--navy); font-size: 12px; }
+.scene-image-credit p { margin: 4px 0; }
+.scene-image-credit a { display: inline; color: var(--red); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.scene-image-credit a svg { display: inline; vertical-align: middle; margin-left: 5px; }
+.scene-image-credit > button { flex: 0 0 auto; font-size: 10px; padding: 3px 0; min-height: 44px; }
+.scene-object-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 16px; }
+.scene-object-tools > span { font-size: 10px; color: var(--muted); }
+.scene-object-tools button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 7px 12px; background: #efe1c8; border: 1px solid #b5a07a; color: var(--navy); font: inherit; font-size: 11px; }
+.scene-object-tools button:hover { background: #e5d4b4; }
+.scene-object-tools button > span { color: var(--red); font-size: 19px; }
+.historical-gallery { padding: 18px; background: #efe2ca; border: 1px solid #b7a17c; margin: 24px 0; }
+.gallery-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #635a4a; font-size: 10px; letter-spacing: .12em; margin-bottom: 14px; }
+.historical-figure { margin: 0; }
+.archive-photo-button { display: grid; place-items: center; position: relative; width: 100%; padding: 14px; border: 1px solid #c1ad8c; background: #e4d5b7; cursor: zoom-in; }
+.archive-photo-button > img { display: block; width: 100%; height: 330px; object-fit: contain; }
+.photo-zoom { position: absolute; bottom: 10px; right: 10px; display: flex; gap: 7px; align-items: center; padding: 7px 10px; color: #f9efd9; background: #172d38ed; font: 10px 'Be Vietnam Pro',sans-serif; }
+.photo-zoom > span { font-size: 17px; }
+.historical-figure figcaption { padding: 17px 0 8px; }
+.image-kind { font-size: 10px; color: var(--red); text-transform: uppercase; letter-spacing: .06em; }
+.historical-figure h3 { margin: 7px 0 10px; font: 600 22px/1.4 Lora,Georgia,serif; color: var(--navy); }
+.image-caption { color: #293e3d; font-size: 13px; line-height: 1.8; margin: 0 0 8px; }
+.image-description { font-size: 12px; color: #5b5d52; line-height: 1.8; margin: 0; }
+.archive-filmstrip { display: flex; gap: 8px; overflow-x: auto; padding: 10px 2px 16px; margin: 4px -2px 0; }
+.archive-filmstrip button { flex: 0 0 128px; padding: 7px; display: flex; flex-direction: column; gap: 7px; text-align: left; background: #f7edd9; border: 1px solid #b9a582; color: #4f5349; }
+.archive-filmstrip button[aria-pressed="true"] { border: 2px solid var(--red); padding: 6px; color: var(--red); background: #fcf3e0; }
+.archive-filmstrip img { display: block; width: 100%; height: 70px; object-fit: contain; }
+.archive-filmstrip span { font-size: 10px; line-height: 1.6; }
+.image-source { display: flex; gap: 12px; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #bdab8d; color: var(--red); font-size: 12px; line-height: 1.8; text-decoration: none; overflow-wrap: anywhere; }
+.image-source small { display: block; font-size: 9px; letter-spacing: .12em; color: #6c6354; }
+.image-source svg { flex-shrink: 0; }
+.image-source:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.image-provenance { font-size: 12px; color: #52594e; line-height: 1.8; }
+.image-provenance summary { padding: 10px 0; cursor: pointer; color: var(--navy); min-height: 44px; }
+.image-provenance dl { margin: 4px 0 12px; }
+.image-provenance dt { color: #3d4e47; font-weight: 700; margin-top: 12px; }
+.image-provenance dd { margin: 3px 0 0; }
+.image-provenance a { color: var(--red); overflow-wrap: anywhere; }
+.archive-zoom-image { padding: 12px; background: #e6d8bf; border: 1px solid #baa481; }
+.archive-zoom-image img { display: block; width: 100%; height: auto; }
+.image-unavailable { min-height: 160px; display: flex; flex-direction: column; gap: 12px; justify-content: center; align-items: center; text-align: center; padding: 18px; color: var(--navy); }
+.archive-mount .image-unavailable { color: #f4e8d1; }
+.history-sources-title { font: 600 18px Lora,Georgia,serif; color: var(--navy); margin: 26px 0 14px; }
+[data-large-text="true"] .image-caption, [data-large-text="true"] .image-description, [data-large-text="true"] .image-provenance, [data-large-text="true"] .scene-image-credit { font-size: 16px; }
+@media (max-width:700px) {
+  .archive-mount { inset: 62px 10px 85px; }
+  .archive-badge { font-size: 8px; right: 12px; top: 55px; background: #203b40dc; padding: 4px 6px; }
+  .scene-image-credit { flex-direction: column; gap: 2px; }
+  .scene-object-tools > span { flex-basis: 100%; }
+  .historical-gallery { padding: 12px; margin: 20px 0; }
+  .archive-photo-button { padding: 8px; }
+  .archive-photo-button > img { height: 260px; }
+  .historical-figure h3 { font-size: 20px; }
+  .archive-filmstrip button { flex-basis: 113px; }
+  .gallery-heading { letter-spacing: .06em; }
+}
 .journey-card p { font-size: 12px; color: #646357; line-height: 1.6; }
 .journey-card small { font-size: 9px; }
 .journey-card.locked { opacity: .8; }

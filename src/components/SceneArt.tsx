@@ -1,6 +1,7 @@
 import { useId } from 'react';
 import { HarborScene } from './HarborScene';
 import type { Scene } from '../content';
+import { ArchiveScene } from './HistoricalMedia';
 
 export function Portrait({ name }: { name: string }) {
   const older = name === 'Bác Tư'; const mai = name === 'Mai';
@@ -16,8 +17,9 @@ export function Portrait({ name }: { name: string }) {
   </svg>;
 }
 
-export function SceneArt({ scene, ending = false, variant = 'good' }: { scene: Scene; ending?: boolean; variant?: string }) {
+export function SceneArt({ scene, ending = false, variant = 'good', illustrated = false }: { scene: Scene; ending?: boolean; variant?: string; illustrated?: boolean }) {
   const uid = useId().replaceAll(':','');
+  if (!ending && !illustrated) return <ArchiveScene key={scene.id} order={scene.order} />;
   if (scene.order <= 3 && !ending) return <div className={`art-variant variant-${scene.background}`}><HarborScene night={scene.order === 3} environment={scene.order===1 ? 'riverside' : scene.order===3 ? 'workers' : 'harbor'} />{scene.order === 3 && <div className="art-note">QUARTIER DES OUVRIERS<br /><small>Scène imaginaire · 1912–1917</small></div>}</div>;
   const night = ['attic','july','book'].includes(scene.background) || ending && variant !== 'good';
   const press = scene.background === 'press'; const research = scene.background === 'study';

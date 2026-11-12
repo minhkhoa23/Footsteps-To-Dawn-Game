@@ -4,7 +4,7 @@ Web app kể chuyện lịch sử bằng tiếng Việt, dùng React + TypeScrip
 
 ## Setup trên Windows bằng Conda
 
-Ứng dụng chạy bằng **Node.js 24 và npm**. Python 3.12 chỉ dùng khi biên dịch lại cốt truyện bằng `npm run content`; chơi game, kiểm thử và build đều chạy bằng Node.js. File [environment.yml](environment.yml) tạo môi trường Conda riêng chứa cả hai công cụ; các thư viện React/Vite được cài bằng npm trong thư mục dự án.
+Ứng dụng chạy bằng **Node.js 24 và npm**. Python dùng khi biên dịch lại cốt truyện bằng `npm run content` hoặc chuẩn bị lại ảnh tư liệu; chơi game, kiểm thử và build đều chạy bằng Node.js. File [environment.yml](environment.yml) tạo môi trường Conda riêng chứa cả hai công cụ; các thư viện React/Vite được cài bằng npm trong thư mục dự án.
 
 Không cần database, backend, khóa API hoặc file `.env`. Môi trường Conda và file cấu hình `.env` là hai khái niệm khác nhau.
 
@@ -158,14 +158,18 @@ Tham khảo chính thức: [quản lý môi trường Conda](https://docs.conda.
 
 - `src/content/story.json`: dữ liệu ba tuyến, 36 màn, ID ngữ nghĩa của lựa chọn, điểm, phản hồi, vật phẩm, điều kiện xuyên màn, 12 thẻ nguồn và 9 lời kết.
 - `src/content/index.ts`: kiểu dữ liệu và tra cứu nội dung.
+- `src/content/history-media.json` và `media.ts`: 25 ảnh tư liệu có mô tả, chú thích, niên đại, nguồn và ánh xạ 12 mốc dùng chung cho 36 màn.
+- `public/images/history/`: bản WebP đóng gói cục bộ, gồm bản thường và bản lớn khi có độ phân giải nguồn phù hợp.
 - `src/engine.ts`: engine thuần, ghi nhận lần chọn đầu, chuyển màn, chốt ending, kiểm tra bản lưu.
 - `src/App.tsx`: trang chủ, giới thiệu, hướng dẫn, màn chơi, chọn tuyến, tạm dừng, bản đồ, nhật ký, ôn tập, nguồn, bộ sưu tập và cài đặt.
-- `src/components/`: minh họa SVG, chân dung, icon, hộp thoại native có quản lý focus.
+- `src/components/`: nền ảnh tư liệu, thư viện ảnh có phóng lớn, minh họa SVG, chân dung, icon, hộp thoại native có quản lý focus.
 - `src/audio.ts`: âm thanh tổng hợp tùy chọn.
 - `tests/engine.test.ts`: các đường mẫu, ranh giới, dữ liệu, tính bất biến và khôi phục tiến trình.
 - `scripts/build_content.py`: biên dịch phụ lục được cung cấp thành dữ liệu và tài liệu biên tập. Chạy `npm run content` khi thay bản nội dung gốc.
+- `scripts/prepare_history_media.py`: kiểm tra hash và tạo ảnh WebP cùng metadata từ danh mục ảnh do người dùng cung cấp; yêu cầu Pillow. Không cần chạy lại để chơi game. Lệnh `npm run content` không ghi đè metadata ảnh.
+- `tests/media.test.ts`: kiểm tra phủ đủ 36 màn, tệp ảnh, nguồn và các mốc dễ nhầm niên đại.
 
-Tài liệu: [cốt truyện biên tập](docs/Cot_truyen_bien_tap.md), [nguồn lịch sử](docs/Nguon_lich_su.md), [danh mục tài sản](docs/Tai_san.md), [kết quả kiểm tra](docs/Kiem_thu.md).
+Tài liệu: [cốt truyện biên tập](docs/Cot_truyen_bien_tap.md), [nguồn lịch sử](docs/Nguon_lich_su.md), [danh mục ảnh và nguồn](docs/Anh_tu_lieu.md), [danh mục tài sản](docs/Tai_san.md), [kết quả kiểm tra](docs/Kiem_thu.md).
 
 ## Luật lựa chọn và ending
 
@@ -195,4 +199,4 @@ Sửa nguồn Markdown rồi chạy `npm run content` sẽ tạo lại JSON cùn
 
 ## Giới hạn của MVP
 
-Minh họa SVG hình học có chất giấy, dùng lại cảnh và biến thể đạo cụ/ánh sáng; chưa có bộ tranh vẽ tay và chín tranh ending độc lập. Âm thanh là tổng hợp. Câu chuyện hiển thị ngay, không có hiệu ứng gõ chữ. Chưa có backend, đăng nhập, PWA offline hoặc đồng bộ đám mây. Thời lượng 20–30 phút là gợi ý nội dung, chưa được đo bằng nghiên cứu người chơi. Kích thước 360px và chế độ chữ lớn đã được kiểm tra; chưa có kiểm thử trực tiếp bằng trình đọc màn hình hoặc thiết bị cảm ứng thật.
+Nền 36 màn dùng ảnh tư liệu với nguồn và niên đại; 12 thẻ lịch sử có thư viện 25 ảnh, xem trọn ảnh và phóng lớn. Nhân vật, đạo cụ và ending vẫn là minh họa SVG hình học; chưa có bộ tranh vẽ tay và chín tranh ending độc lập. Âm thanh là tổng hợp. Câu chuyện hiển thị ngay, không có hiệu ứng gõ chữ. Chưa có backend, đăng nhập, PWA offline hoặc đồng bộ đám mây. Thời lượng 20–30 phút là gợi ý nội dung, chưa được đo bằng nghiên cứu người chơi. Kích thước 360px và chế độ chữ lớn đã được kiểm tra; chưa có kiểm thử trực tiếp bằng trình đọc màn hình hoặc thiết bị cảm ứng thật.

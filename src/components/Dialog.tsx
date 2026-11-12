@@ -9,7 +9,7 @@ export function Dialog({ title, close, children, wide = false }: { title: string
     const dialog = ref.current!; dialog.showModal();
     return () => { dialog.close(); previous?.focus(); };
   }, []);
-  return <dialog className={`dialog-shell ${wide ? 'wide' : ''}`} ref={ref} onCancel={e => { e.preventDefault(); close(); }} onClick={e => { if (e.target === e.currentTarget) close(); }} aria-labelledby={titleId}>
+  return <dialog className={`dialog-shell ${wide ? 'wide' : ''}`} ref={ref} onCancel={e => { e.preventDefault(); e.stopPropagation(); close(); }} onClick={e => { if (e.target === e.currentTarget) close(); }} aria-labelledby={titleId}>
     <div className="modal-card"><button className="modal-close" onClick={close} aria-label="Đóng cửa sổ"><Icon name="close" /></button><span className="modal-kicker">HÀNH TRÌNH TÌM ĐƯỜNG CỨU NƯỚC</span><h2 id={titleId}>{title}</h2>{children}</div>
   </dialog>;
 }

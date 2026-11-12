@@ -1,4 +1,20 @@
-# Kết quả kiểm tra · 04/11/2026
+# Kết quả kiểm tra
+
+## Tích hợp ảnh tư liệu · 12/11/2026
+
+- `npm test`: **22/22 đạt**, gồm 19 kiểm thử engine và 3 kiểm thử metadata ảnh, độ phủ 36 màn/12 thẻ, tệp WebP, nguồn, niên đại và dung lượng.
+- `npm run build`: **đạt**, TypeScript và bản production được tạo thành công.
+- Kiểm tra trực tiếp đủ 36 màn qua UI, lần lượt ba tuyến I → II → III. Mỗi màn có ảnh nền theo mốc, chú thích về thời điểm ảnh và liên kết nguồn. Các tuyến vẫn mở và hoàn thành đúng luồng.
+- Duyệt 29 lượt hiển thị ảnh trong 12 thư viện, phủ đủ 25 ảnh riêng: ảnh tải thành công, tiêu đề và nguồn đổi đúng khi chọn thumbnail. Các ảnh dùng chung xuất hiện ở nhiều thẻ phù hợp.
+- Kiểm tra phóng lớn LS01, báo Thanh Niên và bản quét Le Paria. Bản lớn LS15 tải từ tệp WebP 1860 × 2600, chỉ tải khi mở. Nhấn Esc đóng cửa sổ ảnh, giữ thẻ lịch sử và trả focus về nút mở ảnh.
+- Ở viewport 360 × 800, kiểm tra ảnh nền, thẻ lịch sử, nguồn dài và chế độ chữ lớn: chiều rộng trang là 345px sau thanh cuộn, `scrollWidth` cũng là 345px; vùng nội dung hộp thoại 328px không tràn ngang.
+- Các nút khám phá đạo cụ hoạt động ở phần dưới ảnh; hình trong cửa sổ đạo cụ là SVG minh họa, tránh gán đồ vật trong tư liệu thật cho An. Ending vẫn dùng minh họa hư cấu.
+- Console trình duyệt không ghi nhận cảnh báo hoặc lỗi trong phiên kiểm tra. Ảnh được đóng gói cục bộ; liên kết nguồn chỉ dùng để xem xuất xứ.
+- Đã duyệt 31 ảnh người dùng chụp. Chưa dùng ảnh nào do nội dung chủ yếu ở giai đoạn sau 1945, ngoài khung 1911–1930 của trò chơi.
+
+Tổng 27 tệp WebP (25 bản thường và 2 bản lớn), khoảng 5,47 MiB. Tệp nguồn bên ngoài dự án và ảnh người dùng chụp được giữ nguyên. Dữ liệu chơi thử được đưa về trạng thái mới trước bàn giao. Chưa kiểm tra trên thiết bị cảm ứng thật hoặc bằng trình đọc màn hình.
+
+## Kiểm tra nền tảng · 04/11/2026
 
 ## Tự động
 

@@ -1,0 +1,845 @@
+{
+  "version": 1,
+  "catalogDate": "2026-11-12",
+  "assets": [
+    {
+      "id": "LS01",
+      "title": "Sông Sài Gòn với thuyền và tàu Pháp",
+      "src": "images/history/LS01.webp",
+      "largeSrc": "images/history/LS01-large.webp",
+      "width": 1280,
+      "height": 926,
+      "type": "ảnh chụp lịch sử",
+      "period": "Khoảng 1890–1900, có dấu hỏi trong hồ sơ nguồn",
+      "photoDate": "Khoảng 1890–1900; nguồn không khẳng định năm chính xác",
+      "caption": "Sông Sài Gòn, khoảng 1890–1900. Tư liệu Fonds ASEMI, Université Côte d’Azur, PH54-28-1.",
+      "description": "Những thuyền nhỏ, tàu và công trình ven sông gợi bối cảnh cảng Sài Gòn cuối thế kỷ XIX. Hồ sơ lưu trữ để dấu hỏi ở khoảng niên đại 1890–1900.",
+      "caution": "Không ghi ảnh năm 1911. Tàu chiến trong ảnh không phải tàu Latouche-Tréville. Có viền bản ảnh và vết cũ; bản gốc giữ nguyên.",
+      "source": {
+        "name": "Université Côte d’Azur — thư viện số Humazur, Fonds ASEMI",
+        "title": "[Sans titre] — Sông Sài Gòn, PH54-28-1",
+        "url": "https://humazur.univ-cotedazur.fr/s/henri_bosco/item/18404",
+        "imageUrl": "https://humazur.univ-cotedazur.fr/iiif-img/18405/full/800,579/0/default.jpg",
+        "credit": null,
+        "rights": "Domaine public theo hồ sơ hiện vật"
+      },
+      "original": {
+        "file": "anh_nguon/LS01_song_sai_gon_1890_1900.jpg",
+        "width": 2072,
+        "height": 1499,
+        "sha256": "a4af1bf4b9024ad7d9332c277dab531f393d3eafef7da739ab19ad1be46d8a14"
+      }
+    },
+    {
+      "id": "LS02",
+      "title": "Bến Nhà Rồng đầu thế kỷ XX",
+      "src": "images/history/LS02.webp",
+      "largeSrc": "images/history/LS02.webp",
+      "width": 1200,
+      "height": 630,
+      "type": "ảnh chụp lịch sử",
+      "period": "Đầu thế kỷ XX",
+      "photoDate": "Nguồn không cho ngày chụp cụ thể",
+      "caption": "Bến Nhà Rồng đầu thế kỷ XX. Ảnh tư liệu TTXVN, đăng trên Báo Nghệ An.",
+      "description": "Cảnh bến cảng với Nhà Rồng và những thuyền neo đậu, giúp hình dung không gian Sài Gòn đầu thế kỷ XX.",
+      "caution": "Dùng đúng nhãn đầu thế kỷ XX; không gọi là ảnh ghi lại khoảnh khắc lên tàu ngày 5/6/1911.",
+      "source": {
+        "name": "Báo Nghệ An; ảnh được ghi nguồn Tư liệu TTXVN",
+        "title": "Chàng thanh niên Nguyễn Tất Thành ra đi tìm đường cứu nước",
+        "url": "https://baonghean.vn/chang-thanh-nien-nguyen-tat-thanh-ra-di-tim-duong-cuu-nuoc-10274409.html",
+        "imageUrl": "https://bna.1cdn.vn/2024/06/12/hcm.jpg",
+        "credit": null,
+        "rights": "Chưa xác nhận giấy phép dùng trong game; trang yêu cầu đồng ý bằng văn bản khi sao chép thông tin, hình ảnh."
+      },
+      "original": {
+        "file": "anh_nguon/LS02_ben_nha_rong_dau_the_ky_20.jpg",
+        "width": 1200,
+        "height": 630,
+        "sha256": "a92c508541de60d7220a1f72e9be316701c223c3906e605c78dfac7fd5dbffac"
+      }
+    },
+    {
+      "id": "LS03",
+      "title": "Tàu Amiral Latouche-Tréville",
+      "src": "images/history/LS03.webp",
+      "largeSrc": "images/history/LS03.webp",
+      "width": 1177,
+      "height": 678,
+      "type": "ảnh chụp lịch sử",
+      "period": "Con tàu gắn với chuyến đi năm 1911",
+      "photoDate": "Nguồn chưa nêu ngày, nơi chụp cụ thể",
+      "caption": "Tàu Amiral Latouche-Tréville, con tàu gắn với sự kiện Nguyễn Tất Thành lên đường năm 1911.",
+      "description": "Ảnh toàn thân tàu hơi nước Amiral Latouche-Tréville, gắn với mốc lên đường ngày 5/6/1911; chưa xác định ngày chụp ảnh.",
+      "caution": "Ảnh con tàu; không phải chứng cứ ảnh chụp đúng ngày 5/6/1911 hoặc có Nguyễn Tất Thành xuất hiện trên boong.",
+      "source": {
+        "name": "Trang thông tin điện tử Đảng bộ thành phố Hà Nội; đăng từ Tạp chí Cộng sản",
+        "title": "Bến cảng Nhà Rồng: Điểm khởi đầu của con đường cách mạng Việt Nam",
+        "url": "https://thanhuyhanoi.vn/tin-tuc/chinh-tri/ben-cang-nha-rong-diem-khoi-dau-cua-con-duong-cach-mang-viet-nam-10010807.html",
+        "imageUrl": "https://file.thanhuyhanoi.vn/thanhuy/public/Uploads/TinTuc/2021/6/4/10010807/93e40569-b1f8-4cb4-989f-f60e3d786366.jpg",
+        "credit": null,
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS03_tau_amiral_latouche_treville.jpg",
+        "width": 1177,
+        "height": 678,
+        "sha256": "37166cdd5ca549eedc134c8429ba4071ef842cbd3044804b281f981956d4d75b"
+      }
+    },
+    {
+      "id": "LS04",
+      "title": "Khách sạn Parker, Boston",
+      "src": "images/history/LS04.webp",
+      "largeSrc": "images/history/LS04.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh địa điểm lịch sử; chưa rõ năm chụp",
+      "period": "Gắn với giai đoạn lao động 1912–1913 theo chú thích bảo tàng",
+      "photoDate": "Chưa xác định năm chụp",
+      "caption": "Khách sạn Parker tại Boston, địa điểm được giới thiệu trong tư liệu về những năm Nguyễn Tất Thành lao động ở nước ngoài.",
+      "description": "Mặt đứng khách sạn Parker tại Boston. Bảo tàng giới thiệu địa điểm này trong những năm Nguyễn Tất Thành lao động ở nước ngoài.",
+      "caution": "Không dùng làm nền một cảng vô danh của An. Niên đại hoạt động trong chú thích không phải ngày chụp ảnh.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984653828959_HasThumb.jpg",
+        "credit": "Tr24 a1",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS04_khach_san_parker_boston.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "41ad85d554f3ef54f92d3cd4e6d9e75e17d1ef837ed099602fdb2c85c83f73c5"
+      }
+    },
+    {
+      "id": "LS05",
+      "title": "Khách sạn Carlton, London",
+      "src": "images/history/LS05.webp",
+      "largeSrc": "images/history/LS05.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh địa điểm lịch sử chụp về sau",
+      "period": "Gắn với thời kỳ ở Anh; chú thích bảo tàng ghi 1914–1917",
+      "photoDate": "Ảnh có cảnh quan và biển hiệu về sau; chưa xác định chính xác năm chụp",
+      "caption": "Khách sạn Carlton tại London, địa điểm gắn với thời kỳ Nguyễn Tất Thành sống và lao động ở Anh; ảnh chụp về sau.",
+      "description": "Ảnh địa điểm khách sạn Carlton tại London. Xe cộ và biển quảng cáo thuộc thời kỳ sau, vì vậy ảnh chỉ dùng để nhận diện địa điểm.",
+      "caution": "Có biển quảng cáo phim và xe cộ không thuộc giai đoạn 1911–1930. Không dùng làm nền đương thời.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984658999255_HasThumb.jpg",
+        "credit": "Tr24 a2",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS05_khach_san_carlton_london.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "15f562313e4ff4bca696a84e05c7821eff417d574d974b1f27fc706b6b3be74d"
+      }
+    },
+    {
+      "id": "LS06",
+      "title": "Cửa quán tại số 10 rue du Four, Paris",
+      "src": "images/history/LS06.webp",
+      "largeSrc": "images/history/LS06.webp",
+      "width": 839,
+      "height": 1080,
+      "type": "ảnh chụp lịch sử; bản in lưu trữ",
+      "period": "Hồ sơ ghi ảnh chụp năm 1900; bản in năm 1910",
+      "photoDate": "1900; bản in 1910",
+      "caption": "Eugène Atget, cửa quán tại số 10 rue du Four, Paris; ảnh chụp năm 1900, bản in năm 1910. Paris Musées / Musée Carnavalet, PH3582, CC0.",
+      "description": "Ảnh của Eugène Atget ghi lại mặt tiền một cửa quán Paris. Tư liệu tham khảo cảnh quan đô thị, không xác nhận Nguyễn Ái Quốc từng đến cửa quán này.",
+      "caution": "Tài liệu sớm hơn cảnh trước tháng 6/1919; không xác nhận Nguyễn Ái Quốc từng ở quán này. Bản ảnh dọc có bìa và chú thích, không phải nền ngang sẵn dùng.",
+      "source": {
+        "name": "Paris Musées / Musée Carnavalet — Histoire de Paris",
+        "title": "Façade avec grille de cabaret, 10 rue du Four, 6ème arrondissement, Paris",
+        "url": "https://parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/facade-avec-grille-de-cabaret-10-rue-du-four-6eme-arrondissement-paris-1",
+        "imageUrl": "https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama_zoom/public/atoms/images/CAR/lpdp_44481-19.jpg?itok=HZwndwYh",
+        "credit": null,
+        "rights": "CC0 theo hồ sơ tác phẩm"
+      },
+      "original": {
+        "file": "anh_nguon/LS06_paris_rue_du_four_atget.jpg",
+        "width": 839,
+        "height": 1080,
+        "sha256": "f2f199f427acd8e0cd92d2522f224f57d7c73ae77ec72e965f97869a17adb25b"
+      }
+    },
+    {
+      "id": "LS07",
+      "title": "Danh thiếp thợ ảnh của Nguyễn Ái Quốc",
+      "src": "images/history/LS07.webp",
+      "largeSrc": "images/history/LS07.webp",
+      "width": 750,
+      "height": 500,
+      "type": "ảnh chụp hoặc bản sao tài liệu lịch sử",
+      "period": "1919–1923 theo chú thích bảo tàng",
+      "photoDate": "Chưa xác định ngày chụp hoặc số hóa",
+      "caption": "Danh thiếp thợ ảnh của Nguyễn Ái Quốc tại Paris, giai đoạn 1919–1923.",
+      "description": "Danh thiếp giới thiệu nghề làm ảnh của Nguyễn Ái Quốc, góp phần tìm hiểu cuộc sống lao động và hoạt động tại Paris giai đoạn 1919–1923.",
+      "caution": "Không gán danh thiếp có tên thật của Nguyễn Ái Quốc cho nhân vật hư cấu An. Với màn 4 trước tháng 6/1919, dùng như tư liệu bổ trợ cả giai đoạn, không làm chứng cứ đúng ngày trong cảnh.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984664489569_HasThumb.jpg",
+        "credit": "Tr25 a1",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS07_danh_thiep_tho_anh_nguyen_ai_quoc.jpg",
+        "width": 750,
+        "height": 500,
+        "sha256": "46f7b2d3330379823ff3c629723cbe5b1552c22bd8a5cc21e018ed359bfc4176"
+      }
+    },
+    {
+      "id": "LS08",
+      "title": "Viên gạch dùng sưởi trong thời gian ở Paris",
+      "src": "images/history/LS08.webp",
+      "largeSrc": "images/history/LS08.webp",
+      "width": 750,
+      "height": 500,
+      "type": "ảnh hiện vật lịch sử",
+      "period": "Gắn với thời kỳ hoạt động ở Paris; ảnh không cho năm hiện vật cụ thể",
+      "photoDate": "Chưa xác định ngày chụp hiện vật",
+      "caption": "Viên gạch được Bảo tàng Hồ Chí Minh giới thiệu là hiện vật Nguyễn Ái Quốc dùng sưởi ấm khi ở Paris.",
+      "description": "Ảnh hiện vật viên gạch sưởi được bảo tàng giới thiệu, bổ sung góc nhìn về điều kiện sinh hoạt trong thời gian Nguyễn Ái Quốc ở Paris.",
+      "caution": "Ảnh hiện vật công bố sau này; không phải ảnh chụp căn phòng khi Người đang sinh hoạt. Không biến hiện vật thật thành đồ vật đã được xác nhận của An.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984669299844_HasThumb.jpg",
+        "credit": "Tr25 a2",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS08_vien_gach_suoi_o_paris.jpg",
+        "width": 750,
+        "height": 500,
+        "sha256": "561a75ac76e5f2148de90427c4db7303c22956fcb06cd3841a085c89671fa8bd"
+      }
+    },
+    {
+      "id": "LS09",
+      "title": "Nhà số 9 ngõ Compoint, Paris",
+      "src": "images/history/LS09.webp",
+      "largeSrc": "images/history/LS09.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh địa điểm lịch sử; chưa rõ năm chụp",
+      "period": "Địa điểm gắn với thời gian 1921–1923 theo chú thích bảo tàng",
+      "photoDate": "Chưa xác định năm chụp",
+      "caption": "Nhà số 9 ngõ Compoint, Paris, nơi Nguyễn Ái Quốc sống trong giai đoạn 1921–1923 theo chú thích bảo tàng.",
+      "description": "Ảnh ngôi nhà số 9 ngõ Compoint gắn với nơi ở của Nguyễn Ái Quốc trong giai đoạn 1921–1923, phù hợp với thẻ hoạt động ở Paris năm 1922.",
+      "caution": "Không dùng làm căn phòng màn 4 trước tháng 6/1919, hoặc khẳng định đây là nơi đọc Luận cương tháng 7/1920.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984675140178_HasThumb.jpg",
+        "credit": "Tr25 a3",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS09_nha_9_ngo_compoint_paris.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "43c9e94653af8777024e6d7a25a3329fd6ed52f5199133122dfbfaf4970c6e25"
+      }
+    },
+    {
+      "id": "LS10",
+      "title": "Yêu sách của nhân dân An Nam",
+      "src": "images/history/LS10.webp",
+      "largeSrc": "images/history/LS10.webp",
+      "width": 750,
+      "height": 600,
+      "type": "bản chụp tài liệu; bố cục gồm văn bản Pháp và phần diễn giải tiếng Việt",
+      "period": "Tháng 6/1919",
+      "photoDate": "Chưa xác định ngày số hóa",
+      "caption": "Yêu sách của nhân dân An Nam, tháng 6/1919; bản tư liệu do Bảo tàng Hồ Chí Minh công bố.",
+      "description": "Bố cục tư liệu đặt tờ Yêu sách bằng tiếng Pháp cạnh phần trích, diễn giải tiếng Việt. Người chơi có thể đối chiếu với nội dung mốc tháng 6/1919.",
+      "caution": "Ảnh gồm tờ tiếng Pháp và phần trích, diễn giải tiếng Việt đặt cạnh. Không gọi toàn bộ bố cục là một bản gốc duy nhất từ năm 1919.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984680970511_HasThumb.jpg",
+        "credit": "Tr26-27",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS10_ban_yeu_sach_1919.jpg",
+        "width": 750,
+        "height": 600,
+        "sha256": "2889dbac45aff20f2dab659b85331519414730b699756133e2b52ca0816fc2f1"
+      }
+    },
+    {
+      "id": "LS11",
+      "title": "Nguyễn Ái Quốc ở Pháp năm 1920",
+      "src": "images/history/LS11.webp",
+      "largeSrc": "images/history/LS11.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh chân dung tư liệu do bảo tàng công bố",
+      "period": "1920 theo chú thích bảo tàng",
+      "photoDate": "1920 theo chú thích; chưa đối chiếu âm bản gốc",
+      "caption": "Nguyễn Ái Quốc ở Pháp năm 1920. Tư liệu Bảo tàng Hồ Chí Minh.",
+      "description": "Chân dung Nguyễn Ái Quốc tại Pháp, được bảo tàng ghi niên đại năm 1920, bổ trợ cho hai mốc tháng Bảy và Đại hội Tours.",
+      "caution": "Chỉ dùng như chân dung nhân vật lịch sử thật trong thẻ; không thay avatar An. Giữ nguyên bản ảnh công bố, chưa đánh giá mức tu sửa của bản ảnh.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984649448709_HasThumb.jpg",
+        "credit": "Tr23",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS11_chan_dung_nguyen_ai_quoc_phap_1920.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "0c71117869bc13212d1fefe5cc0f40c0253c90061d3e254e69bed3c71cb6e7f2"
+      }
+    },
+    {
+      "id": "LS12",
+      "title": "Trích Luận cương của Lênin trên L’Humanité",
+      "src": "images/history/LS12.webp",
+      "largeSrc": "images/history/LS12.webp",
+      "width": 940,
+      "height": 628,
+      "type": "bản chụp trích đoạn báo đương thời",
+      "period": "Số báo ngày 16 và 17/7/1920 theo chú thích nguồn",
+      "photoDate": "Chưa xác định ngày số hóa",
+      "caption": "Trích Luận cương của Lênin về vấn đề dân tộc và thuộc địa, đăng trên L’Humanité tháng 7/1920; ảnh từ Bảo tàng Hồ Chí Minh — chi nhánh TPHCM.",
+      "description": "Ảnh trích phần Luận cương về vấn đề dân tộc và thuộc địa trên báo L’Humanité. Phần giải thích của thẻ giúp đọc nội dung khi chữ trên bản ảnh nhỏ và mờ.",
+      "caution": "Là trích đoạn, không phải toàn bộ trang báo. Chữ nhỏ mờ: dùng ảnh nhận diện cùng lời giải thích đánh máy bên cạnh. Trang bài viết dùng đường dẫn tương đối bị lỗi; bản ảnh đã kiểm tra ở miền ảnh images.hcmcpv.org.vn.",
+      "source": {
+        "name": "Cổng thông tin điện tử Thành ủy TPHCM; ảnh ghi nguồn Bảo tàng Hồ Chí Minh — chi nhánh TPHCM",
+        "title": "Lãnh tụ Nguyễn Ái Quốc truyền bá chủ nghĩa Mác - Lê nin vào Việt Nam và sự ra đời của Đảng Cộng sản Việt Nam, bước ngoặt lịch sử vĩ đại",
+        "url": "https://hcmcpv.org.vn/tin-tuc/lanh-tu-nguyen-ai-quoc-truyen-ba-chu-nghia-mac-lenin-vao-viet-nam-va-su-ra-doi-cua-dang-cong-san-1491878747",
+        "imageUrl": "https://images.hcmcpv.org.vn/Uploads/Image/020620212678EABE/hinh%2022.jpg",
+        "credit": null,
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS12_trich_luan_cuong_lenin_lhumanite_1920.jpg",
+        "width": 940,
+        "height": 628,
+        "sha256": "d4ee667ed95e0554c2039d0e3cdc1d6c2f14594cf040bd0360d482ad8e758841"
+      }
+    },
+    {
+      "id": "LS13",
+      "title": "Toàn cảnh Đại hội Tours",
+      "src": "images/history/LS13.webp",
+      "largeSrc": "images/history/LS13.webp",
+      "width": 750,
+      "height": 600,
+      "type": "ảnh chụp sự kiện lịch sử",
+      "period": "Tháng 12/1920",
+      "photoDate": "Tháng 12/1920 theo chú thích bảo tàng",
+      "caption": "Đại hội lần thứ XVIII Đảng Xã hội Pháp tại Tours, tháng 12/1920.",
+      "description": "Toàn cảnh hội trường Đại hội lần thứ XVIII Đảng Xã hội Pháp tại Tours, tháng 12/1920. Đây là không gian sự kiện lịch sử, không phải nhóm bạn của An.",
+      "caution": "Không dựng An vào ghế đại biểu của hội nghị có thật. Bản công bố rộng 750 px, hợp thẻ hơn nền toàn màn hình.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984690911080_HasThumb.jpg",
+        "credit": "Tr28 a2",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS13_toan_canh_dai_hoi_tours_1920.jpg",
+        "width": 750,
+        "height": 600,
+        "sha256": "c231c4d98affd97e48f629c9d549df3ee2f6e5947eda31215060522c46fd9fce"
+      }
+    },
+    {
+      "id": "LS14",
+      "title": "Nguyễn Ái Quốc phát biểu tại Đại hội Tours",
+      "src": "images/history/LS14.webp",
+      "largeSrc": "images/history/LS14.webp",
+      "width": 750,
+      "height": 600,
+      "type": "ảnh tư liệu sự kiện do bảo tàng công bố",
+      "period": "Tháng 12/1920",
+      "photoDate": "Tháng 12/1920 theo chú thích bảo tàng",
+      "caption": "Nguyễn Ái Quốc phát biểu tại Đại hội lần thứ XVIII Đảng Xã hội Pháp, tháng 12/1920.",
+      "description": "Nguyễn Ái Quốc đứng phát biểu giữa các đại biểu tại Đại hội Tours. Ảnh được trình bày như tư liệu của sự kiện có thật.",
+      "caution": "Lưu nguyên bản bảo tàng; không thêm lời thoại hư cấu cho người trong ảnh.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984696981427_HasThumb.jpg",
+        "credit": "Tr29",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS14_nguyen_ai_quoc_phat_bieu_tours_1920.jpg",
+        "width": 750,
+        "height": 600,
+        "sha256": "83336fde36a9075b6ba5fe72cdf325e4a6b6b5853860c240cc756c1bb0aafdee"
+      }
+    },
+    {
+      "id": "LS15",
+      "title": "Le Paria số 2, ngày 1/5/1922",
+      "src": "images/history/LS15.webp",
+      "largeSrc": "images/history/LS15-large.webp",
+      "width": 916,
+      "height": 1280,
+      "type": "bản quét báo lịch sử",
+      "period": "1/5/1922",
+      "photoDate": "Chưa xác định ngày số hóa; nguồn mô tả là bản scan trưng bày tại bảo tàng",
+      "caption": "Le Paria (Người cùng khổ), số 2, ngày 1/5/1922. Bản quét do Bảo tàng Lịch sử Quốc gia công bố.",
+      "description": "Bản quét trang báo Le Paria số 2 với đầu báo và các cột bài viết. Số này ra ngày 1/5/1922, sau số đầu tiên một tháng.",
+      "caution": "Đây là số 2, không phải số đầu 1/4/1922. Bản tải 14,3 MB, giữ cho nghiên cứu; cần tạo bản dung lượng nhỏ hơn ở bước tích hợp.",
+      "source": {
+        "name": "Bảo tàng Lịch sử Quốc gia",
+        "title": "Nguyễn Ái Quốc làm báo Le Paria",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/73006/nguyen-ai-quoc-lam-bao-le-paria.html",
+        "imageUrl": "https://baotanglichsu.vn/DataFiles/2022/04/News/Tieng%20Viet/5.4.2022/Nguyen%20Ai%20Quoc%20lam%20bao%20Le%20Paria/1.jpg",
+        "credit": null,
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS15_le_paria_so_2_1922.jpg",
+        "width": 3421,
+        "height": 4783,
+        "sha256": "1a29e1becfca018d1ebbb49b610bd20315074cd45e7cfb765048c43298f1eb38"
+      }
+    },
+    {
+      "id": "LS16",
+      "title": "Trụ sở đầu tiên của Le Paria tại Paris",
+      "src": "images/history/LS16.webp",
+      "largeSrc": "images/history/LS16.webp",
+      "width": 750,
+      "height": 500,
+      "type": "ảnh địa điểm lịch sử chụp về sau",
+      "period": "Số 16 phố Jacques Calot, địa chỉ báo thời kỳ đầu năm 1922",
+      "photoDate": "Ảnh có xe cộ về sau; chưa xác định năm chụp",
+      "caption": "Địa điểm trụ sở đầu tiên của Le Paria tại số 16 phố Jacques Calot, Paris; ảnh chụp về sau.",
+      "description": "Ảnh chụp về sau của địa chỉ số 16 phố Jacques Calot, Paris, nơi đặt trụ sở đầu tiên của Le Paria; không dùng như cảnh đường phố năm 1922.",
+      "caution": "Không dùng làm nền Paris năm 1922 vì xe cộ trong ảnh thuộc thời kỳ sau.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984709342134_HasThumb.jpg",
+        "credit": "Tr31",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS16_tru_so_dau_tien_le_paria_paris.jpg",
+        "width": 750,
+        "height": 500,
+        "sha256": "c59af4def2966e2d50e376d196ed7e7671c09239770545c59f10e5874b8f799e"
+      }
+    },
+    {
+      "id": "LS17",
+      "title": "Nguyễn Ái Quốc ở Liên Xô năm 1923",
+      "src": "images/history/LS17.webp",
+      "largeSrc": "images/history/LS17.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh chân dung tư liệu",
+      "period": "1923 theo chú thích bảo tàng",
+      "photoDate": "1923 theo chú thích; chưa đối chiếu âm bản gốc",
+      "caption": "Nguyễn Ái Quốc ở Liên Xô năm 1923. Tư liệu Bảo tàng Hồ Chí Minh.",
+      "description": "Chân dung Nguyễn Ái Quốc tại Liên Xô năm 1923 theo chú thích của bảo tàng, bổ trợ cho chặng học tập và hoạt động quốc tế.",
+      "caution": "Chân dung của năm 1923, không phải ảnh chụp khoảnh khắc cập bến ngày 30/6/1923.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984721352821_HasThumb.jpg",
+        "credit": "Tr33",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS17_chan_dung_nguyen_ai_quoc_lien_xo_1923.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "5347240c98cfbbc5495d4c98f96ef1feeceb2c513f4ba8478130a28ce31a6148"
+      }
+    },
+    {
+      "id": "LS18",
+      "title": "Bài báo “Lênin và các dân tộc thuộc địa”",
+      "src": "images/history/LS18.webp",
+      "largeSrc": "images/history/LS18.webp",
+      "width": 500,
+      "height": 750,
+      "type": "bản chụp bài báo lịch sử",
+      "period": "27/1/1924 theo chú thích bảo tàng",
+      "photoDate": "Chưa xác định ngày số hóa",
+      "caption": "Bài “Lênin và các dân tộc thuộc địa” của Nguyễn Ái Quốc, đăng trên báo Sự thật ngày 27/1/1924.",
+      "description": "Bản ảnh bài báo của Nguyễn Ái Quốc đăng trên báo Sự thật ngày 27/1/1924, thuộc chặng hoạt động ở Liên Xô.",
+      "caution": "Không nhầm bài năm 1924 với Luận cương của Lênin năm 1920 ở màn 6.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984728733243_HasThumb.jpg",
+        "credit": "Tr34 a1",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS18_bai_bao_lenin_va_cac_dan_toc_thuoc_dia_1924.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "15a9f74ba1232ee06e55b9172a0bf416009a39a224599d2aa6e5f852306347aa"
+      }
+    },
+    {
+      "id": "LS19",
+      "title": "Khách sạn Trung tâm tại Moskva",
+      "src": "images/history/LS19.webp",
+      "largeSrc": "images/history/LS19.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh địa điểm lịch sử; chưa rõ năm chụp",
+      "period": "Gắn với việc dự Đại hội V Quốc tế Cộng sản, tháng 7/1924 theo chú thích bảo tàng",
+      "photoDate": "Chưa xác định năm chụp",
+      "caption": "Khách sạn Trung tâm tại Moskva, địa điểm được bảo tàng giới thiệu gắn với hoạt động năm 1924 của Nguyễn Ái Quốc.",
+      "description": "Ảnh mặt ngoài khách sạn Trung tâm tại Moskva. Bảo tàng gắn địa điểm với hoạt động dự Đại hội V Quốc tế Cộng sản năm 1924.",
+      "caution": "Chưa đủ dữ kiện để ghi ảnh chụp năm 1924 hoặc dùng làm căn phòng học của An.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984734773589_HasThumb.JPG",
+        "credit": "Tr34 a2.1",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS19_khach_san_trung_tam_moskva.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "178e3915a361f1935d83d2d015a840e44555b55641abb02936acc7206d8126a5"
+      }
+    },
+    {
+      "id": "LS20",
+      "title": "Nguyễn Ái Quốc cùng đại biểu Đại hội V Quốc tế Cộng sản",
+      "src": "images/history/LS20.webp",
+      "largeSrc": "images/history/LS20.webp",
+      "width": 750,
+      "height": 500,
+      "type": "ảnh chụp lịch sử",
+      "period": "Tháng 7/1924 theo chú thích bảo tàng",
+      "photoDate": "Tháng 7/1924 theo chú thích bảo tàng",
+      "caption": "Nguyễn Ái Quốc cùng một số đại biểu Đại hội V Quốc tế Cộng sản, tháng 7/1924.",
+      "description": "Nguyễn Ái Quốc chụp cùng một số đại biểu Đại hội V Quốc tế Cộng sản; chú thích bảo tàng ghi tháng 7/1924.",
+      "caution": "Không ghi ảnh năm 1923 và không gán những người có thật trong ảnh thành nhóm bạn hư cấu của An.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984944965611_HasThumb.jpg",
+        "credit": "Tr35 a2",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS20_nguyen_ai_quoc_cung_dai_bieu_quoc_te_1924.jpg",
+        "width": 750,
+        "height": 500,
+        "sha256": "06cae1c24f808ba0df75cb5bd93d55a41fee7c52be2acd258e9ae523fd002e4d"
+      }
+    },
+    {
+      "id": "LS21",
+      "title": "Báo Thanh Niên, số ngày 3/10/1926",
+      "src": "images/history/LS21.webp",
+      "largeSrc": "images/history/LS21.webp",
+      "width": 500,
+      "height": 750,
+      "type": "bản chụp báo lịch sử",
+      "period": "3/10/1926, nhận diện từ đầu trang và đối chiếu bài của Bảo tàng Lịch sử Quốc gia",
+      "photoDate": "Chưa xác định ngày số hóa",
+      "caption": "Một số báo Thanh Niên ngày 3/10/1926. Báo ra số đầu ngày 21/6/1925.",
+      "description": "Trang báo Thanh Niên ngày 3/10/1926, dùng để nhận diện tờ báo trong thẻ về công tác tuyên truyền và đào tạo khởi đầu từ năm 1925.",
+      "caution": "Không chú thích ảnh này là số đầu 21/6/1925. Nếu xuất hiện trong thẻ giới thiệu mốc 1925, phải ghi rõ đây là một số báo về sau.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984971077105_HasThumb.jpg",
+        "credit": "Tr37 a1",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS21_bao_thanh_nien_3_10_1926.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "632c66e0602727bd2c2b38646f28247893b09d1d06d97f6911f5c85935858736"
+      }
+    },
+    {
+      "id": "LS22",
+      "title": "Nhà trên đường Văn Minh, Quảng Châu",
+      "src": "images/history/LS22.webp",
+      "largeSrc": "images/history/LS22.webp",
+      "width": 550,
+      "height": 750,
+      "type": "ảnh địa điểm lịch sử; chưa rõ năm chụp",
+      "period": "Địa điểm gắn với trụ sở Hội và các lớp huấn luyện giai đoạn 1925–1927",
+      "photoDate": "Chưa xác định năm chụp",
+      "caption": "Ngôi nhà trên đường Văn Minh, Quảng Châu, gắn với trụ sở Hội Việt Nam Cách mạng Thanh niên và các lớp huấn luyện.",
+      "description": "Mặt ngoài ngôi nhà trên đường Văn Minh, Quảng Châu, gắn với trụ sở Hội Việt Nam Cách mạng Thanh niên và các lớp huấn luyện giai đoạn 1925–1927.",
+      "caution": "Ảnh một địa điểm thật, không phải ảnh chụp một buổi lên lớp. Chưa dùng làm nền chính xác năm 1925 khi chưa xác định ngày chụp.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984976757430_HasThumb.jpg",
+        "credit": "Tr37 a3",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS22_nha_duong_van_minh_quang_chau.jpg",
+        "width": 550,
+        "height": 750,
+        "sha256": "72acdabab45febc938ce6c34ed5358276fc36dc18395036f89fe0e91bd384e3d"
+      }
+    },
+    {
+      "id": "LS23",
+      "title": "Bìa Đường Kách mệnh",
+      "src": "images/history/LS23.webp",
+      "largeSrc": "images/history/LS23.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh chụp sách lịch sử",
+      "period": "1927, đối chiếu hồ sơ hiện vật của Bảo tàng Lịch sử Quốc gia",
+      "photoDate": "Chưa xác định ngày chụp hoặc số hóa",
+      "caption": "Đường Kách mệnh của Nguyễn Ái Quốc, xuất bản năm 1927.",
+      "description": "Bìa sách Đường Kách mệnh, tác phẩm tập hợp bài giảng của Nguyễn Ái Quốc và xuất bản năm 1927. Giữ nguyên tên sách và dấu nhận diện của nguồn.",
+      "caution": "Giữ cách viết tên sách lịch sử. Ảnh có dấu nhận diện của nguồn; không xóa dấu nguồn.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984985477928_HasThumb.jpg",
+        "credit": "Tr39 a1",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS23_bia_duong_kach_menh_1927.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "e0668ce68b6e258e934f7891aa0887c166c849e9b29d073a50c93b5af5e02812"
+      }
+    },
+    {
+      "id": "LS24",
+      "title": "Chánh cương vắn tắt và Sách lược vắn tắt",
+      "src": "images/history/LS24.webp",
+      "largeSrc": "images/history/LS24.webp",
+      "width": 1024,
+      "height": 750,
+      "type": "bản chụp hai văn kiện lịch sử",
+      "period": "Tháng 2/1930 theo chú thích nguồn",
+      "photoDate": "Chưa xác định ngày chụp hoặc số hóa",
+      "caption": "Chánh cương vắn tắt và Sách lược vắn tắt do Nguyễn Ái Quốc soạn thảo, tháng 2/1930; bản ảnh đăng trên cổng thông tin Công an Đồng Nai.",
+      "description": "Bản ảnh hai văn kiện Chánh cương vắn tắt và Sách lược vắn tắt, bổ trợ việc tìm hiểu Cương lĩnh đầu tiên vào đầu năm 1930.",
+      "caution": "Nguồn đăng lại không cung cấp mã lưu trữ của bản gốc. Không gọi đây là ảnh chụp hội nghị thành lập Đảng.",
+      "source": {
+        "name": "Cổng thông tin Công an Đồng Nai",
+        "title": "Bài 3: Kinh tế Việt Nam và tỉnh Đồng Nai qua các giai đoạn phát triển của đất nước",
+        "url": "https://congan.dongnai.gov.vn/Pages/newsdetail.aspx?CatId=94&NewsId=16196",
+        "imageUrl": "https://congan.dongnai.gov.vn/TinTucHinhAnh/dongnai/17451.2023-08-28.22-44-58.jpg",
+        "credit": null,
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS24_chanh_cuong_sach_luoc_1930.jpg",
+        "width": 1024,
+        "height": 750,
+        "sha256": "56e42743ffb52bfa61dca38121185037a812a59e192a2f18eab2295aecd0c093"
+      }
+    },
+    {
+      "id": "LS25",
+      "title": "Nguyễn Ái Quốc năm 1930",
+      "src": "images/history/LS25.webp",
+      "largeSrc": "images/history/LS25.webp",
+      "width": 500,
+      "height": 750,
+      "type": "ảnh chân dung tư liệu do bảo tàng công bố",
+      "period": "1930 theo chú thích bảo tàng",
+      "photoDate": "1930 theo chú thích; chưa đối chiếu âm bản gốc",
+      "caption": "Nguyễn Ái Quốc năm 1930. Tư liệu Bảo tàng Hồ Chí Minh.",
+      "description": "Chân dung Nguyễn Ái Quốc năm 1930 theo chú thích bảo tàng. Ảnh giúp nhận diện nhân vật lịch sử ở chặng cuối của trò chơi.",
+      "caution": "Không dùng ảnh chân dung để minh chứng địa điểm hoặc thời điểm chính xác của hội nghị. Không ghép cảnh giành độc lập năm 1945 vào ending năm 1930.",
+      "source": {
+        "name": "Bảo tàng Hồ Chí Minh",
+        "title": "Album: Chủ tịch Hồ Chí Minh tìm thấy con đường cách mạng giải phóng dân tộc, người sáng lập Đảng Cộng sản Việt Nam (1911–1930)",
+        "url": "https://baotanghochiminh.vn/chu-tich-ho-chi-minh-tim-thay-con-duong-cach-mang-giai-phong-dan-toc-nguoi-sang-lap-dang-cong-san-viet-nam-1911-1930.htm",
+        "imageUrl": "https://baotanghochiminh.vn/pic/PhotoAlbum/318_636866984981657710_HasThumb.jpg",
+        "credit": "Tr38 ",
+        "rights": "Chưa xác nhận giấy phép mở cho ảnh; cần đối chiếu quyền dùng khi đưa vào bản game phát hành."
+      },
+      "original": {
+        "file": "anh_nguon/LS25_chan_dung_nguyen_ai_quoc_1930.jpg",
+        "width": 500,
+        "height": 750,
+        "sha256": "40207970b86025de703307a769292c703ca5c10d667f41f9cd25cc6f65ff0b44"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "order": 1,
+      "theme": "Bối cảnh thuộc địa, Sài Gòn",
+      "assetIds": [
+        "LS01",
+        "LS02"
+      ],
+      "backgroundId": "LS01",
+      "layout": "landscape",
+      "backgroundNote": "Ảnh khoảng 1890–1900, gợi bối cảnh cảng Sài Gòn; không phải ảnh năm 1911."
+    },
+    {
+      "order": 2,
+      "theme": "Lên đường năm 1911",
+      "assetIds": [
+        "LS02",
+        "LS03"
+      ],
+      "backgroundId": "LS03",
+      "layout": "landscape",
+      "backgroundNote": "Ảnh con tàu gắn với chuyến đi năm 1911; không xác nhận chụp ngày 5/6/1911."
+    },
+    {
+      "order": 3,
+      "theme": "Lao động, quan sát trong những năm bôn ba",
+      "assetIds": [
+        "LS03",
+        "LS04",
+        "LS05"
+      ],
+      "backgroundId": "LS04",
+      "layout": "document",
+      "backgroundNote": "Tư liệu địa điểm lao động tại Boston; ngày chụp chưa xác định. Khu lao động của An là hư cấu."
+    },
+    {
+      "order": 4,
+      "theme": "Paris, điều kiện sống, học tập",
+      "assetIds": [
+        "LS06",
+        "LS07",
+        "LS08"
+      ],
+      "backgroundId": "LS06",
+      "layout": "document",
+      "backgroundNote": "Paris: ảnh năm 1900, bản in năm 1910; tham khảo cảnh quan cho chặng trước tháng 6/1919."
+    },
+    {
+      "order": 5,
+      "theme": "Yêu sách năm 1919",
+      "assetIds": [
+        "LS10"
+      ],
+      "backgroundId": "LS10",
+      "layout": "document",
+      "backgroundNote": "Bản tư liệu Yêu sách năm 1919, gồm tiếng Pháp và phần trích, diễn giải tiếng Việt."
+    },
+    {
+      "order": 6,
+      "theme": "Luận cương của Lênin, tháng 7/1920",
+      "assetIds": [
+        "LS11",
+        "LS12"
+      ],
+      "backgroundId": "LS12",
+      "layout": "document",
+      "backgroundNote": "Trích Luận cương trên L’Humanité tháng 7/1920; không phải toàn bộ trang báo."
+    },
+    {
+      "order": 7,
+      "theme": "Đại hội Tours, tháng 12/1920",
+      "assetIds": [
+        "LS11",
+        "LS13",
+        "LS14"
+      ],
+      "backgroundId": "LS13",
+      "layout": "landscape",
+      "backgroundNote": "Đại hội Tours tháng 12/1920. An và bạn bè không phải các đại biểu trong ảnh."
+    },
+    {
+      "order": 8,
+      "theme": "Le Paria và hoạt động báo chí",
+      "assetIds": [
+        "LS07",
+        "LS09",
+        "LS15",
+        "LS16"
+      ],
+      "backgroundId": "LS15",
+      "layout": "document",
+      "backgroundNote": "Le Paria số 2, ngày 1/5/1922; số đầu ra ngày 1/4/1922."
+    },
+    {
+      "order": 9,
+      "theme": "Liên Xô, 1923–1924",
+      "assetIds": [
+        "LS17",
+        "LS18",
+        "LS19",
+        "LS20"
+      ],
+      "backgroundId": "LS20",
+      "layout": "landscape",
+      "backgroundNote": "Ảnh đại biểu tháng 7/1924, thuộc chặng 1923–1924; không phải thời điểm đến Nga năm 1923."
+    },
+    {
+      "order": 10,
+      "theme": "Quảng Châu, Hội Việt Nam Cách mạng Thanh niên và báo Thanh Niên",
+      "assetIds": [
+        "LS21",
+        "LS22"
+      ],
+      "backgroundId": "LS22",
+      "layout": "document",
+      "backgroundNote": "Tư liệu địa điểm tại Quảng Châu; chưa xác định ngày chụp, không phải ảnh một buổi học năm 1925."
+    },
+    {
+      "order": 11,
+      "theme": "Đường Kách mệnh, 1927",
+      "assetIds": [
+        "LS23"
+      ],
+      "backgroundId": "LS23",
+      "layout": "document",
+      "backgroundNote": "Bìa Đường Kách mệnh, xuất bản năm 1927; bản ảnh do bảo tàng công bố."
+    },
+    {
+      "order": 12,
+      "theme": "Thành lập Đảng và Cương lĩnh đầu tiên, 1930",
+      "assetIds": [
+        "LS24",
+        "LS25"
+      ],
+      "backgroundId": "LS24",
+      "layout": "document",
+      "backgroundNote": "Bản ảnh văn kiện tháng 2/1930; không phải ảnh chụp Hội nghị thành lập Đảng."
+    }
+  ]
+}
