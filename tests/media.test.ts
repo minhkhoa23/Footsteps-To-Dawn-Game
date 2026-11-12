@@ -3,7 +3,7 @@ import { readFileSync, statSync } from 'node:fs';
 import { test } from 'node:test';
 import { story } from '../src/content/index.ts';
 import media from '../src/content/history-media.json' with { type: 'json' };
-import { DASHBOARD_PHOTOS } from '../src/content/media.ts';
+import { DASHBOARD_PHOTOS, MUSEUM_EXHIBITIONS, MUSEUM_HERO_SLIDES } from '../src/content/media.ts';
 
 test('All 36 scenes and 12 history cards have relevant bundled media and image sources', () => {
   assert.equal(media.stages.length, 12);
@@ -51,8 +51,10 @@ test('Later newspapers and undated locations retain explicit chronology for lear
   assert.match(media.stages.find(stage => stage.order === 10)!.backgroundNote, /chưa xác định ngày chụp/);
 });
 
-test('War Remnants Museum dashboard photos from dataset/Dashboard are bundled as compact WebP files', () => {
+test('War Remnants Museum dashboard photos and 6 thematic exhibitions are bundled as compact WebP files', () => {
   assert.equal(DASHBOARD_PHOTOS.length, 3);
+  assert.equal(MUSEUM_HERO_SLIDES.length, 5);
+  assert.equal(MUSEUM_EXHIBITIONS.length, 6);
   for (const photo of DASHBOARD_PHOTOS) {
     assert(photo.title && photo.caption && photo.story && photo.zone && photo.highlights.length >= 3);
     for (const path of [photo.src, photo.largeSrc]) {
@@ -63,6 +65,18 @@ test('War Remnants Museum dashboard photos from dataset/Dashboard are bundled as
       assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
       const budget = path === photo.src ? 300_000 : 800_000;
       assert(statSync(file).size < budget, `Dashboard image too heavy: ${photo.id}`);
+    }
+  }
+  for (const section of MUSEUM_EXHIBITIONS) {
+    assert(section.title && section.summary && section.historicalContext && section.groupReflection);
+    assert.equal(section.photos.length, 5);
+    for (const photo of section.photos) {
+      assert(photo.title && photo.caption && photo.detail);
+      const file = new URL(`../public/${photo.src}`, import.meta.url);
+      const bytes = readFileSync(file);
+      assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
+      assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+      assert(statSync(file).size < 650_000, `Exhibition image too heavy: ${photo.id}`);
     }
   }
 });

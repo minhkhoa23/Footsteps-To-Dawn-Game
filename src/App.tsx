@@ -86,6 +86,12 @@ export default function App() {
       document.getElementById('museum-dashboard')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 40);
   }
+  function focusGame() {
+    if (dashboardTab === 'museum') setDashboardTab('all');
+    setTimeout(() => {
+      document.getElementById('game-dashboard-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 40);
+  }
   function resume() { update(enterRun); setModal(null); }
   function openHistory(index = scene.order-1) { setHistoryIndex(index); setModal('history'); }
   function begin(id: CampaignId, restart = false) {
@@ -120,29 +126,21 @@ export default function App() {
       {notice && <aside className="save-notice" role="status"><Icon name="info" /><div>{notice}{!writable && <div className="notice-actions"><button onClick={()=>download(loaded.raw || JSON.stringify(save),'ban-luu-can-khoi-phuc.json')}>Tải bản lưu gốc</button><button onClick={()=>location.reload()}>Tải lại</button><button onClick={()=>setConfirmation({title:'Tạo bản lưu mới?',text:'Bản lưu trên trình duyệt sẽ được thay bằng hành trình đang hiển thị. Hãy tải bản gốc nếu bạn cần giữ dữ liệu cũ.',action:()=>{setWritable(true);setNotice('');setConfirmation(null);}})}>Dùng hành trình hiện tại</button></div>}</div><button onClick={()=>{if(writable)setNotice('');else exportSave();}} aria-label={writable ? 'Đóng thông báo' : 'Xuất hành trình hiện tại'}><Icon name={writable ? 'close' : 'book'} /></button></aside>}
 
       {save.view==='home' && <div className="home-page">
-        <header className="site-header"><Brand onClick={home} /><nav aria-label="Điều hướng chính"><button onClick={focusMuseum}>Bảo tàng &amp; Nhóm</button><button onClick={()=>setModal('about')}>Giới thiệu</button><button onClick={()=>openHistory(0)}>Nguồn tư liệu</button><button className="icon-button mobile-about" onClick={()=>setModal('about')} aria-label="Giới thiệu và tư liệu"><Icon name="info" /></button><button className="icon-button" onClick={()=>setModal('settings')} aria-label="Cài đặt"><Icon name="gear" /></button></nav></header>
+        <header className="site-header"><Brand onClick={home} /><nav aria-label="Điều hướng chính"><button onClick={focusMuseum}>Bảo tàng &amp; Nhóm</button><button onClick={focusGame}>Trò chơi 1911–1930</button><button onClick={()=>setModal('about')}>Giới thiệu</button><button onClick={()=>openHistory(0)}>Nguồn tư liệu</button><button className="icon-button mobile-about" onClick={()=>setModal('about')} aria-label="Giới thiệu và tư liệu"><Icon name="info" /></button><button className="icon-button" onClick={()=>setModal('settings')} aria-label="Cài đặt"><Icon name="gear" /></button></nav></header>
         <div className="dashboard-mode-bar" role="navigation" aria-label="Chế độ hiển thị Dashboard">
           <div className="dashboard-mode-inner">
             <span className="dashboard-mode-label"><Icon name="compass" size={15} /> Không gian Dashboard:</span>
             <div className="dashboard-mode-pills" role="tablist" aria-label="Chọn nội dung Dashboard">
-              <button role="tab" aria-selected={dashboardTab==='all'} className={dashboardTab==='all' ? 'active' : ''} onClick={()=>setDashboardTab('all')}>Tổng quan (Trò chơi &amp; Bảo tàng)</button>
+              <button role="tab" aria-selected={dashboardTab==='all'} className={dashboardTab==='all' ? 'active' : ''} onClick={()=>setDashboardTab('all')}>Tổng quan (Bảo tàng &amp; Trò chơi)</button>
               <button role="tab" aria-selected={dashboardTab==='museum'} className={dashboardTab==='museum' ? 'active' : ''} onClick={()=>setDashboardTab('museum')}>Bảo tàng Chứng tích Chiến tranh · Nhóm</button>
               <button role="tab" aria-selected={dashboardTab==='game'} className={dashboardTab==='game' ? 'active' : ''} onClick={()=>setDashboardTab('game')}>Trò chơi Lịch sử (1911–1930)</button>
             </div>
           </div>
         </div>
-        {dashboardTab !== 'museum' && <>
-          <section id="main-content" className="home-hero">
-            <div className="hero-art-wrap"><HarborScene /><div className="art-caption"><span>MINH HỌA</span> Bến cảng Sài Gòn, 1911</div><button className="hotspot h1" onClick={()=>openHistory(1)} aria-label="Khám phá chuyến tàu năm 1911"><span>+</span></button><button className="hotspot h2" onClick={()=>{setObjectIndex(1);setModal('object');}} aria-label="Khám phá chiếc túi của An"><span>+</span></button></div>
-            <div className="hero-content"><div className="eyebrow"><i />TRÒ CHƠI KỂ CHUYỆN LỊCH SỬ<i /></div><h1>Hành trình<br /><em>tìm đường cứu nước</em></h1><p className="hero-lead">Theo bước An — một thanh niên trẻ đi qua những bến cảng, trang sách và câu hỏi lớn của thời đại.</p><div className="meta-row"><span><Icon name="compass" />3 hành trình</span><span><Icon name="book" />36 màn chơi</span><span><Icon name="pause" />20–30 phút / hành trình</span></div>
-              <div className="hero-actions"><button className="primary-button" onClick={()=>run ? resume() : begin('I')}><span className="button-icon"><Icon name={run ? 'arrow' : 'play'} /></span>{run ? run.phase==='complete' ? 'Xem lại kết thúc' : `Tiếp tục · Màn ${scene.order}/12` : 'Bắt đầu hành trình'}<Icon name="arrow" /></button><button className="text-button" onClick={()=>setModal('journeys')}><Icon name="map" />Chọn hành trình<Icon name="chevron" size={16} /></button><button className="text-button" onClick={focusMuseum}><Icon name="spark" />Bảo tàng Chứng tích Chiến tranh<Icon name="chevron" size={16} /></button></div>
-              <blockquote>“Điều An mang theo không chỉ là một chiếc túi nhỏ, mà là một câu hỏi chưa có lời đáp.”</blockquote><button className="text-button how-link" onClick={()=>setModal('guide')}>Lần đầu ghé đến? Xem cách chơi <Icon name="arrow" size={14} /></button>
-            </div>
-          </section>
-          <section className="home-footer" aria-label="Hành trang của bạn"><button onClick={focusMuseum}><Icon name="compass" /><span><b>Bảo tàng Chứng tích Chiến tranh</b><small>Chuyến đi thực tế &amp; bộ ảnh của nhóm</small></span><Icon name="chevron" /></button><button onClick={()=>setModal('journal')}><Icon name="book" /><span><b>Nhật ký kiến thức</b><small>{run ? `${run.journal.length} lựa chọn trong lượt hiện tại` : 'Những điều đã khám phá'}</small></span><Icon name="chevron" /></button><button onClick={()=>setModal('collection')}><Icon name="spark" /><span><b>Bộ sưu tập kết thúc</b><small>{save.collection.length ? `${save.collection.length} / 9 góc kết đã mở` : 'Những trang cuối đang chờ bạn'}</small></span><Icon name="chevron" /></button></section>
-        </>}
+
+        {/* PHẦN 1 (ĐƯA LÊN TRƯỚC): GIỚI THIỆU BẢO TÀNG CHỨNG TÍCH CHIẾN TRANH & CHUYẾN ĐI CỦA NHÓM */}
         {dashboardTab !== 'game' && (
-          <div id={dashboardTab === 'museum' ? 'main-content' : undefined}>
+          <div id="main-content">
             <MuseumDashboard
               save={save}
               onStartCampaign={id => begin(id)}
@@ -151,7 +149,22 @@ export default function App() {
               onOpenJournal={() => setModal('journal')}
               onOpenCollection={() => setModal('collection')}
               onOpenJourneys={() => setModal('journeys')}
+              onScrollToGame={focusGame}
             />
+          </div>
+        )}
+
+        {/* PHẦN 2 (PHÍA DƯỚI): NỘI DUNG TRÒ CHƠI HÀNH TRÌNH TÌM ĐƯỜNG CỨU NƯỚC */}
+        {dashboardTab !== 'museum' && (
+          <div id="game-dashboard-section" className="game-dashboard-block">
+            <section id={dashboardTab === 'game' ? 'main-content' : undefined} className="home-hero">
+              <div className="hero-art-wrap"><HarborScene /><div className="art-caption"><span>MINH HỌA</span> Bến cảng Sài Gòn, 1911</div><button className="hotspot h1" onClick={()=>openHistory(1)} aria-label="Khám phá chuyến tàu năm 1911"><span>+</span></button><button className="hotspot h2" onClick={()=>{setObjectIndex(1);setModal('object');}} aria-label="Khám phá chiếc túi của An"><span>+</span></button></div>
+              <div className="hero-content"><div className="eyebrow"><i />TRÒ CHƠI KỂ CHUYỆN LỊCH SỬ<i /></div><h1>Hành trình<br /><em>tìm đường cứu nước</em></h1><p className="hero-lead">Theo bước An — một thanh niên trẻ đi qua những bến cảng, trang sách và câu hỏi lớn của thời đại.</p><div className="meta-row"><span><Icon name="compass" />3 hành trình</span><span><Icon name="book" />36 màn chơi</span><span><Icon name="pause" />20–30 phút / hành trình</span></div>
+                <div className="hero-actions"><button className="primary-button" onClick={()=>run ? resume() : begin('I')}><span className="button-icon"><Icon name={run ? 'arrow' : 'play'} /></span>{run ? run.phase==='complete' ? 'Xem lại kết thúc' : `Tiếp tục · Màn ${scene.order}/12` : 'Bắt đầu hành trình'}<Icon name="arrow" /></button><button className="text-button" onClick={()=>setModal('journeys')}><Icon name="map" />Chọn hành trình<Icon name="chevron" size={16} /></button><button className="text-button" onClick={focusMuseum}><Icon name="spark" />Lên phần Bảo tàng &amp; Nhóm<Icon name="chevron" size={16} /></button></div>
+                <blockquote>“Điều An mang theo không chỉ là một chiếc túi nhỏ, mà là một câu hỏi chưa có lời đáp.”</blockquote><button className="text-button how-link" onClick={()=>setModal('guide')}>Lần đầu ghé đến? Xem cách chơi <Icon name="arrow" size={14} /></button>
+              </div>
+            </section>
+            <section className="home-footer" aria-label="Hành trang của bạn"><button onClick={focusMuseum}><Icon name="compass" /><span><b>Bảo tàng Chứng tích Chiến tranh</b><small>6 chuyên đề &amp; 30 ảnh thực tế của nhóm</small></span><Icon name="chevron" /></button><button onClick={()=>setModal('journal')}><Icon name="book" /><span><b>Nhật ký kiến thức</b><small>{run ? `${run.journal.length} lựa chọn trong lượt hiện tại` : 'Những điều đã khám phá'}</small></span><Icon name="chevron" /></button><button onClick={()=>setModal('collection')}><Icon name="spark" /><span><b>Bộ sưu tập kết thúc</b><small>{save.collection.length ? `${save.collection.length} / 9 góc kết đã mở` : 'Những trang cuối đang chờ bạn'}</small></span><Icon name="chevron" /></button></section>
           </div>
         )}
       </div>}
