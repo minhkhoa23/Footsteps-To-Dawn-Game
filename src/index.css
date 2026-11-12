@@ -374,3 +374,709 @@ select { width: 100%; min-height: 46px; padding: 10px; color: var(--navy); borde
   .choice-topline { gap: 10px; }.choice-topline span { font-size: 9px; }.choice-topline button { font-size: 10px; }.choice-help { font-size: 12px; }.options button { font-size: 13px; }.result-footer { justify-content: flex-end; }
 }
 
+
+/* === Dashboard & War Remnants Museum Showcase Styles === */
+.dashboard-mode-bar {
+  background: #e5d6bc;
+  border-bottom: 1px solid #96836544;
+  padding: 10px clamp(20px, 5vw, 76px);
+  position: relative;
+  z-index: 5;
+}
+.dashboard-mode-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.dashboard-mode-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.dashboard-mode-label svg { color: var(--red); }
+.dashboard-mode-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dashboard-mode-pills button {
+  min-height: 38px;
+  padding: 6px 15px;
+  border: 1px solid #a99573;
+  background: #f5ead6;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 600;
+  transition: .18s;
+}
+.dashboard-mode-pills button:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+.dashboard-mode-pills button.active {
+  background: var(--navy);
+  color: #f7edd9;
+  border-color: var(--navy);
+  box-shadow: 2px 2px 0 var(--gold);
+}
+
+.hero-actions { flex-wrap: wrap; }
+
+.dashboard-section {
+  padding: 56px clamp(18px, 5vw, 76px) 84px;
+  background: linear-gradient(180deg, #e7d9c1 0%, #efe4cf 24%, #e5d5b9 100%);
+  border-top: 1px solid #96836540;
+  position: relative;
+  z-index: 3;
+}
+.dashboard-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  gap: 56px;
+}
+
+/* Game & Campaign Overview Strip inside Dashboard */
+.dashboard-game-strip {
+  padding: 34px clamp(22px, 4vw, 44px);
+}
+.dashboard-strip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #b59d7655;
+}
+.dashboard-strip-head h2 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: clamp(24px, 2.8vw, 34px);
+  margin: 8px 0 0;
+}
+.dashboard-quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.dashboard-quick-stats > div {
+  min-width: 118px;
+  padding: 10px 16px;
+  background: #efe2ca;
+  border: 1px solid #bda680;
+  text-align: center;
+}
+.dashboard-quick-stats b {
+  display: block;
+  font-family: Lora, Georgia, serif;
+  font-size: 22px;
+  color: var(--red);
+}
+.dashboard-quick-stats span {
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #5f5d53;
+}
+.dashboard-campaign-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.dash-campaign-card {
+  background: #efe3cc;
+  border: 1px solid #bba47e;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .2s;
+}
+.dash-campaign-card.active {
+  border: 2px solid var(--red);
+  background: #f9efdd;
+}
+.dash-campaign-card.locked {
+  opacity: .75;
+}
+.dash-campaign-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.dash-roman {
+  font-family: Lora, Georgia, serif;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 9px;
+  background: var(--navy);
+  color: #f4e6cb;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.dash-campaign-top small {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: .05em;
+}
+.dash-campaign-card h3 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: 21px;
+  margin: 4px 0 8px;
+}
+.dash-campaign-card p {
+  font-size: 13px;
+  color: #595b53;
+  line-height: 1.65;
+  margin: 0 0 18px;
+  flex: 1;
+}
+.compact-btn {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 14px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.dashboard-utility-bar {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #b59d7644;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+}
+
+/* Museum Showcase Header & Fact Cards */
+.museum-showcase-wrapper {
+  display: grid;
+  gap: 32px;
+  scroll-margin-top: 24px;
+}
+.museum-header-block {
+  max-width: 900px;
+}
+.museum-header-block h2 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: clamp(30px, 3.8vw, 48px);
+  line-height: 1.15;
+  margin: 14px 0 16px;
+}
+.museum-header-block h2 em {
+  color: var(--red);
+  font-weight: 500;
+}
+.museum-lead {
+  font-family: Lora, Georgia, serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #3f4442;
+  margin: 0;
+}
+
+.museum-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.museum-fact-card {
+  background: #f7edd9;
+  border: 1px solid #b99f74;
+  padding: 22px;
+  box-shadow: 0 10px 26px #2d241812;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.museum-fact-card.highlight-card {
+  background: var(--navy);
+  color: #f5ead6;
+  border-color: var(--gold);
+}
+.fact-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: var(--red);
+}
+.museum-fact-card.highlight-card .fact-tag {
+  color: #e2c27c;
+}
+.museum-fact-card strong {
+  font-family: Lora, Georgia, serif;
+  font-size: 26px;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.museum-fact-card.highlight-card strong {
+  color: #fff7e6;
+}
+.museum-fact-card b {
+  font-size: 13px;
+  color: #3a4544;
+}
+.museum-fact-card.highlight-card b {
+  color: #e5caa8;
+}
+.museum-fact-card p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #5d5f57;
+  margin: 4px 0 0;
+}
+.museum-fact-card.highlight-card p {
+  color: #d8d1c1;
+}
+
+/* Bento Grid: Spotlight + 3 Dataset/Dashboard Photo Cards */
+.museum-bento-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 56%) minmax(0, 44%);
+  gap: 24px;
+  align-items: start;
+}
+.museum-spotlight {
+  padding: 22px;
+}
+.spotlight-frame {
+  position: relative;
+  height: clamp(320px, 44vh, 470px);
+  background: #162a33;
+  border: 5px solid #efe1c6;
+  outline: 1px solid #9d845f;
+  overflow: hidden;
+}
+.spotlight-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+.spotlight-frame:hover img {
+  transform: scale(1.02);
+}
+.spotlight-overlay-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+.spotlight-badge {
+  background: var(--red);
+  color: #fff8eb;
+  padding: 6px 11px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px #0006;
+}
+.spotlight-counter {
+  background: #172d38e6;
+  color: #f4e6cb;
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.spotlight-zoom-btn {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  min-height: 40px;
+  padding: 7px 14px;
+  background: #172d38ed;
+  color: #f9efd9;
+  border: 1px solid var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.spotlight-zoom-btn:hover {
+  background: var(--red);
+  border-color: #f5ead6;
+}
+.spotlight-body {
+  padding: 20px 6px 6px;
+}
+.spotlight-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.spotlight-meta span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border: 1px solid #b8a07a;
+  color: var(--navy);
+  background: #efe2ca;
+}
+.spotlight-meta span:first-child {
+  background: var(--navy);
+  color: #f5ead6;
+  border-color: var(--navy);
+}
+.spotlight-body h3 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: clamp(22px, 2.2vw, 29px);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+.spotlight-story {
+  font-family: Lora, Georgia, serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #3e4340;
+  margin: 0 0 16px;
+}
+.spotlight-note {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: #eadbc2;
+  border-left: 3px solid var(--red);
+  font-size: 12px;
+  line-height: 1.65;
+  color: #4b5049;
+}
+.spotlight-note svg {
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.spotlight-note b {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+.spotlight-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 20px;
+  display: grid;
+  gap: 8px;
+}
+.spotlight-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: #3c4840;
+}
+.spotlight-highlights svg {
+  color: var(--green);
+  flex-shrink: 0;
+}
+.spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.spotlight-actions .secondary-button {
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+/* Right Stack of 3 Photo Cards */
+.museum-photo-stack {
+  display: grid;
+  gap: 14px;
+}
+.photo-stack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #b59e7866;
+}
+.photo-stack-header span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: var(--red);
+}
+.photo-stack-header small {
+  font-size: 11px;
+  color: #656256;
+}
+.museum-photo-card {
+  display: grid;
+  grid-template-columns: 165px minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px;
+  background: #f7edd9;
+  border: 1px solid #bca47c;
+  cursor: pointer;
+  transition: .18s;
+}
+.museum-photo-card:hover {
+  border-color: var(--red);
+  transform: translateX(3px);
+}
+.museum-photo-card.active {
+  border: 2px solid var(--red);
+  background: #fff7e8;
+  box-shadow: 0 12px 28px #2e24171c;
+}
+.museum-photo-thumb {
+  position: relative;
+  height: 132px;
+  overflow: hidden;
+  border: 2px solid #e7d6b8;
+  background: #172d38;
+}
+.museum-photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.thumb-index {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  background: #172d38d9;
+  color: #f5ead6;
+  font-family: Lora, Georgia, serif;
+  font-size: 11px;
+  padding: 2px 7px;
+}
+.museum-photo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.museum-photo-info small {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--red);
+}
+.museum-photo-info h4 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: 16px;
+  margin: 4px 0 6px;
+  line-height: 1.35;
+}
+.museum-photo-info p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #595b53;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.museum-photo-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.museum-photo-card-footer .text-button {
+  min-height: 32px;
+  padding: 2px 0;
+  font-size: 11px;
+}
+.photo-expand-link {
+  border: 1px solid #b59d76;
+  background: #efe2ca;
+  color: var(--navy);
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.photo-expand-link:hover {
+  background: var(--red);
+  color: #fff7e8;
+  border-color: var(--red);
+}
+
+.museum-group-quote {
+  padding: 20px 22px;
+  background: #efe1c6;
+  display: grid;
+  gap: 10px;
+}
+.quote-seal {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: grid;
+  place-items: center;
+  color: var(--red);
+  background: #f7edd9;
+}
+.museum-group-quote blockquote {
+  margin: 0;
+  font-family: Lora, Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--navy);
+}
+.museum-group-quote cite {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--red);
+}
+
+/* 3 Pillars Connection Section */
+.museum-connection-section {
+  padding: 34px clamp(22px, 4vw, 44px);
+}
+.connection-header h3 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: clamp(22px, 2.5vw, 31px);
+  margin: 8px 0 22px;
+}
+.museum-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.museum-pillar-card {
+  background: #efe2ca;
+  border: 1px solid #bba37b;
+  padding: 22px;
+  position: relative;
+}
+.pillar-no {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  font-family: Lora, Georgia, serif;
+  font-size: 28px;
+  color: #b58c4955;
+}
+.museum-pillar-card small {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+.museum-pillar-card h4 {
+  font-family: Lora, Georgia, serif;
+  color: var(--navy);
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+.museum-pillar-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #53564e;
+  margin: 0;
+}
+.museum-visit-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #b59d7655;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.visit-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--navy);
+}
+.visit-info svg {
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.visit-info b {
+  display: block;
+  font-family: Lora, Georgia, serif;
+  font-size: 15px;
+}
+.visit-info span {
+  font-size: 12px;
+  color: #5b5d54;
+}
+
+@media (max-width: 1050px) {
+  .dashboard-campaign-cards,
+  .museum-pillars {
+    grid-template-columns: 1fr;
+  }
+  .museum-facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .museum-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-section {
+    padding: 36px 14px 56px;
+  }
+  .museum-facts-grid {
+    grid-template-columns: 1fr;
+  }
+  .museum-photo-card {
+    grid-template-columns: 1fr;
+  }
+  .museum-photo-thumb {
+    height: 190px;
+  }
+  .spotlight-frame {
+    height: 260px;
+  }
+  .dashboard-quick-stats > div {
+    flex: 1 1 42%;
+  }
+}

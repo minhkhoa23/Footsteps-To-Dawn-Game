@@ -3,6 +3,7 @@ import { readFileSync, statSync } from 'node:fs';
 import { test } from 'node:test';
 import { story } from '../src/content/index.ts';
 import media from '../src/content/history-media.json' with { type: 'json' };
+import { DASHBOARD_PHOTOS } from '../src/content/media.ts';
 
 test('All 36 scenes and 12 history cards have relevant bundled media and image sources', () => {
   assert.equal(media.stages.length, 12);
@@ -48,4 +49,20 @@ test('Later newspapers and undated locations retain explicit chronology for lear
   assert.match(thanhNien.caption, /3\/10\/1926.*21\/6\/1925/);
   assert.match(paris.caption, /1900.*1910/);
   assert.match(media.stages.find(stage => stage.order === 10)!.backgroundNote, /chưa xác định ngày chụp/);
+});
+
+test('War Remnants Museum dashboard photos from dataset/Dashboard are bundled as compact WebP files', () => {
+  assert.equal(DASHBOARD_PHOTOS.length, 3);
+  for (const photo of DASHBOARD_PHOTOS) {
+    assert(photo.title && photo.caption && photo.story && photo.zone && photo.highlights.length >= 3);
+    for (const path of [photo.src, photo.largeSrc]) {
+      assert.match(path, /^images\/dashboard\/dashboard-0[1-3](-large)?\.webp$/);
+      const file = new URL(`../public/${path}`, import.meta.url);
+      const bytes = readFileSync(file);
+      assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
+      assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+      const budget = path === photo.src ? 300_000 : 800_000;
+      assert(statSync(file).size < budget, `Dashboard image too heavy: ${photo.id}`);
+    }
+  }
 });
